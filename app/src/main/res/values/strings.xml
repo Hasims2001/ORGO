@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">ORGO</string>
+    <string name="enter_password">Your password</string>
+    <string name="enter_name">Your name</string>
+    <string name="enter_phone">Your phone number</string>
+    <string name="enter_birth">Your Birthdate</string>
+    <string name="submit">SUBMIT</string>
+    <string name="don_t_have_account">DON\'T HAVE ACCOUNT?</string>
+    <string name="sign_up"> <u>Sign up</u></string>
+    <string name="enter_your_mail">Your mail</string>
+    <string name="login_png">loginpng</string>
+    <string name="liver_png">liver png</string>
+    <string name="heart_png">heart png</string>
+    <string name="logo_png">logo png</string>
+    <string name="log_in"><u>Log in</u></string>
+    <string name="already_have_an_account">Already have an account!</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="liverpng">liverandkidneyimg</string>
+    <string name="heart">heartandeyeimg</string>
+    <string name="loginpng">"login png "</string>
+    <string name="logopng">logo png</string>
+    <string name="usermail">Mail</string>
+    <string name="userpassword">Password</string>
+    <string name="submitbtn">SUBMIT</string>
 </resources>

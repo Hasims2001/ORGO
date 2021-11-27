@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="`"
     tools:context=".MainActivity">
 
     <ImageView
@@ -11,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="310dp"
+        android:contentDescription="@string/liverpng"
         app:layout_constraintBottom_toTopOf="@+id/secondart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,6 +25,7 @@
         android:id="@+id/secondart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/heart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,6 +37,7 @@
         android:id="@+id/thirdart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/logopng"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,6 +51,7 @@
         android:layout_width="129dp"
         android:layout_height="56dp"
         android:layout_marginTop="20dp"
+        android:contentDescription="@string/loginpng"
         app:layout_constraintBottom_toTopOf="@+id/secondart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +65,8 @@
         android:layout_height="52dp"
         android:layout_marginBottom="350dp"
         android:ems="10"
-        android:hint="Enter your mail"
+        android:hint="@string/usermail"
+        android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/thirdart"
@@ -68,14 +74,16 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginpng"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="230dp"
         android:layout_height="51dp"
         android:ems="10"
-        android:hint="Enter Password"
+        android:hint="@string/userpassword"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/secondart"
@@ -83,13 +91,14 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailid"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintVertical_bias="0.188"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/submitbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SUBMIT"
+        android:text="@string/submitbtn"
         android:textColor="#000000"
         app:backgroundTint="#00558d"
         app:layout_constraintBottom_toBottomOf="@+id/thirdart"
@@ -100,22 +109,23 @@
         app:layout_constraintVertical_bias="0.222" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DON'T HAVE ACCOUNT?"
+        android:text="@string/don_t_have_account"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/signupbtn"
         app:layout_constraintHorizontal_bias="0.927"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.494" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/signupbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign up"
+        android:onClick="opensignup"
+        android:text="@string/sign_up"
         android:textColor="#e55467"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,6 +133,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/submitbtn"
         app:layout_constraintTop_toTopOf="@+id/password"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.576"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:text="@string/forgot_password"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/submitbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/password"
+        app:layout_constraintVertical_bias="0.029" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
