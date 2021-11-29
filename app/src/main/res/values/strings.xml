@@ -8,6 +8,7 @@
     <string name="don_t_have_account">DON\'T HAVE ACCOUNT?</string>
     <string name="sign_up"> <u>Sign up</u></string>
     <string name="enter_your_mail">Your mail</string>
+    <string name="openlogin">openloginpage</string>
     <string name="login_png">loginpng</string>
     <string name="liver_png">liver png</string>
     <string name="heart_png">heart png</string>
@@ -20,6 +21,9 @@
     <string name="loginpng">"login png "</string>
     <string name="logopng">logo png</string>
     <string name="usermail">Mail</string>
+    <string name="textforgotpwd">You will get link on your registered email for reset your password...</string>
+    <string name="userforgotpwd">Enter your Registered Mail</string>
     <string name="userpassword">Password</string>
     <string name="submitbtn">SUBMIT</string>
+    <string name="forgotpwd">ForgotPasswordPNG</string>
 </resources>

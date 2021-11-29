@@ -13,7 +13,8 @@ public class sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
     }
-    public void openlogin(View view){
+
+    public void openloginpage(View view){
         Intent intent = new Intent( this,  MainActivity.class);
         startActivity(intent);
     }

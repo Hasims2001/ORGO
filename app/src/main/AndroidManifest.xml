@@ -10,8 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ORGO">
         <activity
+            android:name=".forgot_pwd"
+            android:exported="false"
+            android:label="ORGO"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".sign_up"
-            android:exported="false" android:label="ORGO" android:parentActivityName=".MainActivity" />
+            android:exported="false"
+            android:label="ORGO"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
