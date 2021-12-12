@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "521621915690",
+    "project_id": "orgo-2022",
+    "storage_bucket": "orgo-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521621915690:android:7296cf63c298d230b5db53",
+        "android_client_info": {
+          "package_name": "com.example.orgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521621915690-hqhsp8t0ff65f4ujdohjp6pvggqkvcs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxpjvtR9OnjG6nhdYepZP8xUBMRlksQp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521621915690-hqhsp8t0ff65f4ujdohjp6pvggqkvcs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

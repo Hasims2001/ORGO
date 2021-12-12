@@ -59,15 +59,16 @@
         app:srcCompat="@drawable/fivth" />
 
     <EditText
-        android:id="@+id/emailid"
+        android:id="@+id/usernamedata"
         android:layout_width="230dp"
         android:layout_height="52dp"
         android:layout_marginBottom="350dp"
         android:ems="10"
         android:fontFamily="@font/allerta_stencil"
-        android:hint="@string/usermail"
+        android:hint="@string/username"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
+        android:text="Hasims2001"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/thirdart"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,12 +87,13 @@
         android:hint="@string/userpassword"
         android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:text="Hasim8980"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/secondart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailid"
+        app:layout_constraintTop_toBottomOf="@+id/usernamedata"
         app:layout_constraintVertical_bias="0.188"
         tools:ignore="TextContrastCheck" />
 
@@ -127,7 +129,6 @@
         android:id="@+id/signupbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="opensignup"
         android:text="@string/sign_up"
         android:textColor="#e55467"
         android:textStyle="bold"
@@ -140,20 +141,18 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/forgotpwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/allerta_stencil"
-        android:onClick="openforgotpwd"
         android:text="@string/forgot_password"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/submitbtn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.319"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/password"
-        app:layout_constraintVertical_bias="0.029"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

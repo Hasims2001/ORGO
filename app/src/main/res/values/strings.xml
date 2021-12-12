@@ -1,29 +1,39 @@
 <resources>
     <string name="app_name">ORGO</string>
-    <string name="enter_password">Your password</string>
-    <string name="enter_name">Your name</string>
-    <string name="enter_phone">Your phone number</string>
-    <string name="enter_birth">Your Birthdate</string>
+    <string name="enter_password">Password</string>
+    <string name="enter_passwordagain">Confirm Password</string>
+    <string name="enter_name">Username</string>
+    <string name="enter_phone">Phone Number</string>
     <string name="submit">SUBMIT</string>
     <string name="don_t_have_account">DON\'T HAVE ACCOUNT?</string>
     <string name="sign_up"> <u>Sign up</u></string>
-    <string name="enter_your_mail">Your mail</string>
+    <string name="enter_your_mail">Mail</string>
     <string name="openlogin">openloginpage</string>
     <string name="login_png">loginpng</string>
     <string name="liver_png">liver png</string>
     <string name="heart_png">heart png</string>
     <string name="logo_png">logo png</string>
     <string name="log_in"><u>Log in</u></string>
-    <string name="already_have_an_account">Already have an account!</string>
+    <string name="already_have_an_account">ALREADY HAVE AN ACCOUNT!</string>
     <string name="forgot_password"><u>Forgot Password?</u></string>
     <string name="liverpng">liverandkidneyimg</string>
     <string name="heart">heartandeyeimg</string>
     <string name="loginpng">"login png "</string>
     <string name="logopng">logo png</string>
-    <string name="usermail">Mail</string>
+    <string name="username">Username</string>
     <string name="textforgotpwd">You will get link on your registered email for reset your password...</string>
-    <string name="userforgotpwd">Enter your Registered Mail</string>
+    <string name="userforgotpwd">Registered Username</string>
     <string name="userpassword">Password</string>
     <string name="submitbtn">SUBMIT</string>
     <string name="forgotpwd">ForgotPasswordPNG</string>
+
+<!--   dashboard string -->
+    <string name="donatebtn">Donate Organ</string>
+    <string name="donatebodybtn">Donate Body</string>
+    <string name="transbtn">Organ Transplant</string>
+    <string name="lawbtn">Law on Transplant</string>
+    <string name="govbtn">Government Organization</string>
+    <string name="helpbtn">Helpline - 24/7</string>
+    <string name="donateorgan">donate_organ_png</string>
+
 </resources>
