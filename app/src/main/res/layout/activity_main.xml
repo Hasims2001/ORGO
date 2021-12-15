@@ -58,11 +58,23 @@
         app:layout_constraintVertical_bias="0.012"
         app:srcCompat="@drawable/fivth" />
 
+<!--    <ImageView-->
+<!--        android:id="@+id/logindesign"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:contentDescription="@string/log_in"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/login" />-->
+
     <EditText
         android:id="@+id/usernamedata"
         android:layout_width="230dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="308dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="@font/allerta_stencil"
         android:hint="@string/username"
@@ -70,18 +82,18 @@
         android:inputType="textEmailAddress"
         android:text="Hasims2001"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/thirdart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/loginpng"
-        app:layout_constraintVertical_bias="0.931"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="230dp"
         android:layout_height="51dp"
+        android:layout_marginTop="3dp"
         android:ems="10"
         android:fontFamily="@font/allerta_stencil"
         android:hint="@string/userpassword"
@@ -89,29 +101,27 @@
         android:inputType="textPassword"
         android:text="Hasim8980"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/secondart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernamedata"
-        app:layout_constraintVertical_bias="0.188"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/submitbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/allerta_stencil"
         android:text="@string/submitbtn"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#00558d"
-        app:layout_constraintBottom_toBottomOf="@+id/thirdart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/account"
@@ -120,10 +130,10 @@
         android:text="@string/don_t_have_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.495" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
 
     <TextView
         android:id="@+id/signupbtn"
@@ -134,26 +144,26 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toEndOf="@+id/account"
-        app:layout_constraintTop_toTopOf="@+id/password"
-        app:layout_constraintVertical_bias="0.591"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/forgotpwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="208dp"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/allerta_stencil"
         android:text="@string/forgot_password"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/submitbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/password"
-        app:layout_constraintVertical_bias="0.836"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

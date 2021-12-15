@@ -32,8 +32,20 @@
     <string name="donatebodybtn">Donate Body</string>
     <string name="transbtn">Organ Transplant</string>
     <string name="lawbtn">Law on Transplant</string>
-    <string name="govbtn">Government Organization</string>
+    <string name="govbtn">Government Org.</string>
     <string name="helpbtn">Helpline - 24/7</string>
     <string name="donateorgan">donate_organ_png</string>
+    <string name="donateorganpng">Donate Organ</string>
+    <string name="donatebodypng">Donate Body</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="donarcard">Donar Card</string>
+    <string name="aboutus">About ORGO</string>
+    <string name="share">Share</string>
+    <string name="logout">Logout</string>
+    <string name="slogan"><i>Let\'s share our life with others.</i></string>
 
+    <string name="navigation_open">Open Navigation drawer</string>
+    <string name="navigation_close">Close Navigation drawer</string>
+    <string name="logo">orgo logo png</string>
 </resources>

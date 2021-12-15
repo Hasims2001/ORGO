@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+
+        <item
+            android:id="@+id/homebtn"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/profilebtn"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/profile" />
+
+        <item
+            android:id="@+id/donarbtn"
+            android:icon="@drawable/ic_card"
+            android:title="@string/donarcard" />
+
+        <item
+            android:id="@+id/aboutbtn"
+            android:icon="@drawable/ic_about"
+            android:title="@string/aboutus" />
+        <item
+            android:id="@+id/sharebtn"
+            android:icon="@drawable/ic_shre"
+            android:title="@string/share" />
+
+        <item
+            android:id="@+id/logoutbtn"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+
+
+    </group>
+</menu>
