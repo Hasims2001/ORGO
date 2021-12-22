@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ORGO</string>
     <string name="enter_password">Password</string>
@@ -21,18 +22,21 @@
     <string name="loginpng">"login png "</string>
     <string name="logopng">logo png</string>
     <string name="username">Username</string>
-    <string name="textforgotpwd">You will get link on your registered email for reset your password...</string>
+    <string name="textforgotpwd">You will get link on your registered email for reset your password!.</string>
     <string name="userforgotpwd">Registered Username</string>
     <string name="userpassword">Password</string>
     <string name="submitbtn">SUBMIT</string>
     <string name="forgotpwd">ForgotPasswordPNG</string>
 
-<!--   dashboard string -->
+
+    <!--   dashboard string -->
     <string name="donatebtn">Donate Organ</string>
     <string name="donatebodybtn">Donate Body</string>
+    <string name="knowbtn">Organ Donation</string>
+    <string name="awerbtn">Donation Awareness</string>
     <string name="transbtn">Organ Transplant</string>
     <string name="lawbtn">Law on Transplant</string>
-    <string name="govbtn">Government Org.</string>
+    <string name="govbtn">Organization</string>
     <string name="helpbtn">Helpline - 24/7</string>
     <string name="donateorgan">donate_organ_png</string>
     <string name="donateorganpng">Donate Organ</string>
@@ -44,8 +48,141 @@
     <string name="share">Share</string>
     <string name="logout">Logout</string>
     <string name="slogan"><i>Let\'s share our life with others.</i></string>
-
     <string name="navigation_open">Open Navigation drawer</string>
     <string name="navigation_close">Close Navigation drawer</string>
     <string name="logo">orgo logo png</string>
+
+
+    <!-- Law on Transplant -->
+    <string name="heading_law"><b>Laws and Rules Governing Organ Transplantation in India</b></string>
+    <string name="para_one">
+        <p>The primary legislation related to organ donation and transplantation in India, Transplantation of Human Organs Act, was passed in 1994 and is aimed at regulation of removal, storage and transplantation of human organs for therapeutic purposes and for prevention of commercial dealings in human organs.</p> \n
+        <p>In India, matters related to health are governed by each state. The Act was initiated at the request of Maharashtra, Himachal Pradesh and Goa (who therefore adopted it by default) and was subsequently adopted by all states except Andhra Pradesh and Jammu &amp; Kashmir. Despite a regulatory framework, cases of commercial dealings in human organs were reported in the media. An amendment to the act was proposed by the states of Goa, Himachal Pradesh and West Bengal in 2009 to address inadequacies in the efficacy, relevance and impact of the Act. The amendment to the Act was passed by the parliament in 2011, and the rules were notified in 2014. The same is adopted by the proposing states and union territories by default and may be adopted by other states by passing a resolution.</p> \n \n
+<p><b>The main provisions of the Act (including the amendments and rules of 2014) are as follows:</b></p> \n \n
+        <p><b>A</b> . Brain death identified as a form of death. Process and criteria for brain death certification defined (Form 10 )</p>\n
+         <p><b>B</b>. Allows transplantation of human organs and tissues from living donors and cadavers (after cardiac or brain death)</p>\n
+         <p><b>C</b>. Regulatory and advisory bodies for monitoring transplantation activity and their constitution defined.</p>\n
+         <p>(i) Appropriate Authority (AA): inspects and grants registration to hospitals for transplantation enforces required standards for hospitals, conducts regular inspections to examine the quality of transplantations. It may conduct investigations into complaints regarding breach of provisions of the Act, and has the powers of a civil court to summon any person, request documents and issue search warrants.</p>\n
+         <p>(ii)  Advisory Committee: consisting of experts in the domain who shall advise the appropriate authority.</p>\n
+         <p>(iii) Authorization Committee (AC): regulates living donor transplantation by reviewing each case to ensure that the living donor is not exploited for monetary considerations and to prevent commercial dealings in transplantation. Proceedings to be video recorded and decisions notified within 24 hours. Appeals against their decision may be made to the state or central government.</p>\n
+         <p>(iv) Medical board (Brain Death Committee): Panel of doctors responsible for brain death certification. In case of non-availability of neurologist or neurosurgeon, any surgeon, physician, anaesthetist or intensivist, nominated by medical administrator in-charge of the hospital may certify brain death.</p>\n
+         <p><b>D</b>. Living donors are classified as either a near relative or a non-related donor.</p>\n
+         <p>(i) A near-relative (spouse, children, grandchildren, siblings, parents and grandparents) needs permission of the doctor in-charge of the transplant center to donate his organ.</p>\n
+         <p>(ii) A non-related donor needs permission of an Authorization Committee established by the state to donate his organs.</p>\n
+
+         <p><b>E</b>. Swap Transplantation: When a near relative living donor is medically incompatible with the recipient, the pair is permitted to do a swap transplant with another related unmatched donor/recipient pair.</p>\n
+         <p><b>F</b>. Authorization for organ donation after brain death</p>\n
+         <p>(i) May be given before death by the person himself/herself or</p>\n
+         <p>(ii) By the person in legal possession of the body. A doctor shall ask the patient or relative of every person admitted to the ICU whether any prior authorization had been made. If not, the patient or his near relative should be made aware of the option to authorize such donation.</p>\n
+         <p>(iii) Authorization process for organ or tissue donation from unclaimed bodies outlined.</p>\n
+         <p><b>G</b>. Organ retrieval permitted from any hospital with ICU facility once registered with the appropriate authority. Any hospital having Intensive Care Unit (ICU) facilities along with manpower, infrastructure and equipment as required to diagnose and maintain the brain-stem dead person and to retrieve and transport organs and tissues including the facility for their temporary storage, can register as a retrieval center.</p>\n
+         <p><b>H</b>. Cost of donor management, retrieval, transportation and preservation to be borne by the recipient, institution, government, NGO or society, and not by the donor family.</p>\n
+         <p><b>I</b>. Procedure for organ donation in medico-legal cases defined to avoid jeopardizing determination of the cause of death and delay in retrieval of organs.</p>\n
+         <p><b>J</b>. Manpower and Facilities required for registration of a hospital as a transplant center outlined.</p>\n
+         <p><b>K</b>. Infrastructure, equipment requirements and guidelines and standard operating procedures for tissue banks outlined.</p>\n
+         <p><b>L</b>. Qualifications of transplant surgeons, cornea and tissue retrieval technicians defined.</p>\n
+         <p><b>M</b>. Appointment of transplant coordinators (with defined qualifications) made mandatory in all transplant centers.</p>\n
+         <p><b>N</b>. Non-governmental organisations, registered societies and trusts working in the field of organ or tissue removal, storage or transplantation will require registration.</p>\n
+         <p><b>O</b>. The central government to establish a National Human Organs and Tissues Removal and Storage Network i.e. NOTTO (National Organ &amp; Tissue Transplant Organisation), ROTTO (Regional Organ &amp; Tissue Transplant Organisation) and SOTTO (State Organ &amp; Tissue Transplant Organisation). Website www.notto.nic.in. Manner of establishing National or Regional or State Human Organs and Tissues Removal and Storage Networks and their functions clearly stated.</p>\n
+         <p><b>P</b>. The central government shall maintain a registry of the donors and recipients of human organs and tissues.</p>\n
+         <p><b>Q</b>. Penalties for removal of organ without authority, making or receiving payment for supplying human organs or contravening any other provisions of the Act have been made very stringent in order to serve as a deterrent for such activities.</p>\n \n
+          <p><b>The various forms outlined in the rules are as follows:</b></p>\n \n
+       <p>Form 1: Near-relative consent \n
+Form 2: Spouse consent \n
+Form 3: Other than near-relative donor consent \n
+Form 4: Psychiatrist evaluation of the donor \n
+Form 5: HLA DNA profiling report \n
+Form 7: Self consent for deceased donation \n
+Form 8: Consent for organ donation from family (also applicable for minors) \n
+Form 9: Consent for organ donation from unclaimed bodies \n
+Form 10: Brain death declaration form \n
+Form 11: Joint transplant application by donor / recipient \n
+Form 12: Registration of hospital for organ transplantation \n
+Form 13: Registration of hospital for organ retrieval \n
+Form 16: Grant of registration \n
+Form 17: Renewal of registration \n
+Form 18: Decision by hospital authorization committee \n
+Form 19: Decision by district authorization committee  \n
+Form 20: Verification of Domicile for non near-relative \n
+Form 21: Letter from Embassy  \n
+       </p> \n \n
+
+<p>All Information taken from <a href="https://www.organindia.org/">https://www.organindia.org/</a></p>
+    </string>
+
+
+    <!-- Organization -->
+    <string name="Organindia"><u>organindia.org</u></string>
+    <string name="mohanfoundation"><u>mohanfoundation.org</u> </string>
+    <string name="dghs.gov"><u>dghs.gov.in</u></string>
+    <string name="kidney.org"><u>kidney.org</u></string>
+
+
+    <!-- Donation Awareness -->
+    <string name="para_aware">
+    <p>Yes, even you can help us spread awareness on organ donation! Organise a short awareness session given by us at your office, college, school, club or anywhere else. Help us get more of your friends, colleagues, relatives and others know more about organ donation. Consider the following:</p>\n
+    <p>India is struggling with acute shortage of organs for transplantation. It is estimated that more than a million people suffer with end stage organ failure, but only a handful of 3,500 transplants are performed annually. At least 15 patients die every day waiting for organs and every 10 minutes a new name is added to this waiting list. Undoubtedly, the demand far outstrips the availability of organs. And no one can escape the harsh reality.</p>\n
+    <p>Awareness on organ donation, is therefore the only way out of this depressing scenario. The more potential donors there are, the more the likelihood of organs becoming available to save lives. Unfortunately, very people in India have any idea about organ donation, or how they could potentially help after their deaths.</p>\n
+    <p>We are there to give a short presentation to anyone who is interested in an effort to encourage people to become organ donors, or at the very least – know more about organ donation.</p>\n
+    <p>Our presentation is 25-30 minutes long which includes a short 5 minute film, and is followed by questions from the audience. We will then offer people the option of signing up for Donor Cards. We require an LCD and screen. We don’t charge for anything. All we need is your time.</p>\n
+    <p>If you’re interested in having us come and present somewhere at any, time please call us at +91-6355850257.</p>
+    </string>
+    <string name="cele">celebrities_img</string>
+    <string name="target">targets_img</string>
+    <string name="gift">giftoflife</string>
+
+
+
+
+    <!-- Know Donation -->
+    <string name="firstdrop">What is Organ Donation?</string>
+    <string name="firstdropanswer">
+        <p>Organ donation is the entire practice of retrieving a human organ from a living or deceased person, who is referred to as a Donor, and transplanting it into a recipient. The recipient will be a patient who is suffering from organ failure and who will not survive unless she/he receives an organ replacement. The process of recovering organs is called Retrieval.
+       </p>\n
+        <p><b>What is Tissue Donation?</b></p>\n
+        <p>Tissue Donation is the process of Retrieving or Procuring tissues from a living or deceased persons, called a Donor, and transplanted into the Recipient who needs it.</p>\n
+        <p>Medical Science has made tremendous progress in recent times in the field of organ donation and transplantation, with organ donation from one person capable of saving up to 9 lives and improving the lives of many others.</p>\n
+        <p>However, due to the prevalence of myths about organ donation, and the lack of awareness about the topic in India, a majority of people do not take up this noble cause for the benefit of others.</p>\n
+        <p><b>Which Organs Can Be Donated?</b></p>\n
+        <p>Let’s take a closer look at the different organs that can be donated by a person after death and while the person is still alive. There are eight organs that can be donated and transplanted:</p>\n
+        <ol>
+            <li>Kidneys: Both kidneys can be donated by a deceased donor. On average the lifespan of a transplanted kidney is around nine years, but it varies from individual to individual. Of all organs in the human body, the demand for kidneys is the highest, and kidneys are the most frequently donated organs. A kidney disease most likely affects both kidneys at the same time. A living donor can easily donate one kidney to someone and function well for the rest of their lives.</li>
+            <li>Liver: The liver is an important organ with primary functions of bile production &amp; excretion; excretion of bilirubin, cholesterol, hormones, and drugs; metabolism of fats, proteins and carbohydrates; enzyme activation; storage of glycogen, vitamins and minerals; synthesis of plasma proteins; blood detoxification and purification. The liver is the only organ in the human body that can grow cells and regenerate. A donated liver from someone who has died (a deceased donor) can further be split into two pieces and transplanted into two different people to save their lives. A living donor can have a portion of her/his liver removed to donate to someone, and the remaining portion will regenerate to almost its full previous size.</li>
+            <li>Heart: A heart is a muscular organ which pumps blood through the human body. In a person’s life, the heart will beat around 2.5 billion times on average and keep the blood running in the body. After being retrieved from the donor, a heart can survive for 4-6 hours only.</li>
+            <li>Lungs: Single or double-lung transplants can be performed from deceased donors. Additionally, living donors can donate a single lobe from the lungs, though it will not regenerate.</li>
+            <li>Pancreas: A deceased donor pancreas can be transplanted into an ailing patient. A living donor can also donate a portion of the pancreas and still retain pancreas functionality.</li>
+            <li>Intestine: After death, a donor can donate their intestine. Although quite rare, a living donor can donate a portion of the intestine.</li>
+        </ol>
+        <p>In addition to organs, you can also donate tissues such as corneas, skin, bones, ligaments, heart valves etc.</p>\n \n
+        <p>Which Tissues Can Be Donated?</p>\n
+        <p>Layers of cells that function together to serve a specific purpose are called Tissues. Most Tissues should be donated within 6 hours of the donor’s death.</p>\n
+        <ol>
+            <li>Cornea: Cornea donation or eye donation is the most common tissue donation. The Cornea is a transparent covering over the eye. It is also the eye’s primary focusing element. Recipients who suffer from corneal blindness can gain their sight again after a corneal transplant. These patients are those who may have been blinded by an accident, infection or disease. Either the entire Cornea can be transplanted or it can be transplanted in parts. A Corneal Transplant is does not need any anti-rejection drugs in the recipient. Corneas from all ages of recipients are effective as long as the Doctors as they are healthy.</li>
+            <li>Bones: Bones from deceased donors are used to replace bones of recipients whose bones are cancerous. A Bone transplant can be done instead of amputating the cancerous arm.</li>
+            <li>Skin: Skin can be used as grafting for burn victims, acid attack victims or for post-mastectomy breast reconstruction, amongst other things.</li>
+            <li>Veins: Donated veins are commonly used in surgeries for cardiac bypass.</li>
+
+        </ol>
+        <p>Apart from these, other tissues that can be donated are muscles, tendons, ligaments, cartilage and heart valves.</p>\n
+
+    </string>
+
+    <string name="seconddrop">Type of Organ Donations</string>
+    <string name="thirddrop">What is the process of Organ Donation?</string>
+    <string name="fourthdrop">Law Governing Organ Donation In India</string>
+    <string name="fivthdrop">Brain Death and Organ Donation</string>
+    <string name="sixthdrop">What happens once Brain Stem Death is Declared?</string>
+    <string name="seventhdrop">How long can an organ survive inside and outside the body in a Deceased Organ Donation?</string>
+    <string name="eigthdrop">Tests Establishing Brain Stem Death</string>
+    <string name="ninthdrop">Organ Allocation Process in India</string>
+    <string name="tenthdrop">What potential organ recipients need to know</string>
+    <string name="eleventhdrop">Pledging your organs and becoming an organ donor</string>
+    <string name="twelvthdrop">Situation in India &amp; Data</string>
+
+
+<!--        <p></p>\n-->
+<!--        <p></p>\n-->
+<!--        <p></p>\n-->
+<!--        <p></p>\n-->
+<!--        <p></p>\n-->
 </resources>

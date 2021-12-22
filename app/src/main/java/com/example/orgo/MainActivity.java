@@ -1,8 +1,13 @@
 package com.example.orgo;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -102,6 +107,27 @@ public class MainActivity extends AppCompatActivity {
         forgot_password.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, forgot_pwd.class)));
 
     }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setMessage("Do you want to Exit?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
 
+                finishAffinity();
+            }
+        });
+        builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert=builder.create();
+        alert.show();
+    }
 
 }

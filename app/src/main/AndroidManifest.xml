@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,21 +13,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ORGO">
         <activity
+            android:name=".know_donation"
+            android:exported="false" />
+        <activity
+            android:name=".awareness"
+            android:exported="false" />
+        <activity
+            android:name=".organization"
+            android:exported="false" />
+        <activity
+            android:name=".law_trans"
+            android:exported="false" />
+        <activity
             android:name=".dashboard"
             android:exported="false" />
         <activity
             android:name=".forgot_pwd"
             android:exported="false"
             android:label="ORGO"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".sign_up"
             android:exported="false"
             android:label="ORGO"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

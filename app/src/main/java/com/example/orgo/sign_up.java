@@ -71,7 +71,7 @@ public class sign_up extends AppCompatActivity {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                                 if (snapshot.exists()){
-                                                    txt_name.setError("User already exists,Try to login");
+                                                    txt_name.setError("This Usernmame is already exists,Try to login");
 
                                                 }else{
                                                     txt_name.setError(null);
