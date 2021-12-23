@@ -1,14 +1,19 @@
 package com.example.orgo;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -18,10 +23,10 @@ public class know_donation extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-
-    CardView firstbox, secondbox;
+    LinearLayout first_layout;
+    CardView first_card, second_card;
     ImageView img_one, one_img;
-    TextView first_ans;
+    TextView first_dis, first_txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,28 +43,33 @@ public class know_donation extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        first_dis = findViewById(R.id.first_dis);
+        first_layout = findViewById(R.id.first_layout);
+        first_card = findViewById(R.id.first_card);
+        img_one = findViewById(R.id.img_one);
+        one_img = findViewById(R.id.one_img);
 
-        firstbox = findViewById(R.id.onebox);
-        img_one = findViewById(R.id.imgone);
-        one_img = findViewById(R.id.oneimg);
-        first_ans = findViewById(R.id.firstanswer);
+        first_card.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onClick(View v) {
+                int x = (first_dis.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+                TransitionManager.beginDelayedTransition(first_layout, new AutoTransition());
 
-        firstbox.setOnClickListener(v -> {
-            if(img_one.getVisibility()==View.VISIBLE){
-            img_one.setVisibility(View.INVISIBLE);
-            one_img.setVisibility(View.VISIBLE);
-            first_ans.setVisibility(View.VISIBLE);
-            firstbox.setMinimumHeight(1000);
-            first_ans.setMinimumHeight(1000);
+                first_dis.setVisibility(x);
 
-            }
-           else if(one_img.getVisibility()==View.VISIBLE){
-                one_img.setVisibility(View.INVISIBLE);
-                first_ans.setVisibility(View.INVISIBLE);
-                img_one.setVisibility(View.VISIBLE);
-//                firstbox.setMinimumHeight();
-//                first_ans.setMinimumHeight(1000);
+                  if(img_one.getVisibility()==View.VISIBLE) {
+                      img_one.setVisibility(View.INVISIBLE);
+                      one_img.setVisibility(View.VISIBLE);
+                  }
+                  else if(one_img.getVisibility()==View.VISIBLE) {
+                      one_img.setVisibility(View.INVISIBLE);
+                      img_one.setVisibility(View.VISIBLE);
+                  }
             }
         });
+
+
     }
+
 }
