@@ -1,19 +1,16 @@
 package com.example.orgo;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.transition.AutoTransition;
-import android.transition.TransitionManager;
-import android.view.View;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -23,16 +20,19 @@ public class know_donation extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    LinearLayout first_layout;
-    CardView first_card, second_card;
+    LinearLayout layout_one;
+    CardView card_one, second_card;
     ImageView img_one, one_img;
-    TextView first_dis, first_txt;
+    TextView dis_one, first_txt;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_know_donation);
 
-        drawerLayout = findViewById(R.id.knowpage);
+        drawerLayout = findViewById(R.id.donatebody);
         navigationView = findViewById(R.id.sidemenubar);
         toolbar = findViewById(R.id.Tool);
 
@@ -43,31 +43,38 @@ public class know_donation extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        first_dis = findViewById(R.id.first_dis);
-        first_layout = findViewById(R.id.first_layout);
-        first_card = findViewById(R.id.first_card);
-        img_one = findViewById(R.id.img_one);
-        one_img = findViewById(R.id.one_img);
+        String[] heading = getResources().getStringArray(R.array.heading);
+        String[] txt =  getResources().getStringArray(R.array.answers);
 
-        first_card.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-            @Override
-            public void onClick(View v) {
-                int x = (first_dis.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
-                TransitionManager.beginDelayedTransition(first_layout, new AutoTransition());
+        ListView listView = findViewById(R.id.listview);
+        knowdontnAdapter knad = new knowdontnAdapter(this, R.layout.organztn_layout, heading, txt);
+        listView.setAdapter(knad);
 
-                first_dis.setVisibility(x);
-
-                  if(img_one.getVisibility()==View.VISIBLE) {
-                      img_one.setVisibility(View.INVISIBLE);
-                      one_img.setVisibility(View.VISIBLE);
-                  }
-                  else if(one_img.getVisibility()==View.VISIBLE) {
-                      one_img.setVisibility(View.INVISIBLE);
-                      img_one.setVisibility(View.VISIBLE);
-                  }
-            }
-        });
+//        dis_one = findViewById(R.id.dis_one);
+//        layout_one = findViewById(R.id.layout_one);
+//        card_one = findViewById(R.id.card);
+//        img_one = findViewById(R.id.img_one);
+//        one_img = findViewById(R.id.one_img);
+//
+//        card_one.setOnClickListener(new View.OnClickListener() {
+//            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+//            @Override
+//            public void onClick(View v) {
+//                int x = (dis_one.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+//                TransitionManager.beginDelayedTransition(layout_one, new AutoTransition());
+//
+//                dis_one.setVisibility(x);
+//
+//                  if(img_one.getVisibility()==View.VISIBLE) {
+//                      img_one.setVisibility(View.INVISIBLE);
+//                      one_img.setVisibility(View.VISIBLE);
+//                  }
+//                  else if(one_img.getVisibility()==View.VISIBLE) {
+//                      one_img.setVisibility(View.INVISIBLE);
+//                      img_one.setVisibility(View.VISIBLE);
+//                  }
+//            }
+//        });
 
 
     }

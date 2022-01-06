@@ -13,14 +13,19 @@
             android:title="@string/profile" />
 
         <item
-            android:id="@+id/donarbtn"
-            android:icon="@drawable/ic_card"
-            android:title="@string/donarcard" />
+            android:id="@+id/mythbtn"
+            android:icon="@drawable/book"
+            android:title="@string/mythandfact" />
 
         <item
             android:id="@+id/aboutbtn"
             android:icon="@drawable/ic_about"
             android:title="@string/aboutus" />
+
+        <item
+            android:id="@+id/feedbtn"
+            android:icon="@drawable/ic_feedback"
+            android:title="@string/feedback" />
         <item
             android:id="@+id/sharebtn"
             android:icon="@drawable/ic_shre"

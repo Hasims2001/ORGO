@@ -24,7 +24,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="ORGO"
+                app:title="Law on Transplant"
 
                 tools:ignore="MissingConstraints" />
 
@@ -34,10 +34,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/allerta_stencil"
-                android:gravity="center|center_horizontal|center_vertical"
+
                 android:padding="10dp"
                 android:text="@string/heading_law"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:textColor="#000000"
                 android:textSize="19sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView2"

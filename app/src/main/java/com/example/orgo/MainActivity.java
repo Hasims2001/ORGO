@@ -1,13 +1,11 @@
 package com.example.orgo;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        submit_btn = (Button) findViewById(R.id.submitbtn);
+        submit_btn = (Button) findViewById(R.id.otpsubmitbtn);
         txt_name = (EditText) findViewById(R.id.usernamedata);
         txt_pwd = (EditText) findViewById(R.id.password);
 
@@ -69,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                                         txt_pwd.setError(null);
                                         Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(),dashboard.class);
+                                        intent.putExtra("txtname", txt_name.getText().toString());
                                         startActivity(intent);
 
                                         finish();

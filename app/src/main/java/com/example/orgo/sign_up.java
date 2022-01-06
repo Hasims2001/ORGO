@@ -10,12 +10,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.concurrent.TimeUnit;
 
 public class sign_up extends AppCompatActivity {
     Button submit_btn;
@@ -30,7 +35,7 @@ public class sign_up extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        submit_btn = findViewById(R.id.submitbtn);
+        submit_btn = findViewById(R.id.otpsubmitbtn);
         txt_name = findViewById(R.id.username);
         txt_phone = findViewById(R.id.userphone);
         txt_mail = findViewById(R.id.usernamedata);
@@ -70,35 +75,47 @@ public class sign_up extends AppCompatActivity {
                                         check_usermail.addListenerForSingleValueEvent(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                if (snapshot.exists()){
+                                                if (snapshot.exists()) {
                                                     txt_name.setError("This Usernmame is already exists,Try to login");
 
-                                                }else{
+                                                } else {
                                                     txt_name.setError(null);
-
 
                                                     if (pwd.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$")) {
                                                         txt_pwd.setError(null);
                                                         if (conpwd.equals(pwd)) {
-                                                            firebaseDatabase = FirebaseDatabase.getInstance();
-                                                            reference = firebaseDatabase.getReference("userdata");
+                                                            Toast.makeText(sign_up.this, "Wait for 10 SECONDS", Toast.LENGTH_SHORT).show();
+                                                            PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                                                                    "+91" + txt_phone.getText().toString(),
+                                                                    60,
+                                                                    TimeUnit.SECONDS,
+                                                                    sign_up.this,
+                                                                    new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                                                                        @Override
+                                                                        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
 
-                                                            String name_store = txt_name.getText().toString();
-                                                            String phone_store = txt_phone.getText().toString();
-                                                            String mail_store = txt_mail.getText().toString();
-                                                            String pwd_store = txt_pwd.getText().toString();
-                                                            String conpwd_store = txt_conpwd.getText().toString();
+                                                                        }
 
-                                                            storingdata storingdataobj = new storingdata(name_store, phone_store, mail_store, pwd_store, conpwd_store);
+                                                                        @Override
+                                                                        public void onVerificationFailed(@NonNull FirebaseException e) {
+                                                                            Toast.makeText(sign_up.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                        }
 
-                                                            reference.child(name_store).setValue(storingdataobj);
+                                                                        @Override
+                                                                        public void onCodeSent(@NonNull String backendotp, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                                                            Intent intent = new Intent(getApplicationContext(), verifyotp.class);
+                                                                            intent.putExtra("name", txt_name.getText().toString());
+                                                                            intent.putExtra("mobile", txt_phone.getText().toString());
+                                                                            intent.putExtra("mail", txt_mail.getText().toString());
+                                                                            intent.putExtra("pwd", txt_pwd.getText().toString());
+                                                                            intent.putExtra("conpwd", txt_conpwd.getText().toString());
+                                                                            intent.putExtra("backendotp", backendotp);
+                                                                            startActivity(intent);
+                                                                            finish();
 
-                                                            Toast.makeText(getApplicationContext(),"Register Successfully!",Toast.LENGTH_SHORT).show();
-
-                                                            Intent intent = new Intent(getApplicationContext(),dashboard.class);
-                                                            startActivity(intent);
-                                                            finish();
-
+                                                                        }
+                                                                    }
+                                                            );
 
 
                                                         } else {
@@ -120,7 +137,7 @@ public class sign_up extends AppCompatActivity {
                                     } else {
                                         txt_mail.setError("Invalid Email");
                                     }
-                                }else{
+                                } else {
                                     txt_phone.setError("Please Enter Valid Mobile Number");
                                 }
                             } else {
@@ -144,8 +161,6 @@ public class sign_up extends AppCompatActivity {
 
 
     }
-
-
 
 
 }

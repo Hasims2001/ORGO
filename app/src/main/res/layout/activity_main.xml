@@ -6,59 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/firstart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="310dp"
-        android:contentDescription="@string/liverpng"
-        app:layout_constraintBottom_toTopOf="@+id/secondart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545"
-        app:srcCompat="@drawable/first" />
-
-    <ImageView
-        android:id="@+id/secondart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/heart"
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstart"
-        app:srcCompat="@drawable/second" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/thirdart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/logopng"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/third" />
+        <ImageView
+            android:id="@+id/firstart"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/liver_png"
+            app:srcCompat="@drawable/first" />
 
-    <ImageView
-        android:id="@+id/loginpng"
-        android:layout_width="129dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/loginpng"
-        app:layout_constraintBottom_toTopOf="@+id/secondart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstart"
-        app:layout_constraintVertical_bias="0.012"
-        app:srcCompat="@drawable/fivth" />
+        <ImageView
+            android:id="@+id/thirdart"
+            android:layout_width="match_parent"
+            android:layout_height="603dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56dp"
+            android:contentDescription="@string/logo_png"
+            app:srcCompat="@drawable/third" />
 
-<!--    <ImageView-->
+        <ImageView
+            android:id="@+id/secondart"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@string/heart_png"
+            app:srcCompat="@drawable/second" />
+
+    </RelativeLayout>
+
+    <!--    <ImageView-->
 <!--        android:id="@+id/logindesign"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
@@ -71,99 +64,98 @@
 <!--        app:layout_constraintVertical_bias="0.0"-->
 <!--        app:srcCompat="@drawable/login" />-->
 
-    <EditText
-        android:id="@+id/usernamedata"
-        android:layout_width="230dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/allerta_stencil"
-        android:hint="@string/username"
-        android:importantForAutofill="no"
-        android:inputType="textEmailAddress"
-        android:text="Hasims2001"
-        android:textStyle="bold"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.6">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="230dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="3dp"
-        android:ems="10"
-        android:fontFamily="@font/allerta_stencil"
-        android:hint="@string/userpassword"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:text="Hasim8980"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernamedata"
-        tools:ignore="TextContrastCheck" />
+        <ImageView
+            android:id="@+id/loginpng"
+            android:layout_width="129dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/loginpng"
+            app:srcCompat="@drawable/fivth" />
 
-    <Button
-        android:id="@+id/submitbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/allerta_stencil"
-        android:text="@string/submitbtn"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:backgroundTint="#00558d"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/usernamedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/allerta_stencil"
+            android:hint="@string/username"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:text="Hasims2001"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/don_t_have_account"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.351"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.809" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ems="10"
+            android:fontFamily="@font/allerta_stencil"
+            android:hint="@string/userpassword"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:text="Hasims2001"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/signupbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textColor="#e55467"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
-        app:layout_constraintStart_toEndOf="@+id/account"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81"
-        tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:id="@+id/forgotpwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/allerta_stencil"
+            android:gravity="start"
+            android:text="@string/forgot_password"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/forgotpwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:fontFamily="@font/allerta_stencil"
-        android:text="@string/forgot_password"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/submitbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/otpsubmitbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/allerta_stencil"
+            android:text="@string/submitbtn"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#00558d" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_account" />
+
+            <TextView
+                android:id="@+id/signupbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:textColor="#e55467"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

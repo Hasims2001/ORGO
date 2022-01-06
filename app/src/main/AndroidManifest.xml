@@ -3,6 +3,7 @@
     package="com.example.orgo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -13,19 +14,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ORGO">
         <activity
+            android:name=".feed_back"
+            android:label="Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".user_profile"
+            android:label="Profile"
+            android:exported="false" />
+        <activity
+            android:name=".donate_body"
+            android:label="Donate Body"
+            android:exported="false" />
+        <activity
+            android:name=".myth_fact"
+            android:label="Myth &amp; Fact About Organ Donation"
+            android:exported="false" />
+        <activity
+            android:name=".about_orgo"
+            android:label="About Organ donation"
+            android:exported="false" />
+        <activity
+            android:name=".verifyotp"
+            android:exported="false"
+            android:label="ORGO"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".know_donation"
             android:exported="false" />
         <activity
             android:name=".awareness"
+            android:label="Donation Awareness"
             android:exported="false" />
         <activity
             android:name=".organization"
+            android:label="Government Organization"
             android:exported="false" />
         <activity
             android:name=".law_trans"
+            android:label="Law on Transplant"
             android:exported="false" />
         <activity
             android:name=".dashboard"
+            android:label="ORGO"
             android:exported="false" />
         <activity
             android:name=".forgot_pwd"

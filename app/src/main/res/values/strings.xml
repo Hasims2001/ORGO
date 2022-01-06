@@ -22,12 +22,54 @@
     <string name="loginpng">"login png "</string>
     <string name="logopng">logo png</string>
     <string name="username">Username</string>
-    <string name="textforgotpwd">You will get link on your registered email for reset your password!.</string>
+    <string name="textforgotpwd">You will get otp on your registered mobile number!</string>
     <string name="userforgotpwd">Registered Username</string>
     <string name="userpassword">Password</string>
     <string name="submitbtn">SUBMIT</string>
     <string name="forgotpwd">ForgotPasswordPNG</string>
+    <string name="hintotp">Please enter the OTP sent to you.</string>
+    <string name="didnt">Didn\'t receive OTP?</string>
+    <string name="resend"><u>RESEND OTP</u></string>
+    <string name="give_feedback_here">Give Feedback here!</string>
+    <string name="mailaddress">Mail ID</string>
+    <string name="headdingfeed">We would like your feedback to improve our app.</string>
 
+
+    <!-- side menu -> Myth and Fact   -->
+    <string name="heading_myfa">Myths and Facts About Organ Donation</string>
+    <string name="myth1">Myth No.1 : Anyone can become an organ donor.</string>
+    <string name="fact1">Certain medical conditions automatically disqualify one from donating organs. The decision to use an organ is based on strict medical criteria. At the time of death, only medical professionals can determine whether a prospect’s organs are suitable for transplantation. Some diseases rule out donation including active cancer, HIV, Hepatitis or  any active infection</string>
+    <string name="myth2">Myth No.2 : Organ donation is not necessary in India</string>
+    <string name="fact2">Unofficial statistics indicate that there are nearly 300 deaths every day due to organ failure. That is more than one lakh deaths per year.  As per records, out of the 9.5 million deaths in India annually, at least 1 lakh are believed to be potential donors; however less than 200 actually become donors. As these figures suggest, India needs organ donors.</string>
+    <string name="myth3">Myth No.3 : An organ recipient cannot be a donor.</string>
+    <string name="fact3">Due to the administration of immunosuppressive drugs, tissue donation can be a problem. Otherwise, the medical team can only determine whether a healthy organ can be retrieved.</string>
+    <string name="myth4">Myth No.4 : Organ/tissue removal will affect cremation/burial arrangements.</string>
+    <string name="fact4">The removal of organs or tissues will not interfere with customary funeral or burial arrangements. The appearance of the body is not altered.  A super specialized surgical transplant team removes the organs and tissues which can be transplanted in other patients.</string>
+    <string name="myth5">Myth No.5 : It is enough just to have a donor card</string>
+    <string name="fact5"> No. You have to carry it at all times and also inform your relatives about your wish to donate your organs so that they give consent for donation when the circumstance arises. Becoming an organ donor takes less than 2 minutes.</string>
+    <string name="myth6">Myth No.6 : Only the wealthy can afford an organ transplant</string>
+    <string name="fact6">Factors such as blood group matching, the length of time being on the waiting list and severity of the disease play a role in classifying high priority and low priority cases.</string>
+    <string name="myth7">Myth No.7 : Organ and tissue donation causes disfiguration.</string>
+    <string name="fact7">Organ donation does not disfigure the body. Like any other surgery, surgical incisions are not visible as such.</string>
+    <string name="myth8">Myth No.8 : You have to be related to the recipient</string>
+    <string name="fact8">For qualifying to become a  living donor, you will undergo an extensive transplant evaluation to assess your health. A person with type O blood can donate organs to anyone, as they are “universal donors.” Also, you need not necessarily be from the same racial or ethnic group to donate an organ.</string>
+    <string name="myth9">Myth No.9 : Organ donation can severely impact your health</string>
+    <string name="fact9">Recovery periods vary, but within three months, most donors will return to their pre-donation health. For instance,  after donating a portion of your liver, cells in the remaining lobe regenerate or grow back to the original size. After a kidney donation, one kidney can still effectively remove waste from the body.</string>
+    <string name="myth10">Myth No.10 : Living organ donation is unsafe</string>
+    <string name="fact10">Donors generally spend 2-7 days in recovery before being discharged from the hospital. Death resulting from organ donation is very rare.</string>
+
+
+    <!-- side menu -> about orgo -->
+    <string name="heading_about">About ORGO</string>
+    <string name="first_para">ORGO is a Not-For-Profit, registered Non-Government Charity Organisation in India that works in the field of deceased organ donation and Transplantation.</string>
+    <string name="second_para">Developers :\n </string>
+    <string name="Haism">Hasim S</string>
+    <string name="Jaydeep">Jaydeep J</string>
+    <string name="Aamir">Aamir S</string>
+
+    <!-- side menu -> Profile -->
+    <string name="user_name">username</string>
+    <string name="update">UPDATE DETAILS</string>
 
     <!--   dashboard string -->
     <string name="donatebtn">Donate Organ</string>
@@ -43,8 +85,9 @@
     <string name="donatebodypng">Donate Body</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
-    <string name="donarcard">Donar Card</string>
+    <string name="mythandfact">Myths and Facts</string>
     <string name="aboutus">About ORGO</string>
+    <string name="feedback">Feedback</string>
     <string name="share">Share</string>
     <string name="logout">Logout</string>
     <string name="slogan"><i>Let\'s share our life with others.</i></string>
@@ -112,10 +155,118 @@ Form 21: Letter from Embassy  \n
 
 
     <!-- Organization -->
+    <string name="websitedrop">Websites</string>
     <string name="Organindia"><u>organindia.org</u></string>
     <string name="mohanfoundation"><u>mohanfoundation.org</u> </string>
     <string name="dghs.gov"><u>dghs.gov.in</u></string>
     <string name="kidney.org"><u>kidney.org</u></string>
+
+    <string name="dropheading_one">AIIMS JODHPUR (State Organ and Tissue Transplant Organization (SOTTO))</string>
+    <string name="droplocation_one">Jodhpur</string>
+    <string name="droptxt_one">Basni Industrial Area, Phase-2, Jodhpur, Rajasthan, 342005</string>
+    <string name="drophone1_one"><u>+912912740741</u></string>
+    <string name="drophone2_one"><u>+912912740742</u></string>
+    <string name="dropmail_one"><u>aoadmin@aiimsjodhpur.edu.in</u></string>
+
+    <string name="dropheading_two">ALL INDIA INSTITUTE OF MEDICAL SCIENCES (State Organ and Transplant Organization (SOTTO))</string>
+    <string name="droplocation_two">Rishikesh</string>
+    <string name="droptxt_two">Virbhadra Road, Rishikesh, Uttarkhand, 249201</string>
+    <string name="drophone1_two"><u>0135-2462510</u></string>
+    <string name="drophone2_two"><u>0135-2462968</u></string>
+    <string name="drophone3_two"><u>0135-2462967</u></string>
+    <string name="dropmail_two"><u>rakeshkumar.aoaiims@gmail.com</u></string>
+
+    <string name="dropheading_three">ALL INDIA INSTITUTE OF MEDICAL SCIENCES (State Organ and Transplant Organization (SOTTO))</string>
+    <string name="droplocation_three">Bhubaneswar</string>
+    <string name="droptxt_three">Bhubaneswar, Sijua, Patrapada, Bhubaneswar, Odisha, 751019</string>
+    <string name="drophone1_three"><u>+916742476789</u></string>
+    <string name="dropmail_three"><u>info@aiimsbhubaneswar.edu.in</u></string>
+
+    <string name="dropheading_four">ALL INDIA INSTITUTE OF MEDICAL SCIENCES PATNA (State Organ and Transplant Organization (SOTTO))</string>
+    <string name="droplocation_four">Patna</string>
+    <string name="droptxt_four">Phulwari Sharif, Patna, Bihar, 801505</string>
+    <string name="drophone1_four"><u>+916122451923</u></string>
+    <string name="dropmail_four"><u>admin@aiimspatna.org</u></string>
+
+    <string name="dropheading_five">ALL INDIA INSTITUTE OF MEDICAL SCIENCES BHOPAT (State Organ and Transplant Organization (SOTTO))</string>
+    <string name="droplocation_five">Bhopal</string>
+    <string name="droptxt_five">Saket Nagar, Bhopal,Madhya Pradesh, 462020</string>
+    <string name="drophone1_five"><u>+917552970020</u></string>
+    <string name="dropmail_five"><u>admin@aiimsraipur.edu.in</u></string>
+
+    <string name="dropheading_six">ALL INDIA INSTITUTE OF MEDICAL SCIENCES RAIPUR (State Organ and Transplant Organization (SOTTO))</string>
+    <string name="droplocation_six">Raipur</string>
+    <string name="droptxt_six">Great Eastern Rd, AIIMS Campus, Tatibandh, Raipur, Chhattisgarh, 492099</string>
+    <string name="drophone1_six"><u>+917712572240</u></string>
+    <string name="dropmail_six"><u>director@aiimsraipur.edu.in</u></string>
+
+    <string name="dropheading_seven">Guwahati Medical College (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+    <string name="droplocation_seven">Guwahati</string>
+    <string name="droptxt_seven">GMCH Complex, GMC Hospital Rd, Bhangagarh, Guwahati, Assam, 781032</string>
+    <string name="drophone1_seven"><u>+913612529457</u></string>
+    <string name="dropmail_seven"><u>gmch-asm@nic.in</u></string>
+
+    <string name="dropheading_eight">INSTITUTE OF POST GRADUATE MEDICAL EDUCATION &amp; RESEARCH (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+    <string name="droplocation_eight">Kolkata</string>
+    <string name="droptxt_eight">C/o Director, IPGME&amp;R, 1st Floor, Administrative Block, 244 A.J.C. Bose Road, Kolkata, West Bengal, 700020</string>
+    <string name="drophone1_eight"><u>+913322041101</u></string>
+    <string name="dropmail_eight"><u>director.ipgmer@gmail.com</u></string>
+
+    <string name="dropheading_nine">JEEVANSARTHEKE</string>
+    <string name="droplocation_nine">Bengaluru</string>
+    <string name="droptxt_nine">Near OPD, NIMHANS, Hosur Road, Bengaluru, Karnataka, 560029</string>
+    <string name="drophone1_nine"><i>Phone NO. : Not Available</i></string>
+    <string name="dropmail_nine"><u>zcckbangalore@gmail.com</u></string>
+
+    <string name="dropheading_ten">JEEVANDAN</string>
+    <string name="droplocation_ten">Vijayawada</string>
+    <string name="droptxt_ten">Dr.NTR University of Health, Sciences Gunadala, Vijayawada, Andhra Pradesh, 520008</string>
+    <string name="drophone1_ten"><u>+918662451374</u></string>
+    <string name="dropmail_ten"><u>chairmanaactjeevandan-ap@nic.in</u></string>
+
+    <string name="dropheading_eleven">KING EDWARD MEMORIAL HOSPITAL (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+    <string name="droplocation_eleven">Mumbai</string>
+    <string name="droptxt_eleven">Acharya Dhonde Marg, Parel, Mumbai, Maharashtra, 400012</string>
+    <string name="drophone1_eleven"><u>02224107000</u></string>
+    <string name="dropmail_eleven"><i>Mail : Not Available</i></string>
+
+    <string name="dropheading_twelve">MRITHASA NJEEVANI-KNOS</string>
+    <string name="droplocation_twelve">Trivandrum</string>
+    <string name="droptxt_twelve">Deceased Donor Organ Transplantation Program, Super Speciality Block, Government Medical College Hospital, Trivandrum, Kerala</string>
+    <string name="drophone1_twelve"><u>+914712528386</u></string>
+    <string name="drophone2_twelve"><u>+914712528658</u></string>
+    <string name="drophone3_twelve"><u>+914712117660</u></string>
+    <string name="dropmail_twelve"><u>principalmct@gmail.com</u></string>
+
+    <string name="dropheading_thirteen">NATIONAL ORGAN AND TISSUE TRANSPLANT ORGANIZATION (NOTTO)</string>
+    <string name="droplocation_thirteen">New Delhi</string>
+    <string name="droptxt_thirteen">4th Floor, National Institute of Pathology Building, Safdarjung Hospital Campus, New Delhi, Delhi NCR, 110029</string>
+    <string name="drophone1_thirteen"><u>+911126164770</u></string>
+    <string name="dropmail_thirteen"><u>dir@notto.nic.in</u></string>
+
+    <string name="dropheading_fourteen">POST GRADUATE INSTITUTE OF MEDICAL EDUCATION &amp; RESEARCH (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+    <string name="droplocation_fourteen">Chandigarh</string>
+    <string name="droptxt_fourteen">Research Block B, 6th Floor, Sector 12, Chandigarh, Chandigarh, 160012</string>
+    <string name="drophone1_fourteen"><i>Phone NO. : Not Available</i></string>
+    <string name="dropmail_fourteen"><i>Mail : Not Available</i></string>
+
+    <string name="dropheading_fivteen">RAJASTHAN NETWORK FOR ORGAN SHARING (RNOS)</string>
+    <string name="droplocation_fivteen">Jainpur</string>
+    <string name="droptxt_fivteen">G-*, KJ Lon, Hospital Trimurti Circle, Gangwal Park, Rambag, Jaipur, Rajasthan, 302004</string>
+    <string name="drophone1_fivteen"><u>+919829300541</u></string>
+    <string name="dropmail_fivteen"><u>rnoscadaverdonation@gmail.com</u></string>
+
+    <string name="dropheading_sixteen">SHER - I - KASHMIR INSTITUTE OF MEDICAL SCIENCES</string>
+    <string name="droplocation_sixteen">Srinagar</string>
+    <string name="droptxt_sixteen">Soura, Srinagar, Srinagar, Jammu and Kashmir, 190011</string>
+    <string name="drophone1_sixteen"><u>+911942401013</u></string>
+    <string name="dropmail_sixteen"><u>contactus@skims.ac.in</u></string>
+
+    <string name="dropheading_seventeen">TRANSPLANT AUTHORITY OF TAMIL NADU (TRANSTAN) (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+    <string name="droplocation_seventeen">Chennai</string>
+    <string name="droptxt_seventeen">1045, I Floor, Fourth Circle, Tamil Nadu, Government Multi Super Specialty Hospital, Omandurar Government Estate, Anna Salai, Chennai, Tamil Nadu, 600002</string>
+    <string name="drophone1_seventeen"><u>+914425363141</u></string>
+    <string name="dropmail_seventeen"><u>organstransplant@gmail.com</u></string>
 
 
     <!-- Donation Awareness -->
@@ -132,9 +283,178 @@ Form 21: Letter from Embassy  \n
     <string name="gift">giftoflife</string>
 
 
-
+    <!-- Know Donation -->
 
     <!-- Know Donation -->
+    <string-array name="heading">
+        <item>What is Organ Donation?</item>
+        <item>Type of Organ Donations</item>
+        <item>What is the process of Organ Donation?</item>
+        <item>Law Governing Organ Donation In India</item>
+        <item>Brain Death and Organ Donation</item>
+        <item>What happens once Brain Stem Death is Declared?</item>
+        <item>How long can an organ survive inside and outside the body in a Deceased Organ Donation?</item>
+        <item>Tests Establishing Brain Stem Death</item>
+        <item>Organ Allocation Process in India</item>
+        <item>What potential organ recipients need to know</item>
+        <item>Pledging your organs and becoming an organ donor</item>
+        <item>Situation in India &amp; Data</item>
+    </string-array>
+    <string-array name="answers">
+        <item>
+        \n<p>Organ donation is the entire practice of retrieving a human organ from a living or deceased person, who is referred to as a Donor, and transplanting it into a recipient. The recipient will be a patient who is suffering from organ failure and who will not survive unless she/he receives an organ replacement. The process of recovering organs is called Retrieval.
+       </p>\n\n \n
+        <p><b>What is Tissue Donation?</b></p>\n\n
+        <p>Tissue Donation is the process of Retrieving or Procuring tissues from a living or deceased persons, called a Donor, and transplanted into the Recipient who needs it.</p>\n\n
+        <p>Medical Science has made tremendous progress in recent times in the field of organ donation and transplantation, with organ donation from one person capable of saving up to 9 lives and improving the lives of many others.</p>\n\n
+        <p>However, due to the prevalence of myths about organ donation, and the lack of awareness about the topic in India, a majority of people do not take up this noble cause for the benefit of others.</p>\n\n \n
+        <p><b>Which Organs Can Be Donated?</b></p>\n\n
+        <p>Let’s take a closer look at the different organs that can be donated by a person after death and while the person is still alive. There are eight organs that can be donated and transplanted:</p>\n\n
+        <p>
+            1. Kidneys: Both kidneys can be donated by a deceased donor. On average the lifespan of a transplanted kidney is around nine years, but it varies from individual to individual. Of all organs in the human body, the demand for kidneys is the highest, and kidneys are the most frequently donated organs. A kidney disease most likely affects both kidneys at the same time. A living donor can easily donate one kidney to someone and function well for the rest of their lives.\n
+            2. Liver: The liver is an important organ with primary functions of bile production &amp; excretion; excretion of bilirubin, cholesterol, hormones, and drugs; metabolism of fats, proteins and carbohydrates; enzyme activation; storage of glycogen, vitamins and minerals; synthesis of plasma proteins; blood detoxification and purification. The liver is the only organ in the human body that can grow cells and regenerate. A donated liver from someone who has died (a deceased donor) can further be split into two pieces and transplanted into two different people to save their lives. A living donor can have a portion of her/his liver removed to donate to someone, and the remaining portion will regenerate to almost its full previous size.\n
+            3. Heart: A heart is a muscular organ which pumps blood through the human body. In a person’s life, the heart will beat around 2.5 billion times on average and keep the blood running in the body. After being retrieved from the donor, a heart can survive for 4-6 hours only.\n
+            4. Lungs: Single or double-lung transplants can be performed from deceased donors. Additionally, living donors can donate a single lobe from the lungs, though it will not regenerate.\n
+            5. Pancreas: A deceased donor pancreas can be transplanted into an ailing patient. A living donor can also donate a portion of the pancreas and still retain pancreas functionality.\n
+            6. Intestine: After death, a donor can donate their intestine. Although quite rare, a living donor can donate a portion of the intestine.\n
+        </p>\n
+        <p>In addition to organs, you can also donate tissues such as corneas, skin, bones, ligaments, heart valves etc.</p>\n\n \n
+        <p><b>Which Tissues Can Be Donated?</b></p>\n\n
+        <p>Layers of cells that function together to serve a specific purpose are called Tissues. Most Tissues should be donated within 6 hours of the donor’s death.</p>\n\n
+        <p>
+            1. Cornea: Cornea donation or eye donation is the most common tissue donation. The Cornea is a transparent covering over the eye. It is also the eye’s primary focusing element. Recipients who suffer from corneal blindness can gain their sight again after a corneal transplant. These patients are those who may have been blinded by an accident, infection or disease. Either the entire Cornea can be transplanted or it can be transplanted in parts. A Corneal Transplant is does not need any anti-rejection drugs in the recipient. Corneas from all ages of recipients are effective as long as the Doctors as they are healthy.\n
+            2. Bones: Bones from deceased donors are used to replace bones of recipients whose bones are cancerous. A Bone transplant can be done instead of amputating the cancerous arm.\n
+            3. Skin: Skin can be used as grafting for burn victims, acid attack victims or for post-mastectomy breast reconstruction, amongst other things.\n
+            4. Veins: Donated veins are commonly used in surgeries for cardiac bypass. \n
+
+        </p>\n
+        <p>Apart from these, other tissues that can be donated are muscles, tendons, ligaments, cartilage and heart valves.</p>\n\n
+    </item>
+        <item>
+            \n<p>There are two types of organ donations – Living Organ Donations &amp; Deceased Organ Donations.</p>\n\n
+            <p><b>Living Organ Donation :</b></p>\n\n
+            <p>This is when you retrieve an organ from a healthy living person and transplant it into the body of someone who is suffering from end-stage organ failure. This is commonly done in the case of a liver or a kidney failure (because the liver can grow back to its normal size and a donor can survive on one kidney).</p>\n
+            <p>Living donors are classified as either a near relative or a distant relative/friends etc.</p>\n
+            <p>A near-relative is spouse, son/daughter, brother/sister, parents, grandparents and grandchildren.</p>\n
+            <p>Those other than near-relative can be distant relatives and friends who will need the permission of the State Authorization Committee to donate organs. If the hospital refuses to entertain such cases, the patient may send a legal notice to the hospital for not following the Transplant Act.</p>\n
+            <p><b>Deceased Organ Donation:</b></p>\n
+            <p>When we talk about pledging your organs for donation or about organ donation after death, we are talking about Deceased Organ Donation. This is an organ donation from a person who has been declared brain stem dead by a team of authorized doctors at a hospital. A person is said to be brain stem dead when there is an irreversible loss of consciousness, absence of brain stem reflexes and irreversible loss of the capacity to breathe.</p>\n
+            <p>A lot of people think that whenever and however they die, their organs can be donated. That is not true. In India, organ donation after death is only possible in the case of Brain stem death.</p>\n
+            <p>Donation after cardiac death is common in the West, but in India it is rare for donations to take place after cardiac death.</p>\n
+            <p>Although it is possible for organs such as the liver and the kidney to be easily donated from a living donor to a recipient, we should work towards an environment where everyone donates their organs after their deaths (if they can), so no living person should have to donate an organ to another.</p>\n
+    </item>
+        <item>
+        <p><b>The Living Donation Process :</b></p>\n
+        <p>The living donor needs to undergo some medical tests and evaluations to check and confirm her/his her medical compatibility with the recipient.</p>\n
+        <p>The living donor’s medical compatibility is confirmed by a doctor. Only after all the tests have positively confirmed that the donor is compatible with the recipient, can the transplant take place.</p>\n
+        <p>The living donor’s organs are retrieved surgically by doctors. They will be stored in special chemical solutions briefly until they are transplanted into the recipient.</p>\n
+        <p>The living donor will need to remain under medical care for a few days or weeks after organ retrieval until she/he is fit to go home.</p>\n
+        <p><b>The Deceased Donation Process</b></p>\n
+        <p>A deceased donor is often someone who has suffered a fatal injury to the head or had Brain Haemorrhage. She/He is declared brain stem dead by a group of medical experts in a hospital.</p>\n
+        <p>The donor’s family has to give consent for the donation before the process of organ retrieval can be carried out. Meanwhile, the donor is kept on life-support with Doctors looking after all her/his needs until the retrieval of the organs is allowed to move forward.</p>\n
+        <p>Suitable recipients for all the organs are identified from a waiting list. They are notified and asked to reach their respective hospitals.</p>\n
+        <p>After retrieval, the body of the donor is respectfully handed over to the family.</p>\n
+    </item>
+        <item>
+        <p>The primary legislation related to organ donation and transplantation in India, Transplantation of Human Organs &amp; Tissues Act, was passed in 1994 and is aimed at regulation of removal, storage and transplantation of human organs for therapeutic purposes and for prevention of commercial dealings in human organs.</p>\n
+        <p><b>Some of the main provisions of the Act are as follows:</b></p>\n
+        <p>Brain stem death identified as a form of death. Process and criteria for brain stem death certification defined</p>\n
+        <p>Allows transplantation of human organs and tissues from living donors and cadavers (after cardiac or brain stem death).</p>\n
+        <p>Regulatory and advisory bodies for monitoring transplantation activity and their constitution defined.</p>\n
+    </item>
+        <item>
+        <p>What is Brain Death and how is it related to organ donation? A brain stem death or brain death results from a severe irreversible injury to the brain or haemorrhage which causes all the brain activity to stop. All areas of the brain are damaged and no longer function, due to which a person cannot sustain his/her own life, but vital body functions may be maintained by an artificial support system. This maintains circulation to vital organs long enough to facilitate organ donation. Patients classified as brain stem dead can have their organs surgically removed for organ donation.</p>\n
+        <p>Once brain stem death or brain death has been declared, the person is dead, but their organs are still alive because they have been kept alive through artificial means. This means that if a person dies at home or anywhere else, and their heart stops beating, they cannot donate their vital organs, because the organs of a person who has died a cardiac death will die within minutes of the heart stopping. Therefore, the only time you can donate your vital organs is if you are in hospital and have been declared brain dead.</p>\n
+        <p>In case of a cardiac death it is possible to donate your corneas and tissues such as bones, skin, veins, blood stem cells, blood and platelets, tendons, ligaments, heart valves, cartilage and even your body.</p>\n
+        <p>While the incidence of brain death is obviously less common than cardiac death, it is important to remember that organ donations will take place only if everyone is aware about when and how they can donate organs.</p>\n
+        <p><b>Procedures for Brain Stem Death Declaration in India :</b></p>\n
+        <p>Organ donation after Brain Death is strictly regulated. According to the provisions of the Transplantation of Human Organs &amp; Tissues Act, THOTA 1994 the protocol for declaration of brain stem death or brain death has been defined. Any organ donation process must involve the following steps before the actual transplant can occur:</p>\n
+        <p>A Panel of 4 doctors, 2 of whom must be from a panel approved by the government need to declare the brain stem death. This test as per law has to be done twice, with a gap of 6 hours between the two tests. This panel needs to include:</p>\n
+        <p>A Registered Medical Practitioner in charge of the Hospital where the brain stem death patient is admitted.</p>\n
+        <p>A Registered Medical Practitioner nominated from the panel of Doctors who have been approved by the Appropriate Authority.</p>\n
+        <p>A Neurologist/Neuro-Surgeon. (If a Neurologist/Neurosurgeon is not available to carry out the tests, then any Surgeon or Physician and Anaesthetist or Intensivist who is nominated by Medical Administrator In-charge from the panel of names who have been approved by the Appropriate Authority can be included in the panel).</p>\n
+        <p>The Registered medical practitioner treating the deceased. Results of the tests are recorded on Form 10 of the THOT Act 2014. The family’s consent is obtained on Form 8.</p>\n
+        <p>This Organ Donation Procedure is strictly followed. The certifying clinicians must have no interest or benefit in any way from transplantation of cadaver donor organs. The legal time of death in these circumstances is taken as the second set of brain stem death tests. The certification should be done on laid out forms as per the act. The medical director or medical superintendent of the hospital should finally countercheck and sign the form. It is only after these formalities have been completed, should organs be retrieved.</p>\n
+    </item>
+        <item>
+        <p>Organ donations require prior consent from the donor’s family. In India, according to the Transplantation of Human Organs &amp; Tissues Act 1994, the next of kin of the patient will decide whether to donate their organs and tissues.</p>\n
+        <p>Once a person is declared brain stem dead, the transplant coordinator of the hospital will counsel the family and give them the option of donating organs and tissues. The family may or may not agree and can, till the last minute before retrieval, change their mind about donating. It has been noted that a lot of families, even in the face of devastating loss, agree to organ donation to save the lives of others. For them, it is the only good thing that could come out of the death of a loved one, and for this reason alone, it is everyone’s absolute right to be asked if they want to donate.</p>\n
+        <p><b>Request for Organ Donations &amp; Counselling of Families</b></p>\n
+        <p>Usually the organ donation request is made in the time interval between the diagnosis of brain stem death and cardiac death. According to law, doctors are required to take the family members’ consent before retrieving organs, even if the brain stem dead patient has pledged his or her organs. The doctor on duty is required by law to ask for the organs from the relative in case of brain stem death.</p>\n
+        <p>Brain stem death is relatively a new concept and making request for organ donation in these circumstances can be an extremely difficult task for a doctor or a nurse to undertake. If the deceased carries a Donor Card (a card the size of a credit card expressing their desire about organ donation) the task of asking for organ donation becomes easier.</p>\n
+        <p>If the relatives are agreeable, the process of organ donation is under taken and vital organs like heart, lungs, liver, pancreas and kidneys are removed for transplantation. The process of organ donation and transplantation requires co-ordination between different teams operating almost simultaneously and sometimes in different locations. It may require getting surgeons from different specialties together for both donor and recipient surgery.</p>\n
+        <p><b>Police NOC &amp; Post-mortem in Medico-Legal Cases</b></p>\n
+        <p>In medico legal cases, to proceed with organ donation, police NOC is required. And the same must be intimated to the designated forensic expert responsible for conducting the post-mortem. The forensic expert can be present during the retrieval of the organs and conduct the post-mortem simultaneously or the retrieving doctor makes notes of the retrieved organs which will form a part of the post-mortem report, and the body is sent to the forensic expert for completion of post-mortem formalities.</p>\n
+    </item>
+        <item>
+        <p>>A deceased organ donor is kept on a ventilator after she/he has been declared brain-dead. They will remain on the ventilator until necessary approvals are taken and the organs can be retrieved. A Brain stem Dead person’s organs may stay alive for a period of time that may range from a few days to a few weeks. The longer it takes to retrieve the organs, the more they will deteriorate inside the body. Therefore, the entire process of taking counselling of the family, taking permissions etc. should be quickly taken care of. For this to happen, families need to be able to make their decision soon after the brain death has been declared.</p>\n
+        <p>Once the organs have been retrieved, they cannot be kept outside the body for very long and need to be transplanted fast.</p>\n
+
+        <p>>The family of the donor will not receive anything, and the recipient is not charged for the organs. The recipients however will have to pay the costs of transplantation to the hospital where they are being operated. After the donor family gives consent for organ donation, all costs relating to the donor are borne by the hospital.</p>\n
+    </item>
+        <item>
+        <p>The absence of brain stem function is documented by conducting the following tests:</p>\n
+
+
+        <p><b>Pupillary Reflexes:</b></p>\n
+        <p>To check for absent pupillary response to light, bright pen torchlight should be used in a darkened room. It should be made sure that no eye drops to dilate the pupils have been used in the four hours previously. The pupils may not be necessarily fixed and dilated in the brainstem dead patients; however there should be no pupillary response to light.</p>\n
+        <p><b>Corneal Reflexes:</b></p>\n
+        <p>Moist cotton tipped swab should be used and firm pressure should be applied to the cornea without damaging it.</p>\n
+        <p><b>Vestibulo-Ocular Reflexes:</b></p>\n
+        <p>This testing involves instilling 20ml of ice-cold water into the external auditory canal and looking at eyeball movements of either eye for about a minute. No eyeball movement indicates absence of reflex. Presence of ruptured eardrums or discharge from the ear prevents this test from being performed.</p>\n
+        <p><b>Gag and Cough Reflexes:</b></p>\n
+        <p>This requires temporary disconnection from the ventilator. A cotton tipped swab can be used to stimulate the posterior pharynx to look for a response. Experienced ICU staff usually notice a progressive loss of response during the evolution of brainstem death when performing the routine suction of airways and oropharynx.</p>\n
+        <p><b>Grimacing of the face to a painful stimulation:</b></p>\n
+        <p>This is a normal response in a normal condition and is absent in brainstem death situation. A firm supra-orbital pressure (trigeminal nerve) should be used to check this cranial reflex. Pin pricks should not be used to test this response.</p>\n
+        <p><b>Dolls Head Eye Phenomenon (Testing for oculo-cephalic reflex):</b></p>\n
+        <p> This is one test that can be done to know if the brainstem is still alive. If this test is positive then other tests to establish brain stem death can be postponed. One may need to disconnect the patient from the ventilator for 15 to 20 second to perform this test. To do this test the physician holds the patients head between his hands and moves the head from side to side through 180 degrees. The clinician should hold the head to one side for 3 to 4 seconds and look at the simultaneous eye movement to that side. A similar movement is done to the opposite side and eye movement is noticed. In a normal fully alert individual the eyes move with the head and there is only a very fractional delay. In the case of Brain Stem Death, the eyes will not move with the head.</p>\n
+        <p><b>Apnoea Test:</b></p>\n
+        <p>This is the last test done after all tests above are positive. The aim of apnoea test is to establish death of the respiratory centre in the brain stem. It is done to check whether there is any spontaneous breathing or not. If the patient cannot breathe on his/her own, after all other tests are positive then they can be declared Brain Stem Dead.</p>\n
+    </item>
+        <item>
+        <p>Health is a State subject in India and owing to the importance of organ donation, each state has its own Nodal Agency in charge of the allocation of human organs. Each Nodal Agency is connected to all the Transplant Hospitals in the State. All hospitals are required to have their own website linked to the State Nodal Agency so that the hospital waiting lists for all organs is automatically linked to the State Nodal Agency. State Nodal Agency needs to be linked to the concerned Regional Organ &amp; Tissue Transplant Organisation (ROTTO) and that ROTTO lists in turn are to be linked to the National Organ &amp; Tissue Transplant Organisation (NOTTO). This will form the National Waiting-List Registry.</p>\n \n
+        <p>In the event of a brain stem death, once the family has agreed to organ donation, the hospital informs its own Nodal Officer in charge of organ donation about the death and the willingness of the family to donate. Of the paired organs such as kidney and lungs, one each is used by the hospital for its own patients on the waiting list and the other is given to the common pool and will be allocated by the Nodal Agency to one of the patients in the other hospitals.</p>\n
+        <p>The rest of the organs (heart, liver, intestines, and pancreas) can be used by the donor hospital if the hospital is registered to perform those particular transplants and if they have patients on the waiting list. If they do not, then the organs are also given to the common pool and the Nodal Agency will decide their distribution. It is extremely rare to have all recipients in the same hospital, and the organs are usually put in the common pool and allocated accordingly.</p>\n
+        <p>As per the government’s allocation policy, if organs are retrieved from a government hospital and put into the common pool, then they will be offered to a government hospital first and then to a private hospital in case there are no takers in the government hospital. If the organs are retrieved from a private hospital, then they will be offered to a private hospital first.</p>\n
+
+        </item>
+        <item>
+        <p>The entire process should be clear to patients who need organ transplants. Some basic organ donation information for recipients is given below.</p>\n
+        <p>The patient is recognized by a transplant center/hospital as somebody who is in need of an organ transplant.</p>\n
+        <p>The recipient’s medical profile and details are verified by the Transplant Coordinator and the recipient undergoes the required tests.</p>\n
+        <p>Once the recipient is deemed fit for transplant, he/she is placed on a waiting list of the hospital in which they are seeking treatment. This will be a Hospital which has a license to conduct transplants. They will then wait until they are called by the Hospital in case an organ becomes available. A suitable donor is identified based on medical compatibility with the recipient.</p>\n
+        <p>There are a few things that organ recipients need to be aware of while going through the transplant process. They should fully conform with the request of the hospital for all information that they may need; hesitation or lack of inclination in sharing information with the hospital could delay the entire process. A constructive and optimistic attitude will also help recipients endure the time spent on the list waiting for a transplant.</p>\n
+        <p>Unfortunately, the waiting time is long in India due to lack of deceased organ donors. This time-period may vary, from a few months to a few years.</p>\n
+
+        </item>
+        <item>
+        <p>If you want to pledge your organs, you can fill out this form on our Website </p>\n
+        <p>An important point to note once you register as a donor is that your donor card is not a legal entity or an official document. It is merely an expression of your wish to be a donor. The card that we will send you does not carry any legal weight. But do keep it with you and make sure you let all your friends and family know about your intended choice.</p>\n
+        <p><b>Should Organ Donors Talk to Their Families?</b></p>\n
+        <p>Yes! In India it’s more important to talk to your family about your decision than it is to pledge your organs and get a donor card. It is one of the most important conversations that a donor will have during their lifetime. By law In India, organ and tissue donation cannot take place without the written consent of the donor’s family. Therefore, donors should help their families understand the reason behind their decision to be an organ donor. For instance, if they have been inspired by another donor’s or recipient’s story, they could narrate this story to their family so that they understand the sentiment behind this decision. This will make the family more likely to go along with the donor’s decision, if need arises.</p>\n
+        <p>In India, legally, it is the next of kin of the donor who will decide whether to donate their organs or not. Even if you have pledged your organs, no donation will happen unless the next of kin signs the forms. Therefore, when you do register anywhere to be an organ donor, it’s very important that you discuss your wish to donate with your family. This is to enable your family to carry out your wishes in case the need arises.</p>\n
+        <p><b>Can anyone donate organs? Are there any conditions under which organ donation is not possible?</b></p>\n
+        <p>Generally, there is no bar to organ donation and one or the other organ or tissues can be donated at any age. The only people who cannot donate organs are those have/had cancer, HIV or disease-causing bacteria in the bloodstream or body tissues. However even this is not a hard and fast rule. There have been instances where one HIV positive person has donated to another HIV positive patient.</p>\n
+        <p>However, it is important to do some essential virology screening before accepting the donor. All potential donors will require a virology screen to prevent possible transmission of disease from donor to the recipient. The next of kin should be made aware that this is necessary; if there are any objections by the doctors to the donation, these should be respected.</p>\n
+        <p>Decisions about an organ’s usability are made at the donor’s time of death or, in the case of living donors, during the pre-transplant screening stage.</p>\n
+
+        </item>
+        <item>
+        <p>Unfortunately, mostly due to unawareness and prejudices, there is a huge shortage of organs that are needed for transplants. It has been seen in umpteen situations that relatives are hesitant and unwilling to donate the organs of their loved ones who have been declared brain dead.</p>\n
+        <p>Normally the transplant coordinator will approach the relatives with information about organ donation and explain that even in their time of loss, they can help another person to live. It is tough for the relatives at this point to come to a decision especially if they are not familiar with the concept of organ donation. This is the main reason why it is important for the public to know about organ donation, before they are suddenly faced with the possibility at some point in their lives.</p>\n
+        <p>It is estimated that the total number of brain stem deaths due to accidents in India is nearly 1.5 lakhs annually. Other causes of brain stem death would potentially add many more numbers. However, our organ donation rate is 0.86 per million population. The total number of deceased donors in India in 2017 was only 905.</p>\n
+        <p>Contrast that to the demand for human organ donation. There is a need of approximately 5 lakh organs annually. Barely 2-3 percent of the demand is met, and many people die of organ failure every year across India.</p>\n
+        <p><b>NOTTO – National Organ and Tissue Transplant Organization</b></p>\n
+        <p>The National Organ and Tissue Transplant Organization (NOTTO) is a National level organization. The establishment of NOTTO is mandated as per the Transplantation of human Organs and Tissues (Amendment) Act of 2011. It has been set up under Directorate General of Health Services, Ministry of Health and Family Welfare, Government of India. Their offices are located on the 4th and 5th Floor of the Institute of Pathology (ICMR) Building in Safdarjung Hospital New Delhi.</p>\n
+        <p>>NOTTO functions as the apex centre for All India activities of coordination and networking for procurement and distribution of Organs and Tissues and registry of Organs and Tissues Donation and Transplantation in the country. In addition to its national role, NOTTO is also the nodal networking agency for Delhi and the National Capital Region, and network for Procurement Allocation and Distribution of Organs and Tissues in Delhi and the National Capital Region.</p>\n
+        <p><b>ROTTO – Regional Organ and Tissue Transplant Organisation</b></p>\n
+    <p>The Regional Organ &amp; Tissue Transplant Organisation (ROTTO) is the regional government organisation. There are five ROTTOs in India. They function as separate regional branches that ensure protocol amongst the state organisations enlisted under each of them. They are all based in a Government Hospital in the region. Each ROTTO manages about 5-7 States currently and is responsible for activities of coordination as well as networking for procurement, distribution and transplantation of organs and tissues between their respective State Organisations.</p>\n
+
+        </item>
+
+    </string-array>
+
+
     <string name="firstdrop">What is Organ Donation?</string>
     <string name="firstdropanswer">
         \n<p>Organ donation is the entire practice of retrieving a human organ from a living or deceased person, who is referred to as a Donor, and transplanting it into a recipient. The recipient will be a patient who is suffering from organ failure and who will not survive unless she/he receives an organ replacement. The process of recovering organs is called Retrieval.
@@ -180,11 +500,9 @@ Form 21: Letter from Embassy  \n
     <string name="twelvthdrop">Situation in India &amp; Data</string>
     <string name="down_arrow">down_arrow</string>
     <string name="up_arrow">up_arrow</string>
+    <string name="verfiyotp">verfiyotp</string>
+    <string name="usermoblieno">user moblie no</string>
 
 
-    <!--        <p></p>\n-->
-<!--        <p></p>\n-->
-<!--        <p></p>\n-->
-<!--        <p></p>\n-->
-<!--        <p></p>\n-->
+
 </resources>

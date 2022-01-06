@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".awareness"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="end">
 
 
     <ScrollView
@@ -27,7 +27,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="ORGO"
+                app:title="Donation Awareness"
                 tools:ignore="MissingConstraints" />
 
             <LinearLayout
@@ -57,9 +57,8 @@
                             android:id="@+id/youtube_player_view"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            app:videoId="mEagZ5COFY8"
                             app:autoPlay="true"
-                             />
+                            app:videoId="mEagZ5COFY8" />
 
 
                     </RelativeLayout>

@@ -19,6 +19,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -30,12 +31,15 @@ public class dashboard extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     CardView help_box, orgz_box, know_box, awer_box, law_box, trans_box, body_box, donate_box;
+    String txt_name;
     private static final int REQUEST_CALL = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        txt_name = getIntent().getStringExtra("txtname");
 
         donate_box = findViewById(R.id.onebox);
         body_box = findViewById(R.id.bodybox);
@@ -68,14 +72,24 @@ public class dashboard extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 } else if (id == R.id.profilebtn) {
-                    Toast.makeText(getApplicationContext(), "profile!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(dashboard.this, user_profile.class);
+                    intent.putExtra("names", txt_name);
+                    startActivity(intent);
                     return true;
-                } else if (id == R.id.donarbtn) {
-                    Toast.makeText(getApplicationContext(), "donar card!", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.mythbtn) {
+                    Intent intent = new Intent(dashboard.this, myth_fact.class);
+                    startActivity(intent);
                     return true;
                 } else if (id == R.id.aboutbtn) {
-                    Toast.makeText(getApplicationContext(), "about orgo!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(dashboard.this, about_orgo.class);
+                    startActivity(intent);
                     return true;
+                } else if (id == R.id.feedbtn){
+                    Intent intent = new Intent(dashboard.this, feed_back.class);
+                    intent.putExtra("user", txt_name);
+                    startActivity(intent);
+                    return true;
+
                 } else if (id == R.id.sharebtn) {
                     Intent myIntent = new Intent(Intent.ACTION_SEND);
                     myIntent.setType("text/plain");
@@ -91,9 +105,16 @@ public class dashboard extends AppCompatActivity {
                     return true;
                 }
 
+
                 return false;
             }
         });
+
+
+//      ---------------------
+//      | Body Donation box |
+//      ---------------------
+        body_box.setOnClickListener(v -> startActivity(new Intent(dashboard.this, donate_body.class)));
 
 
 //      ---------------------------------
