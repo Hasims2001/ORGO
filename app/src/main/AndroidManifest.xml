@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
+    <uses-permission android:name="android.permission.SEND_SMS" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,25 +14,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ORGO">
         <activity
-            android:name=".feed_back"
-            android:label="Feedback"
+            android:name=".donor_alive"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body_direction"
             android:exported="false" />
+        <activity
+            android:name=".feed_back"
+            android:exported="false"
+            android:label="Feedback" />
         <activity
             android:name=".user_profile"
-            android:label="Profile"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Profile" />
         <activity
             android:name=".donate_body"
+            android:exported="false"
             android:label="Donate Body"
-            android:exported="false" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".myth_fact"
-            android:label="Myth &amp; Fact About Organ Donation"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Myth &amp; Fact About Organ Donation" />
         <activity
             android:name=".about_orgo"
-            android:label="About Organ donation"
-            android:exported="false" />
+            android:exported="false"
+            android:label="About Organ donation" />
         <activity
             android:name=".verifyotp"
             android:exported="false"
@@ -43,20 +51,20 @@
             android:exported="false" />
         <activity
             android:name=".awareness"
-            android:label="Donation Awareness"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Donation Awareness" />
         <activity
             android:name=".organization"
-            android:label="Government Organization"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Government Organization" />
         <activity
             android:name=".law_trans"
-            android:label="Law on Transplant"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Law on Transplant" />
         <activity
             android:name=".dashboard"
-            android:label="ORGO"
-            android:exported="false" />
+            android:exported="false"
+            android:label="ORGO" />
         <activity
             android:name=".forgot_pwd"
             android:exported="false"

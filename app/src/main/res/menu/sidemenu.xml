@@ -7,10 +7,16 @@
             android:id="@+id/homebtn"
             android:icon="@drawable/ic_home"
             android:title="@string/home" />
+
         <item
             android:id="@+id/profilebtn"
             android:icon="@drawable/ic_profile"
             android:title="@string/profile" />
+
+        <item
+            android:id="@+id/dbodybtn"
+            android:icon="@drawable/ic_body"
+            android:title="@string/dbbtn" />
 
         <item
             android:id="@+id/mythbtn"

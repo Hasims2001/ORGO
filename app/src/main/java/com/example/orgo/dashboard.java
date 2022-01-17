@@ -76,6 +76,10 @@ public class dashboard extends AppCompatActivity {
                     intent.putExtra("names", txt_name);
                     startActivity(intent);
                     return true;
+                } else if (id == R.id.dbodybtn) {
+                    Intent intent = new Intent(dashboard.this, body_direction.class);
+                    startActivity(intent);
+                    return true;
                 } else if (id == R.id.mythbtn) {
                     Intent intent = new Intent(dashboard.this, myth_fact.class);
                     startActivity(intent);
@@ -93,8 +97,8 @@ public class dashboard extends AppCompatActivity {
                 } else if (id == R.id.sharebtn) {
                     Intent myIntent = new Intent(Intent.ACTION_SEND);
                     myIntent.setType("text/plain");
-                    String body = "Your body here";
-                    String sub = "Your Subject";
+                    String body = "This Application is Contain best things.Check this out on Playstore 'ORGO'";
+                    String sub = "ORGO";
                     myIntent.putExtra(Intent.EXTRA_SUBJECT,sub);
                     myIntent.putExtra(Intent.EXTRA_TEXT,body);
                     startActivity(Intent.createChooser(myIntent, "Share Using"));
@@ -114,7 +118,7 @@ public class dashboard extends AppCompatActivity {
 //      ---------------------
 //      | Body Donation box |
 //      ---------------------
-        body_box.setOnClickListener(v -> startActivity(new Intent(dashboard.this, donate_body.class)));
+        body_box.setOnClickListener(v -> startActivity(new Intent(dashboard.this, body_direction.class)));
 
 
 //      ---------------------------------

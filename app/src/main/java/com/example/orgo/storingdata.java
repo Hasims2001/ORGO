@@ -3,9 +3,6 @@ package com.example.orgo;
 public class storingdata {
     String name,number,mail,pwd,conpwd;
 
-    public storingdata() {
-
-    }
 
     public storingdata(String name, String number, String mail, String pwd, String conpwd) {
         this.mail = mail;

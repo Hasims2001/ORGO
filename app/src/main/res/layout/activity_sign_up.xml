@@ -115,6 +115,7 @@
 
         <EditText
             android:id="@+id/password"
+            app:passwordToggleEnabled="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -127,6 +128,7 @@
 
         <EditText
             android:id="@+id/con_pwd"
+            app:passwordToggleEnabled="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"

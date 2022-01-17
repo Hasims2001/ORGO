@@ -103,4 +103,11 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sidemenubar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/headerfile"
+        app:menu="@menu/sidemenu" />
 </androidx.drawerlayout.widget.DrawerLayout>
