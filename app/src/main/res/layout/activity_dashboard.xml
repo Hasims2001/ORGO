@@ -8,7 +8,7 @@
     app:layoutDescription="@xml/activity_dashboard_scene"
     tools:context=".dashboard"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="end">
 
 
     <ScrollView
@@ -26,7 +26,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/orange"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:layout_constraintBottom_toTopOf="@+id/f_row"
+                app:layout_constraintBottom_toTopOf="@+id/row"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -34,17 +34,74 @@
                 tools:ignore="MissingConstraints" />
 
             <LinearLayout
+                android:id="@+id/row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Tool">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/processbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <ImageView
+                            android:id="@+id/processimg"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/donateorganpng"
+                            app:srcCompat="@drawable/work_process" />
+
+                        <TextView
+                            android:id="@+id/processtxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/processimg"
+                            android:fontFamily="@font/allerta_stencil"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="@string/process"
+                            android:textAlignment="gravity"
+                            android:textColor="#000000"
+                            android:textSize="19sp"
+                            tools:ignore="TextContrastCheck" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/f_row"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="1dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@+id/s_row"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Tool">
+                app:layout_constraintTop_toBottomOf="@+id/row">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/onebox"

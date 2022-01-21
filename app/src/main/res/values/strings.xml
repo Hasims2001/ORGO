@@ -33,6 +33,8 @@
     <string name="give_feedback_here">Give Feedback here!</string>
     <string name="mailaddress">Mail ID</string>
     <string name="headdingfeed">We would like your feedback to improve our app.</string>
+    <string name="process">Process</string>
+    <string name="notsub">Not Submitted Any Form.</string>
 
 
     <!-- side menu -> Myth and Fact   -->
@@ -107,7 +109,7 @@
     <string name="alive">Alive</string>
     <string name="dead">Dead</string>
     <string name="donor">Donor is :</string>
-    <string name="direction"> Contact Details For Further Process</string>
+    <string name="direction"> Contact Details For Medical Process</string>
 
     <string name="did">Donor ID Number</string>
     <string name="dname">Donor Full Name</string>
@@ -123,8 +125,19 @@
     <string name="donatetype">Donate : </string>
 
     <string-array name="dtype">
-        <item>Select one</item><item>Bone</item><item>Body</item><item>Bone marrow</item><item>Corneas</item><item>Heart</item><item>Intestine</item>
-        <item>Kidney</item><item>Liver</item><item>Lung</item><item>Middle ear</item><item>Pancreas</item><item>Skin</item>
+        <item>Select one</item>
+        <item>Bone</item>
+        <item>Body</item>
+        <item>Bone marrow</item>
+        <item>Corneas</item>
+        <item>Heart</item>
+        <item>Intestine</item>
+        <item>Kidney</item>
+        <item>Liver</item>
+        <item>Lung</item>
+        <item>Middle ear</item>
+        <item>Pancreas</item>
+        <item>Skin</item>
     </string-array>
 
     <string name="name">Name : </string>

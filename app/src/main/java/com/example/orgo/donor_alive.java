@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -71,18 +73,23 @@ public class donor_alive extends AppCompatActivity {
     //  After submit
 
     FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference, donateinfo;
 
     TextView out_id, out_name, out_address, out_phone, out_mail, out_aadhar, out_s_age;
     LinearLayout in_details, out_details;
     String[] i_names, i_address, i_phones, i_emails, i_websites;
-    String details, myphone;
+    String details, myphone, txt_name;
     @SuppressLint("SetTextI18n")
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_alive);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("userdata");
+        donateinfo = firebaseDatabase.getReference("userdata/Donate_info");
+
 
         drawerLayout = findViewById(R.id.donor_alive);
         navigationView = findViewById(R.id.sidemenubar);
@@ -97,7 +104,7 @@ public class donor_alive extends AppCompatActivity {
         sel_state = getIntent().getStringExtra("state");
         sel_district = getIntent().getStringExtra("district");
         d_type = getIntent().getStringExtra("d_type");
-
+        txt_name = getIntent().getStringExtra("username");
         dage = findViewById(R.id.donor_age);
 
         age.add(Integer.toString(0));
@@ -168,11 +175,11 @@ public class donor_alive extends AppCompatActivity {
 
 
 
-            final String name = donor_name.getText().toString();
-            final String address = donor_address.getText().toString();
-            final String phone = donor_phoneno.getText().toString();
-            final String mail = donor_mail.getText().toString();
-            final String aadhar = donor_aadhar.getText().toString();
+            final String name = donor_name.getText().toString().trim();
+            final String address = donor_address.getText().toString().trim();
+            final String phone = donor_phoneno.getText().toString().trim();
+            final String mail = donor_mail.getText().toString().trim();
+            final String aadhar = donor_aadhar.getText().toString().trim();
             final String s_age = selected_age;
 
 
@@ -190,72 +197,82 @@ public class donor_alive extends AppCompatActivity {
                                     donor_mail.setError(null);
                                     if (!aadhar.isEmpty() & aadhar.length() == 12) {
                                         donor_aadhar.setError(null);
+                                        //check for reattempt or not
+                                        Query check_username = donateinfo.orderByChild("aadhar").equalTo(aadhar);
 
-                                        // RadioButton
-                                        final int IDs = donor_gender.getCheckedRadioButtonId();
-                                        if (IDs == -1) {
-                                            gender_txt.setError("Select One");
-                                            gender_txt.requestFocus();
-                                        } else {
-                                            gender_txt.setError(null);
-                                            radioid = findViewById(IDs);
-                                            sel_gender = radioid.getText().toString();// here is sel_gender
+                                        check_username.addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                if (snapshot.exists()){
+                                                    donor_aadhar.setError("Donor is Already Registered!");
+                                                    donor_aadhar.requestFocus();
+                                                }else{
+                                                    donor_aadhar.setError(null);
+                                                    // RadioButton
+                                                    final int IDs = donor_gender.getCheckedRadioButtonId();
+                                                    if (IDs == -1) {
+                                                        gender_txt.setError("Select One");
+                                                        gender_txt.requestFocus();
+                                                    } else {
+                                                        gender_txt.setError(null);
+                                                        radioid = findViewById(IDs);
+                                                        sel_gender = radioid.getText().toString();// here is sel_gender
 
-                                            // age spinner
-                                            if (selected_age.equals("0")) {
-                                                age_txt.setError("Select Donor Age");
-                                                age_txt.requestFocus();
-                                            } else {
-                                                age_txt.setError(null);
+                                                        // age spinner
+                                                        if (selected_age.equals("0")) {
+                                                            age_txt.setError("Select Donor Age");
+                                                            age_txt.requestFocus();
+                                                        } else {
+                                                            age_txt.setError(null);
 
-                                                // donate type spinner
-                                                if (selected_type.equals("Select one")) {
-                                                    type_txt.setError("Select Donate Type");
-                                                    type_txt.requestFocus();
-                                                } else {
-                                                    type_txt.setError(null);
+                                                            // donate type spinner
+                                                            if (selected_type.equals("Select one")) {
+                                                                type_txt.setError("Select Donate Type");
+                                                                type_txt.requestFocus();
+                                                            } else {
+                                                                type_txt.setError(null);
 
-                                                    switch (selected_type) {
-                                                        case "Bone":
-                                                            donortype = "DBone";
-                                                            break;
-                                                        case "Body":
-                                                            donortype = "DBody";
-                                                            break;
-                                                        case "Bone marrow":
-                                                            donortype = "DBonemarrow";
-                                                            break;
-                                                        case "Corneas":
-                                                            donortype = "DCorneas";
-                                                            break;
-                                                        case "Heart":
-                                                            donortype = "DHeart";
-                                                            break;
-                                                        case "Intestine":
-                                                            donortype = "DIntestine";
-                                                            break;
-                                                        case "Kidney":
-                                                            donortype = "DKidney";
-                                                            break;
-                                                        case "Liver":
-                                                            donortype = "DLiver";
-                                                            break;
-                                                        case "Lung":
-                                                            donortype = "DLung";
-                                                            break;
-                                                        case "Middle ear":
-                                                            donortype = "DMiddleear";
-                                                            break;
-                                                        case "Pancreas":
-                                                            donortype = "DPancreas";
-                                                            break;
-                                                        case "Skin":
-                                                            donortype = "DSkin";
-                                                            break;
+                                                                switch (selected_type) {
+                                                                    case "Bone":
+                                                                        donortype = "DBone";
+                                                                        break;
+                                                                    case "Body":
+                                                                        donortype = "DBody";
+                                                                        break;
+                                                                    case "Bone marrow":
+                                                                        donortype = "DBonemarrow";
+                                                                        break;
+                                                                    case "Corneas":
+                                                                        donortype = "DCorneas";
+                                                                        break;
+                                                                    case "Heart":
+                                                                        donortype = "DHeart";
+                                                                        break;
+                                                                    case "Intestine":
+                                                                        donortype = "DIntestine";
+                                                                        break;
+                                                                    case "Kidney":
+                                                                        donortype = "DKidney";
+                                                                        break;
+                                                                    case "Liver":
+                                                                        donortype = "DLiver";
+                                                                        break;
+                                                                    case "Lung":
+                                                                        donortype = "DLung";
+                                                                        break;
+                                                                    case "Middle ear":
+                                                                        donortype = "DMiddleear";
+                                                                        break;
+                                                                    case "Pancreas":
+                                                                        donortype = "DPancreas";
+                                                                        break;
+                                                                    case "Skin":
+                                                                        donortype = "DSkin";
+                                                                        break;
 
-                                                    }
-                                                    Random rd = new Random();
-                                                    int val = rd.nextInt(100000);
+                                                                }
+                                                                Random rd = new Random();
+                                                                int val = rd.nextInt(100000);
 //                                                    for (int i = 0; i < ran_store.size(); i++){
 //
 //                                                        if (ran_store.get(i) == val){
@@ -264,184 +281,211 @@ public class donor_alive extends AppCompatActivity {
 //                                                    }
 //                                                    ran_store.add(val);
 
-                                                    final String donorid = donortype + String.valueOf(val);
+                                                                final String donorid = donortype + String.valueOf(val);
 
-                                                    prog.setVisibility(View.VISIBLE);
-                                                    submit_btn.setVisibility(View.INVISIBLE);
-
-                                                    firebaseDatabase = FirebaseDatabase.getInstance();
-                                                    databaseReference = firebaseDatabase.getReference("userdata");
-
-                                                    storingdonordata store_donor_data = new storingdonordata(donorid, name, address, phone, mail, aadhar, s_age);
-                                                    databaseReference.child("Donate_info").child(donorid).setValue(store_donor_data);
-
-                                                    in_details = findViewById(R.id.details);
-                                                    out_details = findViewById(R.id.show_details);
-
-                                                    Handler handler = new Handler();
-                                                    handler.postDelayed(new Runnable() {
-                                                        public void run() {
-                                                            // yourMethod();
-                                                            prog.setVisibility(View.INVISIBLE);
-                                                            submit_btn.setVisibility(View.VISIBLE);
-
-                                                            in_details.setVisibility(View.GONE);
-                                                            out_details.setVisibility(View.VISIBLE);
-
-                                                        }
-                                                    }, 5000);
+                                                                prog.setVisibility(View.VISIBLE);
+                                                                submit_btn.setVisibility(View.INVISIBLE);
 
 
-                                                    out_id = findViewById(R.id.did);
-                                                    out_id.setText("ID : " + donorid);
+                                                                storingdonordata store_donor_data = new storingdonordata(donorid, name, address, phone, mail, aadhar, s_age);
+                                                                databaseReference.child("Donate_info").child(aadhar).setValue(store_donor_data);
 
-                                                    out_name = findViewById(R.id.dname);
-                                                    out_name.setText("Name : " + name);
+                                                                in_details = findViewById(R.id.details);
+                                                                out_details = findViewById(R.id.show_details);
 
-                                                    out_address = findViewById(R.id.daddress);
-                                                    out_address.setText("Address : " + address);
+                                                                Handler handler = new Handler();
+                                                                handler.postDelayed(new Runnable() {
+                                                                    public void run() {
+                                                                        // yourMethod();
+                                                                        prog.setVisibility(View.INVISIBLE);
+                                                                        submit_btn.setVisibility(View.VISIBLE);
 
-                                                    out_phone = findViewById(R.id.dphone);
-                                                    out_phone.setText("Mobile No. : " + phone);
+                                                                        in_details.setVisibility(View.GONE);
+                                                                        out_details.setVisibility(View.VISIBLE);
 
-                                                    out_mail = findViewById(R.id.dmail);
-                                                    out_mail.setText("Mail : " + mail);
+                                                                    }
+                                                                }, 4000);
 
-                                                    out_aadhar = findViewById(R.id.daadhar);
-                                                    out_aadhar.setText("Aadhar No. : " + aadhar);
 
-                                                    out_s_age = findViewById(R.id.dage);
-                                                    out_s_age.setText("Age : " + s_age);
+                                                                out_id = findViewById(R.id.did);
+                                                                out_id.setText("ID : " + donorid);
 
-                                                    ListView contactlist = findViewById(R.id.contact);
+                                                                out_name = findViewById(R.id.dname);
+                                                                out_name.setText("Name : " + name);
 
-                                                    String[] ins_name = getResources().getStringArray(R.array.ins_name);
-                                                    String[] ins_address = getResources().getStringArray(R.array.ins_address);
-                                                    String[] ins_phoneno = getResources().getStringArray(R.array.ins_phoneno);
-                                                    String[] ins_email = getResources().getStringArray(R.array.ins_email);
-                                                    String[] ins_website = getResources().getStringArray(R.array.ins_website);
+                                                                out_address = findViewById(R.id.daddress);
+                                                                out_address.setText("Address : " + address);
 
-                                                    switch (sel_district) {
+                                                                out_phone = findViewById(R.id.dphone);
+                                                                out_phone.setText("Mobile No. : " + phone);
+
+                                                                out_mail = findViewById(R.id.dmail);
+                                                                out_mail.setText("Mail : " + mail);
+
+                                                                out_aadhar = findViewById(R.id.daadhar);
+                                                                out_aadhar.setText("Aadhar No. : " + aadhar);
+
+                                                                out_s_age = findViewById(R.id.dage);
+                                                                out_s_age.setText("Age : " + s_age);
+
+                                                                ListView contactlist = findViewById(R.id.contact);
+
+                                                                String[] ins_name = getResources().getStringArray(R.array.ins_name);
+                                                                String[] ins_address = getResources().getStringArray(R.array.ins_address);
+                                                                String[] ins_phoneno = getResources().getStringArray(R.array.ins_phoneno);
+                                                                String[] ins_email = getResources().getStringArray(R.array.ins_email);
+                                                                String[] ins_website = getResources().getStringArray(R.array.ins_website);
+
+                                                                switch (sel_district) {
 //                                Andaman Nicobar state
-                                                        case "Nicobar":
+                                                                    case "Nicobar":
 
-                                                        case "North Middle Andaman":
+                                                                    case "North Middle Andaman":
 
-                                                        case "South Andaman":
-                                                            i_names = Arrays.copyOfRange(ins_name, 0, 1);
-                                                            i_address = Arrays.copyOfRange(ins_address, 0, 1);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 0, 1);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 0, 1);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 0, 1);
-                                                            
-                                                            contactAdapter nicobar = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(nicobar);
-                                                            break;
+                                                                    case "South Andaman":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 0, 1);
+                                                                        i_address = Arrays.copyOfRange(ins_address, 0, 1);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 0, 1);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 0, 1);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 0, 1);
+
+                                                                        contactAdapter nicobar = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(nicobar);
+                                                                        break;
 
 
 //                                Andhra pradesh state
-                                                        case "Anantapur":
-                                                            i_names = Arrays.copyOfRange(ins_name, 1, 2);
-                                                            i_address = Arrays.copyOfRange(ins_address, 1, 2);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 1, 2);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 1, 2);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 1, 2);
+                                                                    case "Anantapur":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 1, 2);
+                                                                        i_address = Arrays.copyOfRange(ins_address, 1, 2);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 1, 2);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 1, 2);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 1, 2);
 
-                                                            contactAdapter anantapur = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(anantapur);
-                                                            break;
+                                                                        contactAdapter anantapur = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(anantapur);
+                                                                        break;
 
-                                                        case "Chittoor":
-                                                            i_names = Arrays.copyOfRange(ins_name, 2, 3);
-                                                            i_address = Arrays.copyOfRange(ins_address, 2, 3);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 2, 3);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 2, 3);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 2, 3);
+                                                                    case "Chittoor":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 2, 3);
+                                                                        i_address = Arrays.copyOfRange(ins_address, 2, 3);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 2, 3);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 2, 3);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 2, 3);
 
-                                                            contactAdapter chittoor = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(chittoor);
-                                                            break;
+                                                                        contactAdapter chittoor = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(chittoor);
+                                                                        break;
 
-                                                        case "East Godavari":
-                                                            i_names = Arrays.copyOfRange(ins_name, 3, 4);
-                                                            i_address = Arrays.copyOfRange(ins_address, 3, 4);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 3, 4);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 3, 4);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 3, 4);
+                                                                    case "East Godavari":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 3, 4);
+                                                                        i_address = Arrays.copyOfRange(ins_address, 3, 4);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 3, 4);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 3, 4);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 3, 4);
 
-                                                            contactAdapter godavari = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(godavari);
-                                                            break;
+                                                                        contactAdapter godavari = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(godavari);
+                                                                        break;
 
-                                                        case "Guntur":
-                                                            i_names = Arrays.copyOfRange(ins_name, 4, 7); // 4,7
-                                                            i_address = Arrays.copyOfRange(ins_address, 4, 7);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 4, 7);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 4, 7);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 4, 7);
+                                                                    case "Guntur":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 4, 5); // 4,7
+                                                                        i_address = Arrays.copyOfRange(ins_address, 4, 5);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 4, 5);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 4, 5);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 4, 5);
 
-                                                            contactAdapter guntur = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(guntur);
-                                                            break;
+                                                                        contactAdapter guntur = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(guntur);
+                                                                        break;
 
-                                                        case "Kadapa":
-                                                            i_names = Arrays.copyOfRange(ins_name, 7, 9); //7,9
-                                                            i_address = Arrays.copyOfRange(ins_address, 7, 9);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 7, 9);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 7, 9);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 7, 9);
+                                                                    case "Kadapa":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 7, 8); //7,9
+                                                                        i_address = Arrays.copyOfRange(ins_address, 7, 8);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 7, 8);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 7, 8);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 7, 8);
 
-                                                            contactAdapter kadapa = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(kadapa);
-                                                            break;
+                                                                        contactAdapter kadapa = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(kadapa);
+                                                                        break;
 
-                                                        case "Krishna":
-                                                            i_names = Arrays.copyOfRange(ins_name, 9, 10);
-                                                            i_address = Arrays.copyOfRange(ins_address, 9, 10);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 9, 10);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 9, 10);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 9, 10);
+                                                                    case "Krishna":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 9, 10);
+                                                                        i_address = Arrays.copyOfRange(ins_address, 9, 10);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 9, 10);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 9, 10);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 9, 10);
 
-                                                            contactAdapter krishna = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(krishna);
-                                                            break;
+                                                                        contactAdapter krishna = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(krishna);
+                                                                        break;
 
-                                                        case "Kurnool":
-                                                            i_names = Arrays.copyOfRange(ins_name, 10, 12); // 10,12
-                                                            i_address = Arrays.copyOfRange(ins_address, 10, 12);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 10, 12);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 10, 12);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 10, 12);
+                                                                    case "Kurnool":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 10, 11); // 10,12
+                                                                        i_address = Arrays.copyOfRange(ins_address, 10, 11);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 10, 11);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 10, 11);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 10, 11);
 
-                                                            contactAdapter kurnool = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(kurnool);
-                                                            break;
+                                                                        contactAdapter kurnool = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(kurnool);
+                                                                        break;
 
-                                                        case "Nellore":
-                                                            i_names = Arrays.copyOfRange(ins_name, 12, 14); // 12,14
-                                                            i_address = Arrays.copyOfRange(ins_address, 12, 14);
-                                                            i_phones = Arrays.copyOfRange(ins_phoneno, 12, 14);
-                                                            i_emails = Arrays.copyOfRange(ins_email, 12, 14);
-                                                            i_websites = Arrays.copyOfRange(ins_website, 12, 14);
+                                                                    case "Nellore":
+                                                                        i_names = Arrays.copyOfRange(ins_name, 12, 13); // 12,14
+                                                                        i_address = Arrays.copyOfRange(ins_address, 12, 13);
+                                                                        i_phones = Arrays.copyOfRange(ins_phoneno, 12, 13);
+                                                                        i_emails = Arrays.copyOfRange(ins_email, 12, 13);
+                                                                        i_websites = Arrays.copyOfRange(ins_website, 12, 13);
 
-                                                            contactAdapter nellore = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                                            contactlist.setAdapter(nellore);
-                                                            break;
+                                                                        contactAdapter nellore = new contactAdapter(donor_alive.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+                                                                        contactlist.setAdapter(nellore);
+                                                                        break;
+
+                                                                }
+
+                                                                details = donorid + "\n" + name + "\n" + address + "\n" + phone + "\n" + mail + "\n" + aadhar + "\n" + s_age;
+                                                                if(ContextCompat.checkSelfPermission(donor_alive.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
+                                                                    sendMessage();
+
+                                                                }else{
+                                                                    ActivityCompat.requestPermissions(donor_alive.this, new String[] {Manifest.permission.SEND_SMS}, 100);
+                                                                }
+
+                                                                //share data to Process
+                                                                SharedPreferences sharedPref = getSharedPreferences("donote", MODE_PRIVATE);
+                                                                SharedPreferences.Editor editor = sharedPref.edit();
+                                                                editor.putString("did", donorid);
+                                                                editor.putString("name", name);
+                                                                editor.putString("address", address);
+                                                                editor.putString("district", sel_district);
+                                                                editor.putString("state", sel_state);
+                                                                editor.putString("phone", phone);
+                                                                editor.putString("mail", mail);
+                                                                editor.putString("aadhar", aadhar);
+                                                                editor.putString("gender", sel_gender);
+                                                                editor.putString("age", s_age);
+//                                                                editor.putString("i_names", Arrays.toString(i_names));
+//                                                                editor.putString("i_address", Arrays.toString(i_address));
+//                                                                editor.putString("i_phones", Arrays.toString(i_phones));
+//                                                                editor.putString("i_emails", Arrays.toString(i_emails));
+//                                                                editor.putString("i_websites", Arrays.toString(i_websites));
+                                                                editor.apply();
+
+                                                            }
+                                                        }
 
                                                     }
-
-                                                    details = donorid + "\n" + name + "\n" + address + "\n" + phone + "\n" + mail + "\n" + aadhar + "\n" + s_age;
-                                                    if(ContextCompat.checkSelfPermission(donor_alive.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
-                                                        sendMessage();
-
-                                                    }else{
-                                                        ActivityCompat.requestPermissions(donor_alive.this, new String[] {Manifest.permission.SEND_SMS}, 100);
-                                                    }
-
                                                 }
                                             }
 
-                                        }
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                            }
+                                        });
+
                                     } else {
                                         donor_aadhar.setError("Enter Valid Aadhar Number");
                                     }

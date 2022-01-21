@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        submit_btn = (Button) findViewById(R.id.otpsubmitbtn);
-        txt_name = (EditText) findViewById(R.id.usernamedata);
-        txt_pwd = (EditText) findViewById(R.id.password);
+        submit_btn = findViewById(R.id.otpsubmitbtn);
+        txt_name = findViewById(R.id.usernamedata);
+        txt_pwd = findViewById(R.id.password);
 
         submit_btn.setOnClickListener(v -> {
             String username = txt_name.getText().toString();
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }else{
-                txt_name.setError("Please Enter Your Mail Address");
+                txt_name.setError("Please Enter Your Username");
             }
         });
 

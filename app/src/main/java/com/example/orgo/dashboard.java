@@ -30,7 +30,7 @@ public class dashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    CardView help_box, orgz_box, know_box, awer_box, law_box, trans_box, body_box, donate_box;
+    CardView help_box, orgz_box, know_box, awer_box, law_box, trans_box, body_box, donate_box, processbox;
     String txt_name;
     private static final int REQUEST_CALL = 1;
 
@@ -49,6 +49,7 @@ public class dashboard extends AppCompatActivity {
         law_box = findViewById(R.id.lawbox);
         orgz_box = findViewById(R.id.orgzbox);
         help_box = findViewById(R.id.helpbox);
+        processbox = findViewById(R.id.processbox);
 
 
         drawerLayout = findViewById(R.id.dashboard);
@@ -78,6 +79,7 @@ public class dashboard extends AppCompatActivity {
                     return true;
                 } else if (id == R.id.dbodybtn) {
                     Intent intent = new Intent(dashboard.this, body_direction.class);
+                    intent.putExtra("username", txt_name);
                     startActivity(intent);
                     return true;
                 } else if (id == R.id.mythbtn) {
@@ -114,11 +116,22 @@ public class dashboard extends AppCompatActivity {
             }
         });
 
+//      ---------------
+//      | Process box |
+//      ---------------
+        processbox.setOnClickListener(v -> startActivity(new Intent(dashboard.this, process.class)));
 
 //      ---------------------
 //      | Body Donation box |
 //      ---------------------
-        body_box.setOnClickListener(v -> startActivity(new Intent(dashboard.this, body_direction.class)));
+        body_box.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, body_direction.class);
+                intent.putExtra("username", txt_name);
+                startActivity(intent);
+            }
+        });
 
 
 //      ---------------------------------

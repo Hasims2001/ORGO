@@ -55,6 +55,7 @@ public class donate_body extends AppCompatActivity {
 
     String[] dr_names, dr_phones, dr_emails, i_names, i_address, i_phones, i_emails, i_websites;
 
+    String txt_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -239,7 +240,7 @@ public class donate_body extends AppCompatActivity {
         rg = findViewById(R.id.radio_grp);
         donor = findViewById(R.id.donor);
 
-
+        txt_name = getIntent().getStringExtra("username");
 //        adapter
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -277,6 +278,7 @@ public class donate_body extends AppCompatActivity {
                            intent.putExtra("state", selectedstate);
                            intent.putExtra("district", selecteddistrict);
                            intent.putExtra("d_type", "Body");
+                           intent.putExtra("username", txt_name);
                            startActivity(intent);
                        }else{
 
