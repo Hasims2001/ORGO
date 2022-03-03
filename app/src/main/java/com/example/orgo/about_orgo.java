@@ -26,11 +26,8 @@ public class about_orgo extends AppCompatActivity {
         toolbar = findViewById(R.id.Tool);
         setSupportActionBar(toolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
-
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
+        side_menu draw = new side_menu(this);
+        draw.initNav(drawerLayout, navigationView, toolbar, false);
 
     }
 }

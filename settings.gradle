@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ORGO"
 include ':app'
+include ':adminportal'

@@ -35,6 +35,8 @@
     <string name="headdingfeed">We would like your feedback to improve our app.</string>
     <string name="process">Process</string>
     <string name="notsub">Not Submitted Any Form.</string>
+    <string name="medical"><u>Medical Checkup Info.</u></string>
+    <string name="donorconfirm">Donor Card Will be sent to your Address. </string>
 
 
     <!-- side menu -> Myth and Fact   -->
@@ -98,6 +100,9 @@
     <string name="logo">orgo logo png</string>
 
 
+    <!-- Donate Organ Button -->
+    <string name="optionchoose">Do you want to Register for Donate Organ?</string>
+
     <!-- Donate Body Button
      -->
     <string name="dbbtn">Donate Body Direction</string>
@@ -144,10 +149,13 @@
     <string name="address">Address : </string>
     <string name="phone">Phone No. : </string>
     <string name="email">Email : </string>
+    <string name="pwd">Password : </string>
+    <string name="conpwd">Con. Password : </string>
     <string name="website">Website : </string>
     <string name="contactperson">Contact Person</string>
     <string name="coming">Not Available</string>
 
+    <!-- Institute -->
     <string-array name="ins_name">
         <item>Andaman &amp; Nicobar Islands Institute of Medical Sciences</item>
         <item>Government Medical College - Anantapur</item>
@@ -1316,6 +1324,45 @@
         <item>Puducherry</item>
         <item>Yanam</item>
     </string-array>
+
+    <!-- Organ Transplant -->
+    <string name="textview">Do you want to register for organ Transplant?</string>
+    <string name="recname">Recipient Name</string>
+    <string name="recaddress">Recipient Address</string>
+    <string name="recphone">Recipient Phone</string>
+    <string name="recmail">Recipient Mail-Address</string>
+    <string name="rec_gender">Recipient Gender : </string>
+    <string name="rec_age">Recipient Age : </string>
+    <string name="rec_need">Which Organ : </string>
+    <string name="recaadhar">Recipient Aadhar</string>
+    <string name="disa">Donor is Available : </string>
+    <string name="avai">Yes</string>
+    <string name="notavai">No</string>
+
+    <string-array name="orgn_type">
+        <item>Select one</item>
+        <item>Bone</item>
+        <item>Bone marrow</item>
+        <item>Corneas</item>
+        <item>Heart</item>
+        <item>Intestine</item>
+        <item>Kidney</item>
+        <item>Liver</item>
+        <item>Lung</item>
+        <item>Middle ear</item>
+        <item>Pancreas</item>
+        <item>Skin</item>
+    </string-array>
+
+    <string name="rid">Recipient ID Number</string>
+    <string name="rname">Recipient Full Name</string>
+    <string name="raddress">Recipient Address</string>
+    <string name="rphone">Recipient Phone Number</string>
+    <string name="rmail">Recipient Mail-Address</string>
+    <string name="raadhar">Recipient Aadhar Number</string>
+    <string name="rgender">Recipient Gender </string>
+    <string name="rage">Recipient Age</string>
+
     <!-- Law on Transplant -->
     <string name="heading_law"><b>Laws and Rules Governing Organ Transplantation in India</b></string>
     <string name="para_one">
@@ -1375,6 +1422,7 @@ Form 21: Letter from Embassy  \n
 
 
     <!-- Organization -->
+    <string name="hintfor">Search here!</string>
     <string name="websitedrop">Websites</string>
     <string name="Organindia"><u>organindia.org</u></string>
     <string name="mohanfoundation"><u>mohanfoundation.org</u> </string>
@@ -1724,4 +1772,45 @@ Form 21: Letter from Embassy  \n
     <string name="usermoblieno">user moblie no</string>
 
 
+    <!-- Admin Activity-->
+    <string name="organdata">Organ Data</string>
+    <string name="userdata">User Data</string>
+    <string name="donor_info">Donor Information</string>
+    <string name="recipient_info">Recipient Information</string>
+    <string name="bonekey">Bone :</string>
+    <string name="bodykey">Body :</string>
+    <string name="bonemarrowkey">Bone marrow :</string>
+    <string name="corneaskey">Corneas :</string>
+    <string name="heartkey">Heart :</string>
+    <string name="intestinekey">Intestine :</string>
+    <string name="kidneykey">Kidney :</string>
+    <string name="liverkey">Liver :</string>
+    <string name="lungkey">Lung :</string>
+    <string name="middlekey">Middle ear :</string>
+    <string name="pancreaskey">Pancreas :</string>
+    <string name="skinkey">Skin :</string>
+    <string name="nextbtn">Next</string>
+    <string name="searchhere">Search here!</string>
+    <string name="aadhar"> Aadhar No. : </string>
+    <string name="donorid">Donor ID : </string>
+    <string name="age">Age : </string>
+    <string name="user">Username : </string>
+    <string name="checkup">M. Checkup : </string>
+    <string name="recipientid">Recipient ID : </string>
+    <string name="insdata">Institute &amp; Hospital</string>
+    <string name="insname">Name : </string>
+    <string name="insnamehint">Institute Name</string>
+    <string name="insaddress">Address : </string>
+    <string name="insaddresshint">Institute Address</string>
+    <string name="insphone">Phone No. : </string>
+    <string name="insphonehint">Institute Phone Number</string>
+    <string name="insemail">Email : </string>
+    <string name="insemailhint">Institute Email</string>
+    <string name="inswebsite">Website : </string>
+    <string name="inswebsitehint">Institute Website</string>
+    <string name="drname">Dr. Name : </string>
+    <string name="drnamehint">Doctor Name</string>
+    <string name="drphonehint">Doctor Phone Number</string>
+    <string name="dremailhint">Doctor Email</string>
+    <string name="notava">Data Not Available</string>
 </resources>

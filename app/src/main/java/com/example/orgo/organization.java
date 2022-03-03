@@ -4,13 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +24,7 @@ import com.google.android.material.navigation.NavigationView;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class organization extends AppCompatActivity {
-
+    String txt_name;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -33,6 +38,8 @@ public class organization extends AppCompatActivity {
     String[] droptxt = {"Basni Industrial Area, Phase-2, Jodhpur, Rajasthan, 342005", "Virbhadra Road, Rishikesh, Uttarkhand, 249201", "Bhubaneswar, Sijua, Patrapada, Bhubaneswar, Odisha, 751019", "Phulwari Sharif, Patna, Bihar, 801505", "Saket Nagar, Bhopal,Madhya Pradesh, 462020",  "Great Eastern Rd, AIIMS Campus, Tatibandh, Raipur, Chhattisgarh, 492099", "GMCH Complex, GMC Hospital Rd, Bhangagarh, Guwahati, Assam, 781032", "C/o Director, IPGME&amp;R, 1st Floor, Administrative Block, 244 A.J.C. Bose Road, Kolkata, West Bengal, 700020", "Near OPD, NIMHANS, Hosur Road, Bengaluru, Karnataka, 560029", "Dr.NTR University of Health, Sciences Gunadala, Vijayawada, Andhra Pradesh, 520008", "Acharya Dhonde Marg, Parel, Mumbai, Maharashtra, 400012", "Deceased Donor Organ Transplantation Program, Super Speciality Block, Government Medical College Hospital, Trivandrum, Kerala", "4th Floor, National Institute of Pathology Building, Safdarjung Hospital Campus, New Delhi, Delhi NCR, 110029", "Research Block B, 6th Floor, Sector 12, Chandigarh, Chandigarh, 160012", "G-*, KJ Lon, Hospital Trimurti Circle, Gangwal Park, Rambag, Jaipur, Rajasthan, 302004", "Soura, Srinagar, Srinagar, Jammu and Kashmir, 190011", "1045, I Floor, Fourth Circle, Tamil Nadu, Government Multi Super Specialty Hospital, Omandurar Government Estate, Anna Salai, Chennai, Tamil Nadu, 600002"};
     String[] dropphone1 = {"+912912740741", "0135-2462510", "+916742476789", "+916122451923", "+917552970020",  "+917712572240", "+913612529457", "+913322041101", "Phone NO. : Not Available", "+918662451374", "02224107000", "+914712528386", "+911126164770", "Phone NO. : Not Available", "+919829300541", "+911942401013", "+914425363141" };
     String[] dropmail = {"aoadmin@aiimsjodhpur.edu.in", "rakeshkumar.aoaiims@gmail.com", "info@aiimsbhubaneswar.edu.in", "admin@aiimspatna.org", "admin@aiimsraipur.edu.in",  "director@aiimsraipur.edu.in", "gmch-asm@nic.in", "director.ipgmer@gmail.com", "zcckbangalore@gmail.com", "chairmanaactjeevandan-ap@nic.in", "Mail : Not Available", "principalmct@gmail.com", "dir@notto.nic.in", "Mail : Not Available", "rnoscadaverdonation@gmail.com", "contactus@skims.ac.in", "organstransplant@gmail.com"};
+    EditText searchView;
+    organztnAdapter orad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +55,8 @@ public class organization extends AppCompatActivity {
         toolbar = findViewById(R.id.Tool);
         setSupportActionBar(toolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
-
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        side_menu draw = new side_menu(this);
+        draw.initNav(drawerLayout, navigationView, toolbar, false);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -91,9 +96,28 @@ public class organization extends AppCompatActivity {
         });
 
 
+        searchView = findViewById(R.id.searchbar);
         ListView listView = findViewById(R.id.listview);
-        organztnAdapter orad = new organztnAdapter(this, R.layout.organztn_layout, dropheading, droplocation, droptxt, dropphone1, dropmail);
+        listView.setTextFilterEnabled(true);
+        orad = new organztnAdapter(organization.this, R.layout.organztn_layout, dropheading, droplocation, droptxt, dropphone1, dropmail);
         listView.setAdapter(orad);
+
+        searchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                orad.getFilter().filter(s);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
 
 //        // card_one

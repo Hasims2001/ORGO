@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "521621915690",
+    "firebase_url": "https://orgo-2022-default-rtdb.firebaseio.com",
+    "project_id": "orgo-2022",
+    "storage_bucket": "orgo-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521621915690:android:a25994495bdc91ceb5db53",
+        "android_client_info": {
+          "package_name": "com.example.adminportal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521621915690-hqhsp8t0ff65f4ujdohjp6pvggqkvcs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxpjvtR9OnjG6nhdYepZP8xUBMRlksQp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521621915690-hqhsp8t0ff65f4ujdohjp6pvggqkvcs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521621915690:android:7296cf63c298d230b5db53",
+        "android_client_info": {
+          "package_name": "com.example.orgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521621915690-4kt36vlnk4afiltsv6u0cbsb4jal7p6k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.orgo",
+            "certificate_hash": "d40fc3b4d8435f42f53152e979a71d29b0b818af"
+          }
+        },
+        {
+          "client_id": "521621915690-hqhsp8t0ff65f4ujdohjp6pvggqkvcs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxpjvtR9OnjG6nhdYepZP8xUBMRlksQp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521621915690-hqhsp8t0ff65f4ujdohjp6pvggqkvcs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 if (!pwd.isEmpty()) {
                     txt_pwd.setError(null);
 
-                    final String usernamedata = txt_name.getText().toString();
-                    final String userpwddata = txt_pwd.getText().toString();
+                    final String usernamedata = txt_name.getText().toString().trim();
+                    final String userpwddata = txt_pwd.getText().toString().trim();
+
 
                     firebaseDatabase = FirebaseDatabase.getInstance();
                     databaseReference = firebaseDatabase.getReference("userdata");
@@ -64,13 +67,24 @@ public class MainActivity extends AppCompatActivity {
                                     txt_name.setError(null);
                                     String pwdchecking = snapshot.child(usernamedata).child("pwd").getValue(String.class);
                                     if (pwdchecking.equals(userpwddata)){
-                                        txt_pwd.setError(null);
-                                        Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(getApplicationContext(),dashboard.class);
-                                        intent.putExtra("txtname", txt_name.getText().toString());
-                                        startActivity(intent);
 
-                                        finish();
+                                        if (username.equals("Hasim Shaikh")){
+                                            Toast.makeText(getApplicationContext(), "Welcome Admin!", Toast.LENGTH_SHORT).show();
+                                            Intent admin = new Intent(getApplicationContext(), admin_work.class);
+                                            startActivity(admin);
+                                        }else {
+                                            txt_pwd.setError(null);
+                                            Toast.makeText(getApplicationContext(), "Login Successfully!", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(getApplicationContext(), dashboard.class);
+                                            intent.putExtra("txtname", txt_name.getText().toString());
+                                            startActivity(intent);
+                                            SharedPreferences sharedPreferences = getSharedPreferences("UserInfo",MODE_PRIVATE);
+                                            SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                                            myEdit.putString("user_name", txt_name.getText().toString().trim());
+//                                            myEdit.putInt("age", Integer.parseInt(age.getText().toString()));
+                                            myEdit.apply();
+                                            finish();
+                                        }
 
 
                                     }else{

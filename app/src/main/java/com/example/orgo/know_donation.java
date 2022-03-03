@@ -6,12 +6,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -25,7 +29,7 @@ public class know_donation extends AppCompatActivity {
     ImageView img_one, one_img;
     TextView dis_one, first_txt;
 
-
+    String txt_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +42,8 @@ public class know_donation extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
-
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        side_menu draw = new side_menu(this);
+        draw.initNav(drawerLayout, navigationView, toolbar, false);
 
         String[] heading = getResources().getStringArray(R.array.heading);
         String[] txt =  getResources().getStringArray(R.array.answers);
@@ -49,6 +51,29 @@ public class know_donation extends AppCompatActivity {
         ListView listView = findViewById(R.id.listview);
         knowdontnAdapter knad = new knowdontnAdapter(this, R.layout.organztn_layout, heading, txt);
         listView.setAdapter(knad);
+
+        Button yesbtn = findViewById(R.id.yesbtn);
+        Button nobtn = findViewById(R.id.nobtn);
+        LinearLayout option = findViewById(R.id.option);
+
+        String txt_name = getIntent().getStringExtra("username");
+        yesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(know_donation.this, donate_body.class);
+                intent.putExtra("username", txt_name);
+                intent.putExtra("activity_name", "Donate Organ");
+                intent.putExtra("checked", "2");
+                startActivity(intent);
+            }
+        });
+        nobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(know_donation.this, "Thank you", Toast.LENGTH_SHORT).show();
+                option.setVisibility(View.INVISIBLE);
+            }
+        });
 
 //        dis_one = findViewById(R.id.dis_one);
 //        layout_one = findViewById(R.id.layout_one);

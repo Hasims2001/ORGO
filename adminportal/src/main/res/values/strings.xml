@@ -1,0 +1,1868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AdminPortal</string>
+
+
+        <!-- side menu -> Myth and Fact   -->
+        <string name="heading_myfa">Myths and Facts About Organ Donation</string>
+        <string name="myth1">Myth No.1 : Anyone can become an organ donor.</string>
+        <string name="fact1">Certain medical conditions automatically disqualify one from donating organs. The decision to use an organ is based on strict medical criteria. At the time of death, only medical professionals can determine whether a prospect’s organs are suitable for transplantation. Some diseases rule out donation including active cancer, HIV, Hepatitis or  any active infection</string>
+        <string name="myth2">Myth No.2 : Organ donation is not necessary in India</string>
+        <string name="fact2">Unofficial statistics indicate that there are nearly 300 deaths every day due to organ failure. That is more than one lakh deaths per year.  As per records, out of the 9.5 million deaths in India annually, at least 1 lakh are believed to be potential donors; however less than 200 actually become donors. As these figures suggest, India needs organ donors.</string>
+        <string name="myth3">Myth No.3 : An organ recipient cannot be a donor.</string>
+        <string name="fact3">Due to the administration of immunosuppressive drugs, tissue donation can be a problem. Otherwise, the medical team can only determine whether a healthy organ can be retrieved.</string>
+        <string name="myth4">Myth No.4 : Organ/tissue removal will affect cremation/burial arrangements.</string>
+        <string name="fact4">The removal of organs or tissues will not interfere with customary funeral or burial arrangements. The appearance of the body is not altered.  A super specialized surgical transplant team removes the organs and tissues which can be transplanted in other patients.</string>
+        <string name="myth5">Myth No.5 : It is enough just to have a donor card</string>
+        <string name="fact5"> No. You have to carry it at all times and also inform your relatives about your wish to donate your organs so that they give consent for donation when the circumstance arises. Becoming an organ donor takes less than 2 minutes.</string>
+        <string name="myth6">Myth No.6 : Only the wealthy can afford an organ transplant</string>
+        <string name="fact6">Factors such as blood group matching, the length of time being on the waiting list and severity of the disease play a role in classifying high priority and low priority cases.</string>
+        <string name="myth7">Myth No.7 : Organ and tissue donation causes disfiguration.</string>
+        <string name="fact7">Organ donation does not disfigure the body. Like any other surgery, surgical incisions are not visible as such.</string>
+        <string name="myth8">Myth No.8 : You have to be related to the recipient</string>
+        <string name="fact8">For qualifying to become a  living donor, you will undergo an extensive transplant evaluation to assess your health. A person with type O blood can donate organs to anyone, as they are “universal donors.” Also, you need not necessarily be from the same racial or ethnic group to donate an organ.</string>
+        <string name="myth9">Myth No.9 : Organ donation can severely impact your health</string>
+        <string name="fact9">Recovery periods vary, but within three months, most donors will return to their pre-donation health. For instance,  after donating a portion of your liver, cells in the remaining lobe regenerate or grow back to the original size. After a kidney donation, one kidney can still effectively remove waste from the body.</string>
+        <string name="myth10">Myth No.10 : Living organ donation is unsafe</string>
+        <string name="fact10">Donors generally spend 2-7 days in recovery before being discharged from the hospital. Death resulting from organ donation is very rare.</string>
+
+
+        <!-- side menu -> about orgo -->
+        <string name="heading_about">About ORGO</string>
+        <string name="first_para">ORGO is a Not-For-Profit, registered Non-Government Charity Organisation in India that works in the field of deceased organ donation and Transplantation.</string>
+        <string name="second_para">Developers :\n </string>
+        <string name="Haism">Hasim S</string>
+        <string name="Jaydeep">Jaydeep J</string>
+        <string name="Aamir">Aamir S</string>
+
+        <!-- side menu -> Profile -->
+        <string name="user_name">username</string>
+        <string name="update">UPDATE DETAILS</string>
+
+        <!--   dashboard string -->
+        <string name="donatebtn">Donate Organ</string>
+        <string name="donatebodybtn">Donate Body</string>
+        <string name="knowbtn">Organ Donation</string>
+        <string name="awerbtn">Donation Awareness</string>
+        <string name="transbtn">Organ Transplant</string>
+        <string name="lawbtn">Law on Transplant</string>
+        <string name="govbtn">Organization</string>
+        <string name="helpbtn">Helpline - 24/7</string>
+        <string name="donateorgan">donate_organ_png</string>
+        <string name="donateorganpng">Donate Organ</string>
+        <string name="donatebodypng">Donate Body</string>
+        <string name="home">Home</string>
+        <string name="profile">Profile</string>
+        <string name="mythandfact">Myths and Facts</string>
+        <string name="aboutus">About ORGO</string>
+        <string name="feedback">Feedback</string>
+        <string name="share">Share</string>
+        <string name="logout">Logout</string>
+        <string name="slogan"><i>Let\'s share our life with others.</i></string>
+        <string name="navigation_open">Open Navigation drawer</string>
+        <string name="navigation_close">Close Navigation drawer</string>
+        <string name="logo">orgo logo png</string>
+
+
+        <!-- Donate Organ Button -->
+        <string name="optionchoose">Do you want to Register for Donate Organ?</string>
+
+        <!-- Donate Body Button
+         -->
+        <string name="dbbtn">Donate Body Direction</string>
+        <string name="option">Do you want to Register for Donate Body?</string>
+        <string name="yesbtn">YES</string>
+        <string name="nobtn">NO</string>
+        <string name="state">State</string>
+        <string name="district">District</string>
+        <string name="alive">Alive</string>
+        <string name="dead">Dead</string>
+        <string name="donor">Donor is :</string>
+        <string name="direction"> Contact Details For Medical Process</string>
+
+        <string name="did">Donor ID Number</string>
+        <string name="dname">Donor Full Name</string>
+        <string name="daddress">Donor Address</string>
+        <string name="dphone">Donor Phone Number</string>
+        <string name="dmail">Donor Mail-Address</string>
+        <string name="dgender">Donor Gender : </string>
+        <string name="dmale">Male</string>
+        <string name="dfemale">Female</string>
+        <string name="dtrans">TransGender</string>
+        <string name="dage">Donor Age : </string>
+        <string name="daadhar">Donor Aadhar Number</string>
+        <string name="donatetype">Donate : </string>
+
+        <string-array name="dtype">
+            <item>Select one</item>
+            <item>Bone</item>
+            <item>Body</item>
+            <item>Bone marrow</item>
+            <item>Corneas</item>
+            <item>Heart</item>
+            <item>Intestine</item>
+            <item>Kidney</item>
+            <item>Liver</item>
+            <item>Lung</item>
+            <item>Middle ear</item>
+            <item>Pancreas</item>
+            <item>Skin</item>
+        </string-array>
+
+        <string name="name">Name : </string>
+        <string name="address">Address : </string>
+        <string name="phone">Phone No. : </string>
+        <string name="email">Email : </string>
+        <string name="pwd">Password : </string>
+        <string name="conpwd">Con. Password : </string>
+        <string name="website">Website : </string>
+        <string name="contactperson">Contact Person</string>
+        <string name="coming">Not Available</string>
+
+        <!-- Institute -->
+        <string-array name="ins_name">
+            <item>Andaman &amp; Nicobar Islands Institute of Medical Sciences</item>
+            <item>Government Medical College - Anantapur</item>
+            <item>SVIMS - Sri Padmavathi Medical College for women</item>
+            <item>Konaseema Institute of Medical Sciences &amp; Research Foundation</item>
+            <item>Guntur Medical College</item>
+            <item>Katuri Medical College</item>
+            <item>NRI Medical College</item>
+            <item>Fathima Institute of Medical Sciences</item>
+            <item>Rajiv Gandhi Institute of Medical Sciences</item>
+            <item>Siddhartha Medical College</item>
+            <item>Kurnool Medical College</item>
+            <item>Viswabharathi Medical College &amp; General Hospital</item>
+            <item>A. C. S. R. Government Medical College</item>
+            <item>Narayana Medical College</item>
+
+
+        </string-array>
+
+        <string-array name="ins_address">
+            <item>DHS Annexe Building Near Rear Gate, G.B.Pant Hospital, Atlanta Point, Port Blair 744104</item>
+            <item>Gulzarpet, Anantapur, Andhra Pradesh 515001</item>
+            <item>Alipiri Road, Tirupati, Chittoor Dsitrict, Andhra Pradesh 517501</item>
+            <item>NH-216, Chaitanya Health City, Amalapuram, East Godavari District, Andhra Pradesh 533201</item>
+            <item>Kannavari Thota Guntur Andhra Pradesh 522004</item>
+            <item>Katuri Nagar, Kanna Vari Thota, Chinakondrupadu, Guntur, Andhra Pradesh 500019</item>
+            <item>N.R.I Academy Of Sciences, Mangalagiri Road, Chinakakani - Guntur District, Andhra Pradesh 522503</item>
+            <item>Ramarajupalli, Pulivendula Road, Kadapa, Andhra Pradesh 516003</item>
+            <item>Rajiv Gandhi Institute of Medical Sciences, Puttampalli, Andhra Pradesh 516002</item>
+            <item>Ring Road, Gunadala, Vijayawada, Andhra Pradesh 520008</item>
+            <item>Bharath Petroleum, Near Bhudawarapet, Kisan Ghat Road, Kurnool, Andhra Pradesh 518002</item>
+            <item>R.T. Nagar, Penchikalapadu, Kurnool, Andhra Pradesh 518467</item>
+            <item>Nellore, Andhra Pradesh 524004</item>
+            <item>Chinthareddypalem, S. P. S. R. Nellore, Andhra Pradesh</item>
+
+
+        </string-array>
+
+        <string-array name="ins_phoneno">
+            <item>03192 234911, 03192 232605</item>
+            <item>08554 249115, 08554 274568</item>
+            <item>0877 2287777, 0877 2286126, 0877 2287368, 0877 2287152, 0877 2286131 </item>
+            <item>08856 238424, 08856 238428</item>
+            <item>0863 2234625</item>
+            <item>0863 2288555, 0863 2288556, 0863 2288557 </item>
+            <item>086452 36777</item>
+            <item>08562 200093, 08562 200092, 08562 200505 </item>
+            <item>08562 220200, 08562 225677 </item>
+            <item>0866 2450390, 0866 2450626, 9849903130 </item>
+            <item>085182 55160 </item>
+            <item>18004253889, 08518 646416, 08518 283889, 08518 283898 </item>
+            <item>0861 2319299, 0861 2317299 </item>
+            <item>0861 2317963, 0861 2317964, 0861 2317969 </item>
+
+
+        </string-array>
+
+        <string-array name="ins_email">
+            <item>diraniims@gmail.com</item>
+            <item>gmc_atp@ap.nic.in</item>
+            <item>svimshosp@yahoo.com, svimsdirector@gmail.com, bvengamma@yahoo.com </item>
+            <item>info@kims.in</item>
+            <item>gmc_gtr@ap.nic.in</item>
+            <item>kmchgnt@gmail.com </item>
+            <item>enquiry@nrias.ac.in</item>
+            <item>fims.kadapa.ap@gmail.com </item>
+            <item>directorrimskadapa@yahoo.com </item>
+            <item>smc_vja@ap.nic.in </item>
+            <item>principalkmcknl@yahoo.co.in </item>
+            <item>vmcknl@gmail.com</item>
+            <item>acsrgmcnlr@gmail.com </item>
+            <item>narayanamedical@yahoo.com </item>
+
+        </string-array>
+
+        <string-array name="ins_website">
+            <item>aniims.org</item>
+            <item>apsv.nic.in</item>
+            <item>svimstpt.ap.nic.in</item>
+            <item>kims.in</item>
+            <item>gunturmedicalcollege.edu.in</item>
+            <item>katurimedicalcollege.org</item>
+            <item>nrias.net</item>
+            <item>fimskadapa.in</item>
+            <item>rimskadapa.in</item>
+            <item>smcvja.in</item>
+            <item>kmckurnool.com</item>
+            <item>vmcknl.in</item>
+            <item>acsrgmcnlr.ediu.in</item>
+            <item>narayanamedicalcollege.com</item>
+
+        </string-array>
+
+        <!-- contact person-->
+        <string-array name="per_name">
+            <item>Dr. Sumit Tulshidas Patil</item>
+            <item>Dr. Jessie James</item>
+            <item>Dr. Vaibhav Anjankar</item>
+            <item>Dr. Sachin Jagannath Patil</item>
+            <item>Dr. Deepa Devadas</item>
+
+            <item>Dr. M. Neeraja</item>
+            <item>D. V. Radha Krishnamurty</item>
+            <item>Dr. C. Sreekanth</item>
+            <item>Dr. V. Subhadra Devi  M. S.</item>
+            <item>Dr. M. Hanumantha Rao</item>
+            <item>Dr. B. Vengamma</item>
+            <item>Dr. A. S. Kameswara Rao</item>
+            <item>Y. Srininasa Rao</item>
+            <item>Dr. Anirban Das Gupta</item>
+            <item>Dr. V. Harinatha Babu</item>
+            <item>Dr. P. Savithri</item>
+            <item>Dr. D. Madhavi</item>
+            <item>R. Amudha Mohan Rao</item>
+            <item>P. Venkateswara Rao</item>
+            <item>K. Rattaih</item>
+            <item>Dr. Muralidhar Reddy Sangam</item>
+            <item>Dr. G. Aparna</item>
+            <item>Dr. K. Prabakara Rao</item>
+            <item>Dr. C. Bala Krishna</item>
+            <item>Dr. Sofia</item>
+            <item>Dr. M. Sasidhar</item>
+            <item>Dr. R. Chitra</item>
+            <item>Dr. G. Syamala</item>
+            <item>Dr. P. Sasidhar</item>
+            <item>Dr. K. Malathi</item>
+            <item>Dr. Jayamma</item>
+            <item>Dr. Vani Sree S. K.</item>
+            <item>Dr. N. Prabhakar Rao</item>
+            <item>Dr. K. S. Haniman</item>
+            <item>Dr. G. Kanchanalatha</item>
+            <item>Dr. K. Srinivasulu</item>
+            <item>Dr. C. K. Lakshmi Devi</item>
+            <item>Dr. Dasari Madhavi</item>
+            <item>Dr. K. V. N. Geetha Devi</item>
+            <item>Dr. Mulla Pairoja Sultana</item>
+            <item>Dr. B. Lalitha</item>
+            <item>Dr. V. Manikanta Reddy</item>
+            <item>Dr. G. Veera Nagi Reddy</item>
+            <item>Dr. G. Suman Babu</item>
+
+        </string-array>
+        <string-array name="per_phone">
+            <item>7063956241</item>
+            <item>7478460043</item>
+            <item>9422856368</item>
+            <item>9474202316</item>
+            <item>9933207244</item>
+
+            <item>08554 249115, 08554 274568, 08554 274819</item>
+            <item>9440623353</item>
+            <item>0877 2288442</item>
+            <item>9440225860</item>
+            <item>9493547651, 0877 2287777 Extn: 2348</item>
+            <item>0877 2287777 Extn: 2222</item>
+            <item>9000522333</item>
+            <item>9959508957</item>
+            <item>9885939321</item>
+            <item>9963573337</item>
+            <item>9346642682</item>
+            <item>9441277575</item>
+            <item>0863 2288205</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>9440668501</item>
+            <item>9502310954</item>
+            <item>0140 23303223</item>
+            <item>9701501046</item>
+            <item>9490134259</item>
+            <item>Not Available</item>
+            <item>9440508509</item>
+            <item>9885796488</item>
+            <item>9912213633</item>
+            <item>9849690984</item>
+            <item>9297201980</item>
+            <item>9618151415</item>
+            <item>9440017730</item>
+            <item>9985751975</item>
+            <item>9989730473</item>
+            <item>9000911158</item>
+            <item>9441256272</item>
+            <item>9441277575</item>
+            <item>9247631402</item>
+            <item>9441562737</item>
+            <item>9440218245</item>
+            <item>9629014485</item>
+            <item>0861 2312370</item>
+            <item>Not Available</item>
+
+        </string-array>
+        <string-array name="per_email">
+            <item>dr.sumitpatil1122@gmail.com</item>
+            <item>jjames@gmail.com</item>
+            <item>vaibhav_anjankar@yahoo.co.in</item>
+            <item>drsachin6880@gmail.com</item>
+            <item>deepadevadas108@gmail.com</item>
+
+            <item>principal.gmcatp@yahoo.in</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>svimshosp@yahoo.com</item>
+            <item>drmhraosvims1957@gmail.com, deansvims@yahoo.com</item>
+            <item>svimsdirector@gmail.com</item>
+            <item>principal07_kims@yahoo.co.in</item>
+            <item>kavssc@gmail.com</item>
+            <item>dr.anirbanbsmc@gmail.com</item>
+            <item>superintendent.kims@gmail.com</item>
+            <item>Not Available</item>
+            <item>madhavikandepudi@gmail.com</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>murali_sangam@yahoo.co.in</item>
+            <item>maildraparna@yahoo.com</item>
+            <item>Not Available</item>
+            <item>gopiakp@yahoo.com</item>
+            <item>Not Available</item>
+            <item>drgowrav53@yahoo.com</item>
+            <item>vjwchitra@yahoo.co.in</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>suji.kitty1993@gmail.com</item>
+            <item>drprabhakarrao@gmail.com</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+            <item>Not Available</item>
+
+        </string-array>
+
+
+        <string-array name="indian_states">
+            <item>Select Your State</item>
+            <item>Andaman and Nicobar Islands</item>
+            <item>Andhra Pradesh</item>
+            <item>Arunachal Pradesh</item>
+            <item>Assam</item>
+            <item>Bihar</item>
+            <item>Chandigarh</item>
+            <item>Chhattisgarh</item>
+            <item>Dadra and Nagar Haveli</item>
+            <item>Daman and Diu</item>
+            <item>Delhi</item>
+            <item>Goa</item>
+            <item>Gujarat</item>
+            <item>Haryana</item>
+            <item>Himachal Pradesh</item>
+            <item>Jammu and Kashmir</item>
+            <item>Jharkhand</item>
+            <item>Karnataka</item>
+            <item>Kerala</item>
+            <item>Ladakh</item>
+            <item>Lakshadweep</item>
+            <item>Madhya Pradesh</item>
+            <item>Maharashtra</item>
+            <item>Manipur</item>
+            <item>Meghalaya</item>
+            <item>Mizoram</item>
+            <item>Nagaland</item>
+            <item>Orissa</item>
+            <item>Puducherry</item>
+            <item>Punjab</item>
+            <item>Rajasthan</item>
+            <item>Sikkim</item>
+            <item>Tamil Nadu</item>
+            <item>Telangana</item>
+            <item>Tripura</item>
+            <item>Uttarakhand</item>
+            <item>Uttar Pradesh</item>
+            <item>West Bengal</item>
+        </string-array>
+        <string-array name="indian_district">
+            <item>Select Your District</item>
+        </string-array>
+        <string-array name="array_andhra_pradesh_districts">
+            <item>Select Your District</item>
+            <item>Anantapur</item>
+            <item>Chittoor</item>
+            <item>East Godavari</item>
+            <item>Guntur</item>
+            <item>Kadapa</item>
+            <item>Krishna</item>
+            <item>Kurnool</item>
+            <item>Nellore</item>
+            <item>Prakasam</item>
+            <item>Srikakulam</item>
+            <item>Visakhapatnam</item>
+            <item>Vizianagaram</item>
+            <item>West Godavari</item>
+        </string-array>
+
+        <string-array name="array_arunachal_pradesh_districts">
+            <item>Select Your District</item>
+            <item>Anjaw</item>
+            <item>Siang</item>
+            <item>Changlang</item>
+            <item>Dibang Valley</item>
+            <item>East Kameng</item>
+            <item>East Siang</item>
+            <item>Kamle</item>
+            <item>Kra Daadi</item>
+            <item>Kurung Kumey</item>
+            <item>Lepa Rada</item>
+            <item>Lohit</item>
+            <item>Longding</item>
+            <item>Lower Dibang Valley</item>
+            <item>Lower Siang</item>
+            <item>Lower Subansiri</item>
+            <item>Namsai</item>
+            <item>Pakke Kessang</item>
+            <item>Papum Pare</item>
+            <item>Shi Yomi</item>
+            <item>Tawang</item>
+            <item>Tirap</item>
+            <item>Upper Siang</item>
+            <item>Upper Subansiri</item>
+            <item>West Kameng</item>
+            <item>West Siang</item>
+        </string-array>
+
+        <string-array name="array_assam_districts">
+            <item>Select Your District</item>
+            <item>Bajali</item>
+            <item>Baksa</item>
+            <item>Barpeta</item>
+            <item>Biswanath</item>
+            <item>Bongaigaon</item>
+            <item>Cachar</item>
+            <item>Charaideo</item>
+            <item>Chirang</item>
+            <item>Darrang</item>
+            <item>Dhemaji</item>
+            <item>Dhubri</item>
+            <item>Dibrugarh</item>
+            <item>Dima Hasao</item>
+            <item>Goalpara</item>
+            <item>Golaghat</item>
+            <item>Hailakandi</item>
+            <item>Hojai</item>
+            <item>Jorhat</item>
+            <item>Kamrup</item>
+            <item>Kamrup Metropolitan</item>
+            <item>Karbi Anglong</item>
+            <item>Karimganj</item>
+            <item>Kokrajhar</item>
+            <item>Lakhimpur</item>
+            <item>Majuli</item>
+            <item>Morigaon</item>
+            <item>Nagaon</item>
+            <item>Nalbari</item>
+            <item>Sivasagar</item>
+            <item>Sonitpur</item>
+            <item>South Salmara-Mankachar</item>
+            <item>Tinsukia</item>
+            <item>Udalguri</item>
+            <item>West Karbi Anglong</item>
+        </string-array>
+
+        <string-array name="array_bihar_districts">
+            <item>Select Your District</item>
+            <item>Araria</item>
+            <item>Arwal</item>
+            <item>Aurangabad</item>
+            <item>Banka</item>
+            <item>Begusarai</item>
+            <item>Bhagalpur</item>
+            <item>Bhojpur</item>
+            <item>Buxar</item>
+            <item>Darbhanga</item>
+            <item>East Champaran</item>
+            <item>Gaya</item>
+            <item>Gopalganj</item>
+            <item>Jamui</item>
+            <item>Jehanabad</item>
+            <item>Kaimur</item>
+            <item>Katihar</item>
+            <item>Khagaria</item>
+            <item>Kishanganj</item>
+            <item>Lakhisarai</item>
+            <item>Madhepura</item>
+            <item>Madhubani</item>
+            <item>Munger</item>
+            <item>Muzaffarpur</item>
+            <item>Nalanda</item>
+            <item>Nawada</item>
+            <item>Patna</item>
+            <item>Purnia</item>
+            <item>Rohtas</item>
+            <item>Saharsa</item>
+            <item>Samastipur</item>
+            <item>Saran</item>
+            <item>Sheikhpura</item>
+            <item>Sheohar</item>
+            <item>Sitamarhi</item>
+            <item>Siwan</item>
+            <item>Supaul</item>
+            <item>Vaishali</item>
+            <item>West Champaran</item>
+        </string-array>
+
+        <string-array name="array_chhattisgarh_districts">
+            <item>Select Your District</item>
+            <item>Balod</item>
+            <item>Baloda Bazar</item>
+            <item>Balrampur Ramanujganj</item>
+            <item>Bastar</item>
+            <item>Bemetara</item>
+            <item>Bijapur</item>
+            <item>Bilaspur</item>
+            <item>Dantewada</item>
+            <item>Dhamtari</item>
+            <item>Durg</item>
+            <item>Gariaband</item>
+            <item>Gaurela Pendra Marwahi</item>
+            <item>Janjgir Champa</item>
+            <item>Jashpur</item>
+            <item>Kabirdham</item>
+            <item>Kanker</item>
+            <item>Kondagaon</item>
+            <item>Korba</item>
+            <item>Koriya</item>
+            <item>Mahasamund</item>
+            <item>Mungeli</item>
+            <item>Narayanpur</item>
+            <item>Raigarh</item>
+            <item>Raipur</item>
+            <item>Rajnandgaon</item>
+            <item>Sukma</item>
+            <item>Surajpur</item>
+            <item>Surguja</item>
+        </string-array>
+
+        <string-array name="array_goa_districts">
+            <item>Select Your District</item>
+            <item>North Goa</item>
+            <item>South Goa</item>
+        </string-array>
+
+        <string-array name="array_gujarat_districts">
+            <item>Select Your District</item>
+            <item>Ahmedabad</item>
+            <item>Amreli</item>
+            <item>Anand</item>
+            <item>Aravalli</item>
+            <item>Banaskantha</item>
+            <item>Bharuch</item>
+            <item>Bhavnagar</item>
+            <item>Botad</item>
+            <item>Chhota Udaipur</item>
+            <item>Dahod</item>
+            <item>Dang</item>
+            <item>Devbhoomi Dwarka</item>
+            <item>Gandhinagar</item>
+            <item>Gir Somnath</item>
+            <item>Jamnagar</item>
+            <item>Junagadh</item>
+            <item>Kheda</item>
+            <item>Kutch</item>
+            <item>Mahisagar</item>
+            <item>Mehsana</item>
+            <item>Morbi</item>
+            <item>Narmada</item>
+            <item>Navsari</item>
+            <item>Panchmahal</item>
+            <item>Patan</item>
+            <item>Porbandar</item>
+            <item>Rajkot</item>
+            <item>Sabarkantha</item>
+            <item>Surat</item>
+            <item>Surendranagar</item>
+            <item>Tapi</item>
+            <item>Vadodara</item>
+            <item>Valsad</item>
+        </string-array>
+
+        <string-array name="array_haryana_districts">
+            <item>Select Your District</item>
+            <item>Ambala</item>
+            <item>Bhiwani</item>
+            <item>Charkhi Dadri</item>
+            <item>Faridabad</item>
+            <item>Fatehabad</item>
+            <item>Gurugram</item>
+            <item>Hisar</item>
+            <item>Jhajjar</item>
+            <item>Jind</item>
+            <item>Kaithal</item>
+            <item>Karnal</item>
+            <item>Kurukshetra</item>
+            <item>Mahendragarh</item>
+            <item>Mewat</item>
+            <item>Palwal</item>
+            <item>Panchkula</item>
+            <item>Panipat</item>
+            <item>Rewari</item>
+            <item>Rohtak</item>
+            <item>Sirsa</item>
+            <item>Sonipat</item>
+            <item>Yamunanagar</item>
+        </string-array>
+
+        <string-array name="array_himachal_pradesh_districts">
+            <item>Select Your District</item>
+            <item>Bilaspur</item>
+            <item>Chamba</item>
+            <item>Hamirpur</item>
+            <item>Kangra</item>
+            <item>Kinnaur</item>
+            <item>Kullu</item>
+            <item>Lahaul Spiti</item>
+            <item>Mandi</item>
+            <item>Shimla</item>
+            <item>Sirmaur</item>
+            <item>Solan</item>
+            <item>Una</item>
+        </string-array>
+
+        <string-array name="array_jammu_kashmir_districts">
+            <item>Select Your District</item>
+            <item>Anantnag</item>
+            <item>Bandipora</item>
+            <item>Baramulla</item>
+            <item>Budgam</item>
+            <item>Doda</item>
+            <item>Ganderbal</item>
+            <item>Jammu</item>
+            <item>Kathua</item>
+            <item>Kishtwar</item>
+            <item>Kulgam</item>
+            <item>Kupwara</item>
+            <item>Poonch</item>
+            <item>Pulwama</item>
+            <item>Rajouri</item>
+            <item>Ramban</item>
+            <item>Reasi</item>
+            <item>Samba</item>
+            <item>Shopian</item>
+            <item>Srinagar</item>
+            <item>Udhampur</item>
+        </string-array>
+
+        <string-array name="array_jharkhand_districts">
+            <item>Select Your District</item>
+            <item>Bokaro</item>
+            <item>Chatra</item>
+            <item>Deoghar</item>
+            <item>Dhanbad</item>
+            <item>Dumka</item>
+            <item>East Singhbhum</item>
+            <item>Garhwa</item>
+            <item>Giridih</item>
+            <item>Godda</item>
+            <item>Gumla</item>
+            <item>Hazaribagh</item>
+            <item>Jamtara</item>
+            <item>Khunti</item>
+            <item>Koderma</item>
+            <item>Latehar</item>
+            <item>Lohardaga</item>
+            <item>Pakur</item>
+            <item>Palamu</item>
+            <item>Ramgarh</item>
+            <item>Ranchi</item>
+            <item>Sahebganj</item>
+            <item>Seraikela Kharsawan</item>
+            <item>Simdega</item>
+            <item>West Singhbhum</item>
+        </string-array>
+
+        <string-array name="array_karnataka_districts">
+            <item>Select Your District</item>
+            <item>Bagalkot</item>
+            <item>Bangalore Rural</item>
+            <item>Bangalore Urban</item>
+            <item>Belgaum</item>
+            <item>Bellary</item>
+            <item>Bidar</item>
+            <item>Chamarajanagar</item>
+            <item>Chikkaballapur</item>
+            <item>Chikkamagaluru</item>
+            <item>Chitradurga</item>
+            <item>Dakshina Kannada</item>
+            <item>Davanagere</item>
+            <item>Dharwad</item>
+            <item>Gadag</item>
+            <item>Gulbarga</item>
+            <item>Hassan</item>
+            <item>Haveri</item>
+            <item>Kodagu</item>
+            <item>Kolar</item>
+            <item>Koppal</item>
+            <item>Mandya</item>
+            <item>Mysore</item>
+            <item>Raichur</item>
+            <item>Ramanagara</item>
+            <item>Shimoga</item>
+            <item>Tumkur</item>
+            <item>Udupi</item>
+            <item>Uttara Kannada</item>
+            <item>Vijayanagara</item>
+            <item>Vijayapura</item>
+            <item>Yadgir</item>
+        </string-array>
+
+        <string-array name="array_kerala_districts">
+            <item>Select Your District</item>
+            <item>Alappuzha</item>
+            <item>Ernakulam</item>
+            <item>Idukki</item>
+            <item>Kannur</item>
+            <item>Kasaragod</item>
+            <item>Kollam</item>
+            <item>Kottayam</item>
+            <item>Kozhikode</item>
+            <item>Malappuram</item>
+            <item>Palakkad</item>
+            <item>Pathanamthitta</item>
+            <item>Thiruvananthapuram</item>
+            <item>Thrissur</item>
+            <item>Wayanad</item>
+        </string-array>
+
+        <string-array name="array_madhya_pradesh_districts">
+            <item>Select Your District</item>
+            <item>Agar Malwa</item>
+            <item>Alirajpur</item>
+            <item>Anuppur</item>
+            <item>Ashoknagar</item>
+            <item>Balaghat</item>
+            <item>Barwani</item>
+            <item>Betul</item>
+            <item>Bhind</item>
+            <item>Bhopal</item>
+            <item>Burhanpur</item>
+            <item>Chachaura</item>
+            <item>Chhatarpur</item>
+            <item>Chhindwara</item>
+            <item>Damoh</item>
+            <item>Datia</item>
+            <item>Dewas</item>
+            <item>Dhar</item>
+            <item>Dindori</item>
+            <item>Guna</item>
+            <item>Gwalior</item>
+            <item>Harda</item>
+            <item>Hoshangabad</item>
+            <item>Indore</item>
+            <item>Jabalpur</item>
+            <item>Jhabua</item>
+            <item>Katni</item>
+            <item>Khandwa</item>
+            <item>Khargone</item>
+            <item>Maihar</item>
+            <item>Mandla</item>
+            <item>Mandsaur</item>
+            <item>Morena</item>
+            <item>Nagda</item>
+            <item>Narsinghpur</item>
+            <item>Neemuch</item>
+            <item>Niwari</item>
+            <item>Panna</item>
+            <item>Raisen</item>
+            <item>Rajgarh</item>
+            <item>Ratlam</item>
+            <item>Rewa</item>
+            <item>Sagar</item>
+            <item>Satna</item>
+            <item>Sehore</item>
+            <item>Seoni</item>
+            <item>Shahdol</item>
+            <item>Shajapur</item>
+            <item>Sheopur</item>
+            <item>Shivpuri</item>
+            <item>Sidhi</item>
+            <item>Singrauli</item>
+            <item>Tikamgarh</item>
+            <item>Ujjain</item>
+            <item>Umaria</item>
+            <item>Vidisha</item>
+        </string-array>
+
+        <string-array name="array_maharashtra_districts">
+            <item>Select Your District</item>
+            <item>Ahmednagar</item>
+            <item>Akola</item>
+            <item>Amravati</item>
+            <item>Aurangabad</item>
+            <item>Beed</item>
+            <item>Bhandara</item>
+            <item>Buldhana</item>
+            <item>Chandrapur</item>
+            <item>Dhule</item>
+            <item>Gadchiroli</item>
+            <item>Gondia</item>
+            <item>Hingoli</item>
+            <item>Jalgaon</item>
+            <item>Jalna</item>
+            <item>Kolhapur</item>
+            <item>Latur</item>
+            <item>Mumbai City</item>
+            <item>Mumbai Suburban</item>
+            <item>Nagpur</item>
+            <item>Nanded</item>
+            <item>Nandurbar</item>
+            <item>Nashik</item>
+            <item>Osmanabad</item>
+            <item>Palghar</item>
+            <item>Parbhani</item>
+            <item>Pune</item>
+            <item>Raigad</item>
+            <item>Ratnagiri</item>
+            <item>Sangli</item>
+            <item>Satara</item>
+            <item>Sindhudurg</item>
+            <item>Solapur</item>
+            <item>Thane</item>
+            <item>Wardha</item>
+            <item>Washim</item>
+            <item>Yavatmal</item>
+        </string-array>
+
+        <string-array name="array_manipur_districts">
+            <item>Select Your District</item>
+            <item>Bishnupur</item>
+            <item>Chandel</item>
+            <item>Churachandpur</item>
+            <item>Imphal East</item>
+            <item>Imphal West</item>
+            <item>Jiribam</item>
+            <item>Kakching</item>
+            <item>Kamjong</item>
+            <item>Kangpokpi</item>
+            <item>Noney</item>
+            <item>Pherzawl</item>
+            <item>Senapati</item>
+            <item>Tamenglong</item>
+            <item>Tengnoupal</item>
+            <item>Thoubal</item>
+            <item>Ukhrul</item>
+        </string-array>
+
+        <string-array name="array_meghalaya_districts">
+            <item>Select Your District</item>
+            <item>East Garo Hills</item>
+            <item>East Jaintia Hills</item>
+            <item>East Khasi Hills</item>
+            <item>North Garo Hills</item>
+            <item>Ri Bhoi</item>
+            <item>South Garo Hills</item>
+            <item>South West Garo Hills</item>
+            <item>South West Khasi Hills</item>
+            <item>West Garo Hills</item>
+            <item>West Jaintia Hills</item>
+            <item>West Khasi Hills</item>
+        </string-array>
+
+        <string-array name="array_mizoram_districts">
+            <item>Select Your District</item>
+            <item>Aizawl</item>
+            <item>Champhai</item>
+            <item>Hnahthial</item>
+            <item>Khawzawl</item>
+            <item>Kolasib</item>
+            <item>Lawngtlai</item>
+            <item>Lunglei</item>
+            <item>Mamit</item>
+            <item>Saiha</item>
+            <item>Saitual</item>
+            <item>Serchhip</item>
+        </string-array>
+
+        <string-array name="array_nagaland_districts">
+            <item>Select Your District</item>
+            <item>Dimapur</item>
+            <item>Kiphire</item>
+            <item>Kohima</item>
+            <item>Longleng</item>
+            <item>Mokokchung</item>
+            <item>Mon</item>
+            <item>Peren</item>
+            <item>Phek</item>
+            <item>Tuensang</item>
+            <item>Wokha</item>
+            <item>Zunheboto</item>
+            <item>Noklak</item>
+        </string-array>
+
+        <string-array name="array_odisha_districts">
+            <item>Select Your District</item>
+            <item>Angul</item>
+            <item>Balangir</item>
+            <item>Balasore</item>
+            <item>Bargarh</item>
+            <item>Bhadrak</item>
+            <item>Boudh</item>
+            <item>Cuttack</item>
+            <item>Debagarh</item>
+            <item>Dhenkanal</item>
+            <item>Gajapati</item>
+            <item>Ganjam</item>
+            <item>Jagatsinghpur</item>
+            <item>Jajpur</item>
+            <item>Jharsuguda</item>
+            <item>Kalahandi</item>
+            <item>Kandhamal</item>
+            <item>Kendrapara</item>
+            <item>Kendujhar</item>
+            <item>Khordha</item>
+            <item>Koraput</item>
+            <item>Malkangiri</item>
+            <item>Mayurbhanj</item>
+            <item>Nabarangpur</item>
+            <item>Nayagarh</item>
+            <item>Nuapada</item>
+            <item>Puri</item>
+            <item>Rayagada</item>
+            <item>Sambalpur</item>
+            <item>Subarnapur</item>
+            <item>Sundergarh</item>
+        </string-array>
+
+        <string-array name="array_punjab_districts">
+            <item>Select Your District</item>
+            <item>Amritsar</item>
+            <item>Barnala</item>
+            <item>Bathinda</item>
+            <item>Faridkot</item>
+            <item>Fatehgarh Sahib</item>
+            <item>Fazilka</item>
+            <item>Firozpur</item>
+            <item>Gurdaspur</item>
+            <item>Hoshiarpur</item>
+            <item>Jalandhar</item>
+            <item>Kapurthala</item>
+            <item>Ludhiana</item>
+            <item>Mansa</item>
+            <item>Moga</item>
+            <item>Mohali</item>
+            <item>Muktsar</item>
+            <item>Pathankot</item>
+            <item>Patiala</item>
+            <item>Rupnagar</item>
+            <item>Sangrur</item>
+            <item>Shaheed Bhagat Singh Nagar</item>
+            <item>Tarn Taran</item>
+        </string-array>
+
+        <string-array name="array_rajasthan_districts">
+            <item>Select Your District</item>
+            <item>Ajmer</item>
+            <item>Alwar</item>
+            <item>Banswara</item>
+            <item>Baran</item>
+            <item>Barmer</item>
+            <item>Bharatpur</item>
+            <item>Bhilwara</item>
+            <item>Bikaner</item>
+            <item>Bundi</item>
+            <item>Chittorgarh</item>
+            <item>Churu</item>
+            <item>Dausa</item>
+            <item>Dholpur</item>
+            <item>Dungarpur</item>
+            <item>Sri Ganganagar</item>
+            <item>Hanumangarh</item>
+            <item>Jaipur</item>
+            <item>Jaisalmer</item>
+            <item>Jalore</item>
+            <item>Jhalawar</item>
+            <item>Jhunjhunu</item>
+            <item>Jodhpur</item>
+            <item>Karauli</item>
+            <item>Kota</item>
+            <item>Nagaur</item>
+            <item>Pali</item>
+            <item>Pratapgarh</item>
+            <item>Rajsamand</item>
+            <item>Sawai Madhopur</item>
+            <item>Sikar</item>
+            <item>Sirohi</item>
+            <item>Tonk</item>
+            <item>Udaipur</item>
+        </string-array>
+
+        <string-array name="array_sikkim_districts">
+            <item>Select Your District</item>
+            <item>East Sikkim</item>
+            <item>North Sikkim</item>
+            <item>South Sikkim</item>
+            <item>West Sikkim</item>
+        </string-array>
+
+        <string-array name="array_tamil_nadu_districts">
+            <item>Select Your District</item>
+            <item>Ariyalur</item>
+            <item>Chengalpattu</item>
+            <item>Chennai</item>
+            <item>Coimbatore</item>
+            <item>Cuddalore</item>
+            <item>Dharmapuri</item>
+            <item>Dindigul</item>
+            <item>Erode</item>
+            <item>Kallakurichi</item>
+            <item>Kanchipuram</item>
+            <item>Kanyakumari</item>
+            <item>Karur</item>
+            <item>Krishnagiri</item>
+            <item>Madurai</item>
+            <item>Mayiladuthurai</item>
+            <item>Nagapattinam</item>
+            <item>Namakkal</item>
+            <item>Nilgiris</item>
+            <item>Perambalur</item>
+            <item>Pudukkottai</item>
+            <item>Ramanathapuram</item>
+            <item>Ranipet</item>
+            <item>Salem</item>
+            <item>Sivaganga</item>
+            <item>Tenkasi</item>
+            <item>Thanjavur</item>
+            <item>Theni</item>
+            <item>Thoothukudi</item>
+            <item>Tiruchirappalli</item>
+            <item>Tirunelveli</item>
+            <item>Tirupattur</item>
+            <item>Tiruppur</item>
+            <item>Tiruvallur</item>
+            <item>Tiruvannamalai</item>
+            <item>Tiruvarur</item>
+            <item>Vellore</item>
+            <item>Viluppuram</item>
+            <item>Virudhunagar</item>
+        </string-array>
+
+        <string-array name="array_telangana_districts">
+            <item>Select Your District</item>
+            <item>Adilabad</item>
+            <item>Bhadradri Kothagudem</item>
+            <item>Hyderabad</item>
+            <item>Jagtial</item>
+            <item>Jangaon</item>
+            <item>Jayashankar Bhupalpally</item>
+            <item>Jogulamba Gadwal</item>
+            <item>Kamareddy</item>
+            <item>Karimnagar</item>
+            <item>Khammam</item>
+            <item>Komaram Bheem</item>
+            <item>Mahabubabad</item>
+            <item>Mahbubnagar</item>
+            <item>Mancherial</item>
+            <item>Medak</item>
+            <item>Medchal</item>
+            <item>Mulugu</item>
+            <item>Nagarkurnool</item>
+            <item>Nalgonda</item>
+            <item>Narayanpet</item>
+            <item>Nirmal</item>
+            <item>Nizamabad</item>
+            <item>Peddapalli</item>
+            <item>Rajanna Sircilla</item>
+            <item>Ranga Reddy</item>
+            <item>Sangareddy</item>
+            <item>Siddipet</item>
+            <item>Suryapet</item>
+            <item>Vikarabad</item>
+            <item>Wanaparthy</item>
+            <item>Warangal Rural</item>
+            <item>Warangal Urban</item>
+            <item>Yadadri Bhuvanagiri</item>
+        </string-array>
+
+        <string-array name="array_tripura_districts">
+            <item>Select Your District</item>
+            <item>Dhalai</item>
+            <item>Gomati</item>
+            <item>Khowai</item>
+            <item>North Tripura</item>
+            <item>Sepahijala</item>
+            <item>South Tripura</item>
+            <item>Unakoti</item>
+            <item>West Tripura</item>
+        </string-array>
+
+        <string-array name="array_uttar_pradesh_districts">
+            <item>Select Your District</item>
+            <item>Agra</item>
+            <item>Aligarh</item>
+            <item>Prayagraj</item>
+            <item>Ambedkar Nagar</item>
+            <item>Amethi</item>
+            <item>Amroha</item>
+            <item>Auraiya</item>
+            <item>Azamgarh</item>
+            <item>Baghpat</item>
+            <item>Bahraich</item>
+            <item>Ballia</item>
+            <item>Balrampur</item>
+            <item>Banda</item>
+            <item>Barabanki</item>
+            <item>Bareilly</item>
+            <item>Basti</item>
+            <item>Bhadohi</item>
+            <item>Bijnor</item>
+            <item>Budaun</item>
+            <item>Bulandshahr</item>
+            <item>Chandauli</item>
+            <item>Chitrakoot</item>
+            <item>Deoria</item>
+            <item>Etah</item>
+            <item>Etawah</item>
+            <item>Ayodhya</item>
+            <item>Farrukhabad</item>
+            <item>Fatehpur</item>
+            <item>Firozabad</item>
+            <item>Gautam Buddha Nagar</item>
+            <item>Ghaziabad</item>
+            <item>Ghazipur</item>
+            <item>Gonda</item>
+            <item>Gorakhpur</item>
+            <item>Hamirpur</item>
+            <item>Hapur</item>
+            <item>Hardoi</item>
+            <item>Hathras</item>
+            <item>Jalaun</item>
+            <item>Jaunpur</item>
+            <item>Jhansi</item>
+            <item>Kannauj</item>
+            <item>Kanpur Dehat</item>
+            <item>Kanpur Nagar</item>
+            <item>Kasganj</item>
+            <item>Kaushambi</item>
+            <item>Kheri</item>
+            <item>Kushinagar</item>
+            <item>Lalitpur</item>
+            <item>Lucknow</item>
+            <item>Maharajganj</item>
+            <item>Mahoba</item>
+            <item>Mainpuri</item>
+            <item>Mathura</item>
+            <item>Mau</item>
+            <item>Meerut</item>
+            <item>Mirzapur</item>
+            <item>Moradabad</item>
+            <item>Muzaffarnagar</item>
+            <item>Pilibhit</item>
+            <item>Pratapgarh</item>
+            <item>Raebareli</item>
+            <item>Rampur</item>
+            <item>Saharanpur</item>
+            <item>Sambhal</item>
+            <item>Sant Kabir Nagar</item>
+            <item>Shahjahanpur</item>
+            <item>Shamli</item>
+            <item>Shravasti</item>
+            <item>Siddharthnagar</item>
+            <item>Sitapur</item>
+            <item>Sonbhadra</item>
+            <item>Sultanpur</item>
+            <item>Unnao</item>
+            <item>Varanasi</item>
+        </string-array>
+
+        <string-array name="array_uttarakhand_districts">
+            <item>Select Your District</item>
+            <item>Almora</item>
+            <item>Bageshwar</item>
+            <item>Chamoli</item>
+            <item>Champawat</item>
+            <item>Dehradun</item>
+            <item>Haridwar</item>
+            <item>Nainital</item>
+            <item>Pauri</item>
+            <item>Pithoragarh</item>
+            <item>Rudraprayag</item>
+            <item>Tehri</item>
+            <item>Udham Singh Nagar</item>
+            <item>Uttarkashi</item>
+        </string-array>
+
+        <string-array name="array_west_bengal_districts">
+            <item>Select Your District</item>
+            <item>Alipurduar</item>
+            <item>Bankura</item>
+            <item>Birbhum</item>
+            <item>Cooch Behar</item>
+            <item>Dakshin Dinajpur</item>
+            <item>Darjeeling</item>
+            <item>Hooghly</item>
+            <item>Howrah</item>
+            <item>Jalpaiguri</item>
+            <item>Jhargram</item>
+            <item>Kalimpong</item>
+            <item>Kolkata</item>
+            <item>Malda</item>
+            <item>Murshidabad</item>
+            <item>Nadia</item>
+            <item>North 24 Parganas</item>
+            <item>Paschim Bardhaman</item>
+            <item>Paschim Medinipur</item>
+            <item>Purba Bardhaman</item>
+            <item>Purba Medinipur</item>
+            <item>Purulia</item>
+            <item>South 24 Parganas</item>
+            <item>Uttar Dinajpur</item>
+        </string-array>
+
+        <string-array name="array_andaman_nicobar_districts">
+            <item>Select Your District</item>
+            <item>Nicobar</item>
+            <item>North Middle Andaman</item>
+            <item>South Andaman</item>
+        </string-array>
+
+        <string-array name="array_chandigarh_districts">
+            <item>Chandigarh</item>
+        </string-array>
+
+        <string-array name="array_dadra_nagar_haveli_districts">
+            <item>Dadra Nagar Haveli</item>
+        </string-array>
+
+        <string-array name="array_daman_diu_districts">
+            <item>Select Your District</item>
+            <item>Daman</item>
+            <item>Diu</item>
+        </string-array>
+
+        <string-array name="array_delhi_districts">
+            <item>Select Your District</item>
+            <item>Central Delhi</item>
+            <item>East Delhi</item>
+            <item>New Delhi</item>
+            <item>North Delhi</item>
+            <item>North East Delhi</item>
+            <item>North West Delhi</item>
+            <item>Shahdara</item>
+            <item>South Delhi</item>
+            <item>South East Delhi</item>
+            <item>South West Delhi</item>
+            <item>West Delhi</item>
+        </string-array>
+
+        <string-array name="array_lakshadweep_districts">
+            <item>Lakshadweep</item>
+        </string-array>
+
+        <string-array name="array_ladakh_districts">
+            <item>Select Your District</item>
+            <item>Kargil</item>
+            <item>Leh</item>
+        </string-array>
+
+        <string-array name="array_puducherry_districts">
+            <item>Select Your District</item>
+            <item>Karaikal</item>
+            <item>Mahe</item>
+            <item>Puducherry</item>
+            <item>Yanam</item>
+        </string-array>
+
+        <!-- Organ Transplant -->
+        <string name="textview">Do you want to register for organ Transplant?</string>
+        <string name="recname">Recipient Name</string>
+        <string name="recaddress">Recipient Address</string>
+        <string name="recphone">Recipient Phone</string>
+        <string name="recmail">Recipient Mail-Address</string>
+        <string name="rec_gender">Recipient Gender : </string>
+        <string name="rec_age">Recipient Age : </string>
+        <string name="rec_need">Which Organ : </string>
+        <string name="recaadhar">Recipient Aadhar</string>
+        <string name="disa">Donor is Available : </string>
+        <string name="avai">Yes</string>
+        <string name="notavai">No</string>
+
+        <string-array name="orgn_type">
+            <item>Select one</item>
+            <item>Bone</item>
+            <item>Bone marrow</item>
+            <item>Corneas</item>
+            <item>Heart</item>
+            <item>Intestine</item>
+            <item>Kidney</item>
+            <item>Liver</item>
+            <item>Lung</item>
+            <item>Middle ear</item>
+            <item>Pancreas</item>
+            <item>Skin</item>
+        </string-array>
+
+        <string name="rid">Recipient ID Number</string>
+        <string name="rname">Recipient Full Name</string>
+        <string name="raddress">Recipient Address</string>
+        <string name="rphone">Recipient Phone Number</string>
+        <string name="rmail">Recipient Mail-Address</string>
+        <string name="raadhar">Recipient Aadhar Number</string>
+        <string name="rgender">Recipient Gender </string>
+        <string name="rage">Recipient Age</string>
+
+        <!-- Law on Transplant -->
+        <string name="heading_law"><b>Laws and Rules Governing Organ Transplantation in India</b></string>
+        <string name="para_one">
+        <p>The primary legislation related to organ donation and transplantation in India, Transplantation of Human Organs Act, was passed in 1994 and is aimed at regulation of removal, storage and transplantation of human organs for therapeutic purposes and for prevention of commercial dealings in human organs.</p> \n
+        <p>In India, matters related to health are governed by each state. The Act was initiated at the request of Maharashtra, Himachal Pradesh and Goa (who therefore adopted it by default) and was subsequently adopted by all states except Andhra Pradesh and Jammu &amp; Kashmir. Despite a regulatory framework, cases of commercial dealings in human organs were reported in the media. An amendment to the act was proposed by the states of Goa, Himachal Pradesh and West Bengal in 2009 to address inadequacies in the efficacy, relevance and impact of the Act. The amendment to the Act was passed by the parliament in 2011, and the rules were notified in 2014. The same is adopted by the proposing states and union territories by default and may be adopted by other states by passing a resolution.</p> \n \n
+<p><b>The main provisions of the Act (including the amendments and rules of 2014) are as follows:</b></p> \n \n
+        <p><b>A</b> . Brain death identified as a form of death. Process and criteria for brain death certification defined (Form 10 )</p>\n
+         <p><b>B</b>. Allows transplantation of human organs and tissues from living donors and cadavers (after cardiac or brain death)</p>\n
+         <p><b>C</b>. Regulatory and advisory bodies for monitoring transplantation activity and their constitution defined.</p>\n
+         <p>(i) Appropriate Authority (AA): inspects and grants registration to hospitals for transplantation enforces required standards for hospitals, conducts regular inspections to examine the quality of transplantations. It may conduct investigations into complaints regarding breach of provisions of the Act, and has the powers of a civil court to summon any person, request documents and issue search warrants.</p>\n
+         <p>(ii)  Advisory Committee: consisting of experts in the domain who shall advise the appropriate authority.</p>\n
+         <p>(iii) Authorization Committee (AC): regulates living donor transplantation by reviewing each case to ensure that the living donor is not exploited for monetary considerations and to prevent commercial dealings in transplantation. Proceedings to be video recorded and decisions notified within 24 hours. Appeals against their decision may be made to the state or central government.</p>\n
+         <p>(iv) Medical board (Brain Death Committee): Panel of doctors responsible for brain death certification. In case of non-availability of neurologist or neurosurgeon, any surgeon, physician, anaesthetist or intensivist, nominated by medical administrator in-charge of the hospital may certify brain death.</p>\n
+         <p><b>D</b>. Living donors are classified as either a near relative or a non-related donor.</p>\n
+         <p>(i) A near-relative (spouse, children, grandchildren, siblings, parents and grandparents) needs permission of the doctor in-charge of the transplant center to donate his organ.</p>\n
+         <p>(ii) A non-related donor needs permission of an Authorization Committee established by the state to donate his organs.</p>\n
+
+         <p><b>E</b>. Swap Transplantation: When a near relative living donor is medically incompatible with the recipient, the pair is permitted to do a swap transplant with another related unmatched donor/recipient pair.</p>\n
+         <p><b>F</b>. Authorization for organ donation after brain death</p>\n
+         <p>(i) May be given before death by the person himself/herself or</p>\n
+         <p>(ii) By the person in legal possession of the body. A doctor shall ask the patient or relative of every person admitted to the ICU whether any prior authorization had been made. If not, the patient or his near relative should be made aware of the option to authorize such donation.</p>\n
+         <p>(iii) Authorization process for organ or tissue donation from unclaimed bodies outlined.</p>\n
+         <p><b>G</b>. Organ retrieval permitted from any hospital with ICU facility once registered with the appropriate authority. Any hospital having Intensive Care Unit (ICU) facilities along with manpower, infrastructure and equipment as required to diagnose and maintain the brain-stem dead person and to retrieve and transport organs and tissues including the facility for their temporary storage, can register as a retrieval center.</p>\n
+         <p><b>H</b>. Cost of donor management, retrieval, transportation and preservation to be borne by the recipient, institution, government, NGO or society, and not by the donor family.</p>\n
+         <p><b>I</b>. Procedure for organ donation in medico-legal cases defined to avoid jeopardizing determination of the cause of death and delay in retrieval of organs.</p>\n
+         <p><b>J</b>. Manpower and Facilities required for registration of a hospital as a transplant center outlined.</p>\n
+         <p><b>K</b>. Infrastructure, equipment requirements and guidelines and standard operating procedures for tissue banks outlined.</p>\n
+         <p><b>L</b>. Qualifications of transplant surgeons, cornea and tissue retrieval technicians defined.</p>\n
+         <p><b>M</b>. Appointment of transplant coordinators (with defined qualifications) made mandatory in all transplant centers.</p>\n
+         <p><b>N</b>. Non-governmental organisations, registered societies and trusts working in the field of organ or tissue removal, storage or transplantation will require registration.</p>\n
+         <p><b>O</b>. The central government to establish a National Human Organs and Tissues Removal and Storage Network i.e. NOTTO (National Organ &amp; Tissue Transplant Organisation), ROTTO (Regional Organ &amp; Tissue Transplant Organisation) and SOTTO (State Organ &amp; Tissue Transplant Organisation). Website www.notto.nic.in. Manner of establishing National or Regional or State Human Organs and Tissues Removal and Storage Networks and their functions clearly stated.</p>\n
+         <p><b>P</b>. The central government shall maintain a registry of the donors and recipients of human organs and tissues.</p>\n
+         <p><b>Q</b>. Penalties for removal of organ without authority, making or receiving payment for supplying human organs or contravening any other provisions of the Act have been made very stringent in order to serve as a deterrent for such activities.</p>\n \n
+          <p><b>The various forms outlined in the rules are as follows:</b></p>\n \n
+       <p>Form 1: Near-relative consent \n
+Form 2: Spouse consent \n
+Form 3: Other than near-relative donor consent \n
+Form 4: Psychiatrist evaluation of the donor \n
+Form 5: HLA DNA profiling report \n
+Form 7: Self consent for deceased donation \n
+Form 8: Consent for organ donation from family (also applicable for minors) \n
+Form 9: Consent for organ donation from unclaimed bodies \n
+Form 10: Brain death declaration form \n
+Form 11: Joint transplant application by donor / recipient \n
+Form 12: Registration of hospital for organ transplantation \n
+Form 13: Registration of hospital for organ retrieval \n
+Form 16: Grant of registration \n
+Form 17: Renewal of registration \n
+Form 18: Decision by hospital authorization committee \n
+Form 19: Decision by district authorization committee  \n
+Form 20: Verification of Domicile for non near-relative \n
+Form 21: Letter from Embassy  \n
+       </p> \n \n
+
+<p>All Information taken from <a href="https://www.organindia.org/">https://www.organindia.org/</a></p>
+    </string>
+
+
+        <!-- Organization -->
+        <string name="hintfor">Search here!</string>
+        <string name="websitedrop">Websites</string>
+        <string name="Organindia"><u>organindia.org</u></string>
+        <string name="mohanfoundation"><u>mohanfoundation.org</u> </string>
+        <string name="dghs.gov"><u>dghs.gov.in</u></string>
+        <string name="kidney.org"><u>kidney.org</u></string>
+
+        <string name="dropheading_one">AIIMS JODHPUR (State Organ and Tissue Transplant Organization (SOTTO))</string>
+        <string name="droplocation_one">Jodhpur</string>
+        <string name="droptxt_one">Basni Industrial Area, Phase-2, Jodhpur, Rajasthan, 342005</string>
+        <string name="drophone1_one"><u>+912912740741</u></string>
+        <string name="drophone2_one"><u>+912912740742</u></string>
+        <string name="dropmail_one"><u>aoadmin@aiimsjodhpur.edu.in</u></string>
+
+        <string name="dropheading_two">ALL INDIA INSTITUTE OF MEDICAL SCIENCES (State Organ and Transplant Organization (SOTTO))</string>
+        <string name="droplocation_two">Rishikesh</string>
+        <string name="droptxt_two">Virbhadra Road, Rishikesh, Uttarkhand, 249201</string>
+        <string name="drophone1_two"><u>0135-2462510</u></string>
+        <string name="drophone2_two"><u>0135-2462968</u></string>
+        <string name="drophone3_two"><u>0135-2462967</u></string>
+        <string name="dropmail_two"><u>rakeshkumar.aoaiims@gmail.com</u></string>
+
+        <string name="dropheading_three">ALL INDIA INSTITUTE OF MEDICAL SCIENCES (State Organ and Transplant Organization (SOTTO))</string>
+        <string name="droplocation_three">Bhubaneswar</string>
+        <string name="droptxt_three">Bhubaneswar, Sijua, Patrapada, Bhubaneswar, Odisha, 751019</string>
+        <string name="drophone1_three"><u>+916742476789</u></string>
+        <string name="dropmail_three"><u>info@aiimsbhubaneswar.edu.in</u></string>
+
+        <string name="dropheading_four">ALL INDIA INSTITUTE OF MEDICAL SCIENCES PATNA (State Organ and Transplant Organization (SOTTO))</string>
+        <string name="droplocation_four">Patna</string>
+        <string name="droptxt_four">Phulwari Sharif, Patna, Bihar, 801505</string>
+        <string name="drophone1_four"><u>+916122451923</u></string>
+        <string name="dropmail_four"><u>admin@aiimspatna.org</u></string>
+
+        <string name="dropheading_five">ALL INDIA INSTITUTE OF MEDICAL SCIENCES BHOPAT (State Organ and Transplant Organization (SOTTO))</string>
+        <string name="droplocation_five">Bhopal</string>
+        <string name="droptxt_five">Saket Nagar, Bhopal,Madhya Pradesh, 462020</string>
+        <string name="drophone1_five"><u>+917552970020</u></string>
+        <string name="dropmail_five"><u>admin@aiimsraipur.edu.in</u></string>
+
+        <string name="dropheading_six">ALL INDIA INSTITUTE OF MEDICAL SCIENCES RAIPUR (State Organ and Transplant Organization (SOTTO))</string>
+        <string name="droplocation_six">Raipur</string>
+        <string name="droptxt_six">Great Eastern Rd, AIIMS Campus, Tatibandh, Raipur, Chhattisgarh, 492099</string>
+        <string name="drophone1_six"><u>+917712572240</u></string>
+        <string name="dropmail_six"><u>director@aiimsraipur.edu.in</u></string>
+
+        <string name="dropheading_seven">Guwahati Medical College (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+        <string name="droplocation_seven">Guwahati</string>
+        <string name="droptxt_seven">GMCH Complex, GMC Hospital Rd, Bhangagarh, Guwahati, Assam, 781032</string>
+        <string name="drophone1_seven"><u>+913612529457</u></string>
+        <string name="dropmail_seven"><u>gmch-asm@nic.in</u></string>
+
+        <string name="dropheading_eight">INSTITUTE OF POST GRADUATE MEDICAL EDUCATION &amp; RESEARCH (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+        <string name="droplocation_eight">Kolkata</string>
+        <string name="droptxt_eight">C/o Director, IPGME&amp;R, 1st Floor, Administrative Block, 244 A.J.C. Bose Road, Kolkata, West Bengal, 700020</string>
+        <string name="drophone1_eight"><u>+913322041101</u></string>
+        <string name="dropmail_eight"><u>director.ipgmer@gmail.com</u></string>
+
+        <string name="dropheading_nine">JEEVANSARTHEKE</string>
+        <string name="droplocation_nine">Bengaluru</string>
+        <string name="droptxt_nine">Near OPD, NIMHANS, Hosur Road, Bengaluru, Karnataka, 560029</string>
+        <string name="drophone1_nine"><i>Phone NO. : Not Available</i></string>
+        <string name="dropmail_nine"><u>zcckbangalore@gmail.com</u></string>
+
+        <string name="dropheading_ten">JEEVANDAN</string>
+        <string name="droplocation_ten">Vijayawada</string>
+        <string name="droptxt_ten">Dr.NTR University of Health, Sciences Gunadala, Vijayawada, Andhra Pradesh, 520008</string>
+        <string name="drophone1_ten"><u>+918662451374</u></string>
+        <string name="dropmail_ten"><u>chairmanaactjeevandan-ap@nic.in</u></string>
+
+        <string name="dropheading_eleven">KING EDWARD MEMORIAL HOSPITAL (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+        <string name="droplocation_eleven">Mumbai</string>
+        <string name="droptxt_eleven">Acharya Dhonde Marg, Parel, Mumbai, Maharashtra, 400012</string>
+        <string name="drophone1_eleven"><u>02224107000</u></string>
+        <string name="dropmail_eleven"><i>Mail : Not Available</i></string>
+
+        <string name="dropheading_twelve">MRITHASA NJEEVANI-KNOS</string>
+        <string name="droplocation_twelve">Trivandrum</string>
+        <string name="droptxt_twelve">Deceased Donor Organ Transplantation Program, Super Speciality Block, Government Medical College Hospital, Trivandrum, Kerala</string>
+        <string name="drophone1_twelve"><u>+914712528386</u></string>
+        <string name="drophone2_twelve"><u>+914712528658</u></string>
+        <string name="drophone3_twelve"><u>+914712117660</u></string>
+        <string name="dropmail_twelve"><u>principalmct@gmail.com</u></string>
+
+        <string name="dropheading_thirteen">NATIONAL ORGAN AND TISSUE TRANSPLANT ORGANIZATION (NOTTO)</string>
+        <string name="droplocation_thirteen">New Delhi</string>
+        <string name="droptxt_thirteen">4th Floor, National Institute of Pathology Building, Safdarjung Hospital Campus, New Delhi, Delhi NCR, 110029</string>
+        <string name="drophone1_thirteen"><u>+911126164770</u></string>
+        <string name="dropmail_thirteen"><u>dir@notto.nic.in</u></string>
+
+        <string name="dropheading_fourteen">POST GRADUATE INSTITUTE OF MEDICAL EDUCATION &amp; RESEARCH (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+        <string name="droplocation_fourteen">Chandigarh</string>
+        <string name="droptxt_fourteen">Research Block B, 6th Floor, Sector 12, Chandigarh, Chandigarh, 160012</string>
+        <string name="drophone1_fourteen"><i>Phone NO. : Not Available</i></string>
+        <string name="dropmail_fourteen"><i>Mail : Not Available</i></string>
+
+        <string name="dropheading_fivteen">RAJASTHAN NETWORK FOR ORGAN SHARING (RNOS)</string>
+        <string name="droplocation_fivteen">Jainpur</string>
+        <string name="droptxt_fivteen">G-*, KJ Lon, Hospital Trimurti Circle, Gangwal Park, Rambag, Jaipur, Rajasthan, 302004</string>
+        <string name="drophone1_fivteen"><u>+919829300541</u></string>
+        <string name="dropmail_fivteen"><u>rnoscadaverdonation@gmail.com</u></string>
+
+        <string name="dropheading_sixteen">SHER - I - KASHMIR INSTITUTE OF MEDICAL SCIENCES</string>
+        <string name="droplocation_sixteen">Srinagar</string>
+        <string name="droptxt_sixteen">Soura, Srinagar, Srinagar, Jammu and Kashmir, 190011</string>
+        <string name="drophone1_sixteen"><u>+911942401013</u></string>
+        <string name="dropmail_sixteen"><u>contactus@skims.ac.in</u></string>
+
+        <string name="dropheading_seventeen">TRANSPLANT AUTHORITY OF TAMIL NADU (TRANSTAN) (Regional Organ and Tissue Transplant Organization (ROTTO))</string>
+        <string name="droplocation_seventeen">Chennai</string>
+        <string name="droptxt_seventeen">1045, I Floor, Fourth Circle, Tamil Nadu, Government Multi Super Specialty Hospital, Omandurar Government Estate, Anna Salai, Chennai, Tamil Nadu, 600002</string>
+        <string name="drophone1_seventeen"><u>+914425363141</u></string>
+        <string name="dropmail_seventeen"><u>organstransplant@gmail.com</u></string>
+
+
+        <!-- Donation Awareness -->
+        <string name="para_aware">
+    <p>Yes, even you can help us spread awareness on organ donation! Organise a short awareness session given by us at your office, college, school, club or anywhere else. Help us get more of your friends, colleagues, relatives and others know more about organ donation. Consider the following:</p>\n
+    <p>India is struggling with acute shortage of organs for transplantation. It is estimated that more than a million people suffer with end stage organ failure, but only a handful of 3,500 transplants are performed annually. At least 15 patients die every day waiting for organs and every 10 minutes a new name is added to this waiting list. Undoubtedly, the demand far outstrips the availability of organs. And no one can escape the harsh reality.</p>\n
+    <p>Awareness on organ donation, is therefore the only way out of this depressing scenario. The more potential donors there are, the more the likelihood of organs becoming available to save lives. Unfortunately, very people in India have any idea about organ donation, or how they could potentially help after their deaths.</p>\n
+    <p>We are there to give a short presentation to anyone who is interested in an effort to encourage people to become organ donors, or at the very least – know more about organ donation.</p>\n
+    <p>Our presentation is 25-30 minutes long which includes a short 5 minute film, and is followed by questions from the audience. We will then offer people the option of signing up for Donor Cards. We require an LCD and screen. We don’t charge for anything. All we need is your time.</p>\n
+    <p>If you’re interested in having us come and present somewhere at any, time please call us at +91-6355850257.</p>
+    </string>
+        <string name="cele">celebrities_img</string>
+        <string name="target">targets_img</string>
+        <string name="gift">giftoflife</string>
+
+
+        <!-- Know Donation -->
+
+        <!-- Know Donation -->
+        <string-array name="heading">
+            <item>What is Organ Donation?</item>
+            <item>Type of Organ Donations</item>
+            <item>What is the process of Organ Donation?</item>
+            <item>Law Governing Organ Donation In India</item>
+            <item>Brain Death and Organ Donation</item>
+            <item>What happens once Brain Stem Death is Declared?</item>
+            <item>How long can an organ survive inside and outside the body in a Deceased Organ Donation?</item>
+            <item>Tests Establishing Brain Stem Death</item>
+            <item>Organ Allocation Process in India</item>
+            <item>What potential organ recipients need to know</item>
+            <item>Pledging your organs and becoming an organ donor</item>
+            <item>Situation in India &amp; Data</item>
+        </string-array>
+        <string-array name="answers">
+        <item>
+        \n<p>Organ donation is the entire practice of retrieving a human organ from a living or deceased person, who is referred to as a Donor, and transplanting it into a recipient. The recipient will be a patient who is suffering from organ failure and who will not survive unless she/he receives an organ replacement. The process of recovering organs is called Retrieval.
+       </p>\n\n \n
+        <p><b>What is Tissue Donation?</b></p>\n\n
+        <p>Tissue Donation is the process of Retrieving or Procuring tissues from a living or deceased persons, called a Donor, and transplanted into the Recipient who needs it.</p>\n\n
+        <p>Medical Science has made tremendous progress in recent times in the field of organ donation and transplantation, with organ donation from one person capable of saving up to 9 lives and improving the lives of many others.</p>\n\n
+        <p>However, due to the prevalence of myths about organ donation, and the lack of awareness about the topic in India, a majority of people do not take up this noble cause for the benefit of others.</p>\n\n \n
+        <p><b>Which Organs Can Be Donated?</b></p>\n\n
+        <p>Let’s take a closer look at the different organs that can be donated by a person after death and while the person is still alive. There are eight organs that can be donated and transplanted:</p>\n\n
+        <p>
+            1. Kidneys: Both kidneys can be donated by a deceased donor. On average the lifespan of a transplanted kidney is around nine years, but it varies from individual to individual. Of all organs in the human body, the demand for kidneys is the highest, and kidneys are the most frequently donated organs. A kidney disease most likely affects both kidneys at the same time. A living donor can easily donate one kidney to someone and function well for the rest of their lives.\n
+            2. Liver: The liver is an important organ with primary functions of bile production &amp; excretion; excretion of bilirubin, cholesterol, hormones, and drugs; metabolism of fats, proteins and carbohydrates; enzyme activation; storage of glycogen, vitamins and minerals; synthesis of plasma proteins; blood detoxification and purification. The liver is the only organ in the human body that can grow cells and regenerate. A donated liver from someone who has died (a deceased donor) can further be split into two pieces and transplanted into two different people to save their lives. A living donor can have a portion of her/his liver removed to donate to someone, and the remaining portion will regenerate to almost its full previous size.\n
+            3. Heart: A heart is a muscular organ which pumps blood through the human body. In a person’s life, the heart will beat around 2.5 billion times on average and keep the blood running in the body. After being retrieved from the donor, a heart can survive for 4-6 hours only.\n
+            4. Lungs: Single or double-lung transplants can be performed from deceased donors. Additionally, living donors can donate a single lobe from the lungs, though it will not regenerate.\n
+            5. Pancreas: A deceased donor pancreas can be transplanted into an ailing patient. A living donor can also donate a portion of the pancreas and still retain pancreas functionality.\n
+            6. Intestine: After death, a donor can donate their intestine. Although quite rare, a living donor can donate a portion of the intestine.\n
+        </p>\n
+        <p>In addition to organs, you can also donate tissues such as corneas, skin, bones, ligaments, heart valves etc.</p>\n\n \n
+        <p><b>Which Tissues Can Be Donated?</b></p>\n\n
+        <p>Layers of cells that function together to serve a specific purpose are called Tissues. Most Tissues should be donated within 6 hours of the donor’s death.</p>\n\n
+        <p>
+            1. Cornea: Cornea donation or eye donation is the most common tissue donation. The Cornea is a transparent covering over the eye. It is also the eye’s primary focusing element. Recipients who suffer from corneal blindness can gain their sight again after a corneal transplant. These patients are those who may have been blinded by an accident, infection or disease. Either the entire Cornea can be transplanted or it can be transplanted in parts. A Corneal Transplant is does not need any anti-rejection drugs in the recipient. Corneas from all ages of recipients are effective as long as the Doctors as they are healthy.\n
+            2. Bones: Bones from deceased donors are used to replace bones of recipients whose bones are cancerous. A Bone transplant can be done instead of amputating the cancerous arm.\n
+            3. Skin: Skin can be used as grafting for burn victims, acid attack victims or for post-mastectomy breast reconstruction, amongst other things.\n
+            4. Veins: Donated veins are commonly used in surgeries for cardiac bypass. \n
+
+        </p>\n
+        <p>Apart from these, other tissues that can be donated are muscles, tendons, ligaments, cartilage and heart valves.</p>\n\n
+    </item>
+            <item>
+            \n<p>There are two types of organ donations – Living Organ Donations &amp; Deceased Organ Donations.</p>\n\n
+            <p><b>Living Organ Donation :</b></p>\n\n
+            <p>This is when you retrieve an organ from a healthy living person and transplant it into the body of someone who is suffering from end-stage organ failure. This is commonly done in the case of a liver or a kidney failure (because the liver can grow back to its normal size and a donor can survive on one kidney).</p>\n
+            <p>Living donors are classified as either a near relative or a distant relative/friends etc.</p>\n
+            <p>A near-relative is spouse, son/daughter, brother/sister, parents, grandparents and grandchildren.</p>\n
+            <p>Those other than near-relative can be distant relatives and friends who will need the permission of the State Authorization Committee to donate organs. If the hospital refuses to entertain such cases, the patient may send a legal notice to the hospital for not following the Transplant Act.</p>\n
+            <p><b>Deceased Organ Donation:</b></p>\n
+            <p>When we talk about pledging your organs for donation or about organ donation after death, we are talking about Deceased Organ Donation. This is an organ donation from a person who has been declared brain stem dead by a team of authorized doctors at a hospital. A person is said to be brain stem dead when there is an irreversible loss of consciousness, absence of brain stem reflexes and irreversible loss of the capacity to breathe.</p>\n
+            <p>A lot of people think that whenever and however they die, their organs can be donated. That is not true. In India, organ donation after death is only possible in the case of Brain stem death.</p>\n
+            <p>Donation after cardiac death is common in the West, but in India it is rare for donations to take place after cardiac death.</p>\n
+            <p>Although it is possible for organs such as the liver and the kidney to be easily donated from a living donor to a recipient, we should work towards an environment where everyone donates their organs after their deaths (if they can), so no living person should have to donate an organ to another.</p>\n
+    </item>
+            <item>
+        <p><b>The Living Donation Process :</b></p>\n
+        <p>The living donor needs to undergo some medical tests and evaluations to check and confirm her/his her medical compatibility with the recipient.</p>\n
+        <p>The living donor’s medical compatibility is confirmed by a doctor. Only after all the tests have positively confirmed that the donor is compatible with the recipient, can the transplant take place.</p>\n
+        <p>The living donor’s organs are retrieved surgically by doctors. They will be stored in special chemical solutions briefly until they are transplanted into the recipient.</p>\n
+        <p>The living donor will need to remain under medical care for a few days or weeks after organ retrieval until she/he is fit to go home.</p>\n
+        <p><b>The Deceased Donation Process</b></p>\n
+        <p>A deceased donor is often someone who has suffered a fatal injury to the head or had Brain Haemorrhage. She/He is declared brain stem dead by a group of medical experts in a hospital.</p>\n
+        <p>The donor’s family has to give consent for the donation before the process of organ retrieval can be carried out. Meanwhile, the donor is kept on life-support with Doctors looking after all her/his needs until the retrieval of the organs is allowed to move forward.</p>\n
+        <p>Suitable recipients for all the organs are identified from a waiting list. They are notified and asked to reach their respective hospitals.</p>\n
+        <p>After retrieval, the body of the donor is respectfully handed over to the family.</p>\n
+    </item>
+            <item>
+        <p>The primary legislation related to organ donation and transplantation in India, Transplantation of Human Organs &amp; Tissues Act, was passed in 1994 and is aimed at regulation of removal, storage and transplantation of human organs for therapeutic purposes and for prevention of commercial dealings in human organs.</p>\n
+        <p><b>Some of the main provisions of the Act are as follows:</b></p>\n
+        <p>Brain stem death identified as a form of death. Process and criteria for brain stem death certification defined</p>\n
+        <p>Allows transplantation of human organs and tissues from living donors and cadavers (after cardiac or brain stem death).</p>\n
+        <p>Regulatory and advisory bodies for monitoring transplantation activity and their constitution defined.</p>\n
+    </item>
+            <item>
+        <p>What is Brain Death and how is it related to organ donation? A brain stem death or brain death results from a severe irreversible injury to the brain or haemorrhage which causes all the brain activity to stop. All areas of the brain are damaged and no longer function, due to which a person cannot sustain his/her own life, but vital body functions may be maintained by an artificial support system. This maintains circulation to vital organs long enough to facilitate organ donation. Patients classified as brain stem dead can have their organs surgically removed for organ donation.</p>\n
+        <p>Once brain stem death or brain death has been declared, the person is dead, but their organs are still alive because they have been kept alive through artificial means. This means that if a person dies at home or anywhere else, and their heart stops beating, they cannot donate their vital organs, because the organs of a person who has died a cardiac death will die within minutes of the heart stopping. Therefore, the only time you can donate your vital organs is if you are in hospital and have been declared brain dead.</p>\n
+        <p>In case of a cardiac death it is possible to donate your corneas and tissues such as bones, skin, veins, blood stem cells, blood and platelets, tendons, ligaments, heart valves, cartilage and even your body.</p>\n
+        <p>While the incidence of brain death is obviously less common than cardiac death, it is important to remember that organ donations will take place only if everyone is aware about when and how they can donate organs.</p>\n
+        <p><b>Procedures for Brain Stem Death Declaration in India :</b></p>\n
+        <p>Organ donation after Brain Death is strictly regulated. According to the provisions of the Transplantation of Human Organs &amp; Tissues Act, THOTA 1994 the protocol for declaration of brain stem death or brain death has been defined. Any organ donation process must involve the following steps before the actual transplant can occur:</p>\n
+        <p>A Panel of 4 doctors, 2 of whom must be from a panel approved by the government need to declare the brain stem death. This test as per law has to be done twice, with a gap of 6 hours between the two tests. This panel needs to include:</p>\n
+        <p>A Registered Medical Practitioner in charge of the Hospital where the brain stem death patient is admitted.</p>\n
+        <p>A Registered Medical Practitioner nominated from the panel of Doctors who have been approved by the Appropriate Authority.</p>\n
+        <p>A Neurologist/Neuro-Surgeon. (If a Neurologist/Neurosurgeon is not available to carry out the tests, then any Surgeon or Physician and Anaesthetist or Intensivist who is nominated by Medical Administrator In-charge from the panel of names who have been approved by the Appropriate Authority can be included in the panel).</p>\n
+        <p>The Registered medical practitioner treating the deceased. Results of the tests are recorded on Form 10 of the THOT Act 2014. The family’s consent is obtained on Form 8.</p>\n
+        <p>This Organ Donation Procedure is strictly followed. The certifying clinicians must have no interest or benefit in any way from transplantation of cadaver donor organs. The legal time of death in these circumstances is taken as the second set of brain stem death tests. The certification should be done on laid out forms as per the act. The medical director or medical superintendent of the hospital should finally countercheck and sign the form. It is only after these formalities have been completed, should organs be retrieved.</p>\n
+    </item>
+            <item>
+        <p>Organ donations require prior consent from the donor’s family. In India, according to the Transplantation of Human Organs &amp; Tissues Act 1994, the next of kin of the patient will decide whether to donate their organs and tissues.</p>\n
+        <p>Once a person is declared brain stem dead, the transplant coordinator of the hospital will counsel the family and give them the option of donating organs and tissues. The family may or may not agree and can, till the last minute before retrieval, change their mind about donating. It has been noted that a lot of families, even in the face of devastating loss, agree to organ donation to save the lives of others. For them, it is the only good thing that could come out of the death of a loved one, and for this reason alone, it is everyone’s absolute right to be asked if they want to donate.</p>\n
+        <p><b>Request for Organ Donations &amp; Counselling of Families</b></p>\n
+        <p>Usually the organ donation request is made in the time interval between the diagnosis of brain stem death and cardiac death. According to law, doctors are required to take the family members’ consent before retrieving organs, even if the brain stem dead patient has pledged his or her organs. The doctor on duty is required by law to ask for the organs from the relative in case of brain stem death.</p>\n
+        <p>Brain stem death is relatively a new concept and making request for organ donation in these circumstances can be an extremely difficult task for a doctor or a nurse to undertake. If the deceased carries a Donor Card (a card the size of a credit card expressing their desire about organ donation) the task of asking for organ donation becomes easier.</p>\n
+        <p>If the relatives are agreeable, the process of organ donation is under taken and vital organs like heart, lungs, liver, pancreas and kidneys are removed for transplantation. The process of organ donation and transplantation requires co-ordination between different teams operating almost simultaneously and sometimes in different locations. It may require getting surgeons from different specialties together for both donor and recipient surgery.</p>\n
+        <p><b>Police NOC &amp; Post-mortem in Medico-Legal Cases</b></p>\n
+        <p>In medico legal cases, to proceed with organ donation, police NOC is required. And the same must be intimated to the designated forensic expert responsible for conducting the post-mortem. The forensic expert can be present during the retrieval of the organs and conduct the post-mortem simultaneously or the retrieving doctor makes notes of the retrieved organs which will form a part of the post-mortem report, and the body is sent to the forensic expert for completion of post-mortem formalities.</p>\n
+    </item>
+            <item>
+        <p>>A deceased organ donor is kept on a ventilator after she/he has been declared brain-dead. They will remain on the ventilator until necessary approvals are taken and the organs can be retrieved. A Brain stem Dead person’s organs may stay alive for a period of time that may range from a few days to a few weeks. The longer it takes to retrieve the organs, the more they will deteriorate inside the body. Therefore, the entire process of taking counselling of the family, taking permissions etc. should be quickly taken care of. For this to happen, families need to be able to make their decision soon after the brain death has been declared.</p>\n
+        <p>Once the organs have been retrieved, they cannot be kept outside the body for very long and need to be transplanted fast.</p>\n
+
+        <p>>The family of the donor will not receive anything, and the recipient is not charged for the organs. The recipients however will have to pay the costs of transplantation to the hospital where they are being operated. After the donor family gives consent for organ donation, all costs relating to the donor are borne by the hospital.</p>\n
+    </item>
+            <item>
+        <p>The absence of brain stem function is documented by conducting the following tests:</p>\n
+
+
+        <p><b>Pupillary Reflexes:</b></p>\n
+        <p>To check for absent pupillary response to light, bright pen torchlight should be used in a darkened room. It should be made sure that no eye drops to dilate the pupils have been used in the four hours previously. The pupils may not be necessarily fixed and dilated in the brainstem dead patients; however there should be no pupillary response to light.</p>\n
+        <p><b>Corneal Reflexes:</b></p>\n
+        <p>Moist cotton tipped swab should be used and firm pressure should be applied to the cornea without damaging it.</p>\n
+        <p><b>Vestibulo-Ocular Reflexes:</b></p>\n
+        <p>This testing involves instilling 20ml of ice-cold water into the external auditory canal and looking at eyeball movements of either eye for about a minute. No eyeball movement indicates absence of reflex. Presence of ruptured eardrums or discharge from the ear prevents this test from being performed.</p>\n
+        <p><b>Gag and Cough Reflexes:</b></p>\n
+        <p>This requires temporary disconnection from the ventilator. A cotton tipped swab can be used to stimulate the posterior pharynx to look for a response. Experienced ICU staff usually notice a progressive loss of response during the evolution of brainstem death when performing the routine suction of airways and oropharynx.</p>\n
+        <p><b>Grimacing of the face to a painful stimulation:</b></p>\n
+        <p>This is a normal response in a normal condition and is absent in brainstem death situation. A firm supra-orbital pressure (trigeminal nerve) should be used to check this cranial reflex. Pin pricks should not be used to test this response.</p>\n
+        <p><b>Dolls Head Eye Phenomenon (Testing for oculo-cephalic reflex):</b></p>\n
+        <p> This is one test that can be done to know if the brainstem is still alive. If this test is positive then other tests to establish brain stem death can be postponed. One may need to disconnect the patient from the ventilator for 15 to 20 second to perform this test. To do this test the physician holds the patients head between his hands and moves the head from side to side through 180 degrees. The clinician should hold the head to one side for 3 to 4 seconds and look at the simultaneous eye movement to that side. A similar movement is done to the opposite side and eye movement is noticed. In a normal fully alert individual the eyes move with the head and there is only a very fractional delay. In the case of Brain Stem Death, the eyes will not move with the head.</p>\n
+        <p><b>Apnoea Test:</b></p>\n
+        <p>This is the last test done after all tests above are positive. The aim of apnoea test is to establish death of the respiratory centre in the brain stem. It is done to check whether there is any spontaneous breathing or not. If the patient cannot breathe on his/her own, after all other tests are positive then they can be declared Brain Stem Dead.</p>\n
+    </item>
+            <item>
+        <p>Health is a State subject in India and owing to the importance of organ donation, each state has its own Nodal Agency in charge of the allocation of human organs. Each Nodal Agency is connected to all the Transplant Hospitals in the State. All hospitals are required to have their own website linked to the State Nodal Agency so that the hospital waiting lists for all organs is automatically linked to the State Nodal Agency. State Nodal Agency needs to be linked to the concerned Regional Organ &amp; Tissue Transplant Organisation (ROTTO) and that ROTTO lists in turn are to be linked to the National Organ &amp; Tissue Transplant Organisation (NOTTO). This will form the National Waiting-List Registry.</p>\n \n
+        <p>In the event of a brain stem death, once the family has agreed to organ donation, the hospital informs its own Nodal Officer in charge of organ donation about the death and the willingness of the family to donate. Of the paired organs such as kidney and lungs, one each is used by the hospital for its own patients on the waiting list and the other is given to the common pool and will be allocated by the Nodal Agency to one of the patients in the other hospitals.</p>\n
+        <p>The rest of the organs (heart, liver, intestines, and pancreas) can be used by the donor hospital if the hospital is registered to perform those particular transplants and if they have patients on the waiting list. If they do not, then the organs are also given to the common pool and the Nodal Agency will decide their distribution. It is extremely rare to have all recipients in the same hospital, and the organs are usually put in the common pool and allocated accordingly.</p>\n
+        <p>As per the government’s allocation policy, if organs are retrieved from a government hospital and put into the common pool, then they will be offered to a government hospital first and then to a private hospital in case there are no takers in the government hospital. If the organs are retrieved from a private hospital, then they will be offered to a private hospital first.</p>\n
+
+        </item>
+            <item>
+        <p>The entire process should be clear to patients who need organ transplants. Some basic organ donation information for recipients is given below.</p>\n
+        <p>The patient is recognized by a transplant center/hospital as somebody who is in need of an organ transplant.</p>\n
+        <p>The recipient’s medical profile and details are verified by the Transplant Coordinator and the recipient undergoes the required tests.</p>\n
+        <p>Once the recipient is deemed fit for transplant, he/she is placed on a waiting list of the hospital in which they are seeking treatment. This will be a Hospital which has a license to conduct transplants. They will then wait until they are called by the Hospital in case an organ becomes available. A suitable donor is identified based on medical compatibility with the recipient.</p>\n
+        <p>There are a few things that organ recipients need to be aware of while going through the transplant process. They should fully conform with the request of the hospital for all information that they may need; hesitation or lack of inclination in sharing information with the hospital could delay the entire process. A constructive and optimistic attitude will also help recipients endure the time spent on the list waiting for a transplant.</p>\n
+        <p>Unfortunately, the waiting time is long in India due to lack of deceased organ donors. This time-period may vary, from a few months to a few years.</p>\n
+
+        </item>
+            <item>
+        <p>If you want to pledge your organs, you can fill out this form on our Website </p>\n
+        <p>An important point to note once you register as a donor is that your donor card is not a legal entity or an official document. It is merely an expression of your wish to be a donor. The card that we will send you does not carry any legal weight. But do keep it with you and make sure you let all your friends and family know about your intended choice.</p>\n
+        <p><b>Should Organ Donors Talk to Their Families?</b></p>\n
+        <p>Yes! In India it’s more important to talk to your family about your decision than it is to pledge your organs and get a donor card. It is one of the most important conversations that a donor will have during their lifetime. By law In India, organ and tissue donation cannot take place without the written consent of the donor’s family. Therefore, donors should help their families understand the reason behind their decision to be an organ donor. For instance, if they have been inspired by another donor’s or recipient’s story, they could narrate this story to their family so that they understand the sentiment behind this decision. This will make the family more likely to go along with the donor’s decision, if need arises.</p>\n
+        <p>In India, legally, it is the next of kin of the donor who will decide whether to donate their organs or not. Even if you have pledged your organs, no donation will happen unless the next of kin signs the forms. Therefore, when you do register anywhere to be an organ donor, it’s very important that you discuss your wish to donate with your family. This is to enable your family to carry out your wishes in case the need arises.</p>\n
+        <p><b>Can anyone donate organs? Are there any conditions under which organ donation is not possible?</b></p>\n
+        <p>Generally, there is no bar to organ donation and one or the other organ or tissues can be donated at any age. The only people who cannot donate organs are those have/had cancer, HIV or disease-causing bacteria in the bloodstream or body tissues. However even this is not a hard and fast rule. There have been instances where one HIV positive person has donated to another HIV positive patient.</p>\n
+        <p>However, it is important to do some essential virology screening before accepting the donor. All potential donors will require a virology screen to prevent possible transmission of disease from donor to the recipient. The next of kin should be made aware that this is necessary; if there are any objections by the doctors to the donation, these should be respected.</p>\n
+        <p>Decisions about an organ’s usability are made at the donor’s time of death or, in the case of living donors, during the pre-transplant screening stage.</p>\n
+
+        </item>
+            <item>
+        <p>Unfortunately, mostly due to unawareness and prejudices, there is a huge shortage of organs that are needed for transplants. It has been seen in umpteen situations that relatives are hesitant and unwilling to donate the organs of their loved ones who have been declared brain dead.</p>\n
+        <p>Normally the transplant coordinator will approach the relatives with information about organ donation and explain that even in their time of loss, they can help another person to live. It is tough for the relatives at this point to come to a decision especially if they are not familiar with the concept of organ donation. This is the main reason why it is important for the public to know about organ donation, before they are suddenly faced with the possibility at some point in their lives.</p>\n
+        <p>It is estimated that the total number of brain stem deaths due to accidents in India is nearly 1.5 lakhs annually. Other causes of brain stem death would potentially add many more numbers. However, our organ donation rate is 0.86 per million population. The total number of deceased donors in India in 2017 was only 905.</p>\n
+        <p>Contrast that to the demand for human organ donation. There is a need of approximately 5 lakh organs annually. Barely 2-3 percent of the demand is met, and many people die of organ failure every year across India.</p>\n
+        <p><b>NOTTO – National Organ and Tissue Transplant Organization</b></p>\n
+        <p>The National Organ and Tissue Transplant Organization (NOTTO) is a National level organization. The establishment of NOTTO is mandated as per the Transplantation of human Organs and Tissues (Amendment) Act of 2011. It has been set up under Directorate General of Health Services, Ministry of Health and Family Welfare, Government of India. Their offices are located on the 4th and 5th Floor of the Institute of Pathology (ICMR) Building in Safdarjung Hospital New Delhi.</p>\n
+        <p>>NOTTO functions as the apex centre for All India activities of coordination and networking for procurement and distribution of Organs and Tissues and registry of Organs and Tissues Donation and Transplantation in the country. In addition to its national role, NOTTO is also the nodal networking agency for Delhi and the National Capital Region, and network for Procurement Allocation and Distribution of Organs and Tissues in Delhi and the National Capital Region.</p>\n
+        <p><b>ROTTO – Regional Organ and Tissue Transplant Organisation</b></p>\n
+    <p>The Regional Organ &amp; Tissue Transplant Organisation (ROTTO) is the regional government organisation. There are five ROTTOs in India. They function as separate regional branches that ensure protocol amongst the state organisations enlisted under each of them. They are all based in a Government Hospital in the region. Each ROTTO manages about 5-7 States currently and is responsible for activities of coordination as well as networking for procurement, distribution and transplantation of organs and tissues between their respective State Organisations.</p>\n
+
+        </item>
+
+        </string-array>
+
+
+        <string name="firstdrop">What is Organ Donation?</string>
+        <string name="firstdropanswer">
+        \n<p>Organ donation is the entire practice of retrieving a human organ from a living or deceased person, who is referred to as a Donor, and transplanting it into a recipient. The recipient will be a patient who is suffering from organ failure and who will not survive unless she/he receives an organ replacement. The process of recovering organs is called Retrieval.
+       </p>\n \n
+        <p><b>What is Tissue Donation?</b></p>\n
+        <p>Tissue Donation is the process of Retrieving or Procuring tissues from a living or deceased persons, called a Donor, and transplanted into the Recipient who needs it.</p>\n
+        <p>Medical Science has made tremendous progress in recent times in the field of organ donation and transplantation, with organ donation from one person capable of saving up to 9 lives and improving the lives of many others.</p>\n
+        <p>However, due to the prevalence of myths about organ donation, and the lack of awareness about the topic in India, a majority of people do not take up this noble cause for the benefit of others.</p>\n \n
+        <p><b>Which Organs Can Be Donated?</b></p>\n
+        <p>Let’s take a closer look at the different organs that can be donated by a person after death and while the person is still alive. There are eight organs that can be donated and transplanted:</p>\n
+        <p>
+            1. Kidneys: Both kidneys can be donated by a deceased donor. On average the lifespan of a transplanted kidney is around nine years, but it varies from individual to individual. Of all organs in the human body, the demand for kidneys is the highest, and kidneys are the most frequently donated organs. A kidney disease most likely affects both kidneys at the same time. A living donor can easily donate one kidney to someone and function well for the rest of their lives.\n
+            2. Liver: The liver is an important organ with primary functions of bile production &amp; excretion; excretion of bilirubin, cholesterol, hormones, and drugs; metabolism of fats, proteins and carbohydrates; enzyme activation; storage of glycogen, vitamins and minerals; synthesis of plasma proteins; blood detoxification and purification. The liver is the only organ in the human body that can grow cells and regenerate. A donated liver from someone who has died (a deceased donor) can further be split into two pieces and transplanted into two different people to save their lives. A living donor can have a portion of her/his liver removed to donate to someone, and the remaining portion will regenerate to almost its full previous size.\n
+            3. Heart: A heart is a muscular organ which pumps blood through the human body. In a person’s life, the heart will beat around 2.5 billion times on average and keep the blood running in the body. After being retrieved from the donor, a heart can survive for 4-6 hours only.\n
+            4. Lungs: Single or double-lung transplants can be performed from deceased donors. Additionally, living donors can donate a single lobe from the lungs, though it will not regenerate.\n
+            5. Pancreas: A deceased donor pancreas can be transplanted into an ailing patient. A living donor can also donate a portion of the pancreas and still retain pancreas functionality.\n
+            6. Intestine: After death, a donor can donate their intestine. Although quite rare, a living donor can donate a portion of the intestine.\n
+        </p>
+        <p>In addition to organs, you can also donate tissues such as corneas, skin, bones, ligaments, heart valves etc.</p>\n \n
+        <p><b>Which Tissues Can Be Donated?</b></p>\n
+        <p>Layers of cells that function together to serve a specific purpose are called Tissues. Most Tissues should be donated within 6 hours of the donor’s death.</p>\n
+        <p>
+            1. Cornea: Cornea donation or eye donation is the most common tissue donation. The Cornea is a transparent covering over the eye. It is also the eye’s primary focusing element. Recipients who suffer from corneal blindness can gain their sight again after a corneal transplant. These patients are those who may have been blinded by an accident, infection or disease. Either the entire Cornea can be transplanted or it can be transplanted in parts. A Corneal Transplant is does not need any anti-rejection drugs in the recipient. Corneas from all ages of recipients are effective as long as the Doctors as they are healthy.\n
+            2. Bones: Bones from deceased donors are used to replace bones of recipients whose bones are cancerous. A Bone transplant can be done instead of amputating the cancerous arm.\n
+            3. Skin: Skin can be used as grafting for burn victims, acid attack victims or for post-mastectomy breast reconstruction, amongst other things.\n
+            4. Veins: Donated veins are commonly used in surgeries for cardiac bypass. \n
+
+        </p>
+        <p>Apart from these, other tissues that can be donated are muscles, tendons, ligaments, cartilage and heart valves.</p>\n
+
+    </string>
+
+        <string name="seconddrop">Type of Organ Donations</string>
+        <string name="thirddrop">What is the process of Organ Donation?</string>
+        <string name="fourthdrop">Law Governing Organ Donation In India</string>
+        <string name="fivthdrop">Brain Death and Organ Donation</string>
+        <string name="sixthdrop">What happens once Brain Stem Death is Declared?</string>
+        <string name="seventhdrop">How long can an organ survive inside and outside the body in a Deceased Organ Donation?</string>
+        <string name="eigthdrop">Tests Establishing Brain Stem Death</string>
+        <string name="ninthdrop">Organ Allocation Process in India</string>
+        <string name="tenthdrop">What potential organ recipients need to know</string>
+        <string name="eleventhdrop">Pledging your organs and becoming an organ donor</string>
+        <string name="twelvthdrop">Situation in India &amp; Data</string>
+        <string name="down_arrow">down_arrow</string>
+        <string name="up_arrow">up_arrow</string>
+        <string name="verfiyotp">verfiyotp</string>
+        <string name="usermoblieno">user moblie no</string>
+
+
+        <!-- Admin Activity-->
+<!--        <string name="organdata">Organ Data</string>-->
+<!--        <string name="userdata">User Data</string>-->
+<!--        <string name="donor_info">Donor Information</string>-->
+<!--        <string name="recipient_info">Recipient Information</string>-->
+<!--        <string name="bonekey">Bone :</string>-->
+<!--        <string name="bodykey">Body :</string>-->
+<!--        <string name="bonemarrowkey">Bone marrow :</string>-->
+<!--        <string name="corneaskey">Corneas :</string>-->
+<!--        <string name="heartkey">Heart :</string>-->
+<!--        <string name="intestinekey">Intestine :</string>-->
+<!--        <string name="kidneykey">Kidney :</string>-->
+<!--        <string name="liverkey">Liver :</string>-->
+<!--        <string name="lungkey">Lung :</string>-->
+<!--        <string name="middlekey">Middle ear :</string>-->
+<!--        <string name="pancreaskey">Pancreas :</string>-->
+<!--        <string name="skinkey">Skin :</string>-->
+<!--        <string name="nextbtn">Next</string>-->
+<!--        <string name="searchhere">Search here!</string>-->
+<!--        <string name="aadhar"> Aadhar No. : </string>-->
+<!--        <string name="donorid">Donor ID : </string>-->
+<!--        <string name="age">Age : </string>-->
+<!--        <string name="user">Username : </string>-->
+<!--        <string name="checkup">M. Checkup : </string>-->
+<!--        <string name="recipientid">Recipient ID : </string>-->
+<!--        <string name="insdata">Institute &amp; Hospital</string>-->
+<!--        <string name="insname">Name : </string>-->
+<!--        <string name="insnamehint">Institute Name</string>-->
+<!--        <string name="insaddress">Address : </string>-->
+<!--        <string name="insaddresshint">Institute Address</string>-->
+<!--        <string name="insphone">Phone No. : </string>-->
+<!--        <string name="insphonehint">Institute Phone Number</string>-->
+<!--        <string name="insemail">Email : </string>-->
+<!--        <string name="insemailhint">Institute Email</string>-->
+<!--        <string name="inswebsite">Website : </string>-->
+<!--        <string name="inswebsitehint">Institute Website</string>-->
+<!--        <string name="drname">Dr. Name : </string>-->
+<!--        <string name="drnamehint">Doctor Name</string>-->
+<!--        <string name="drphonehint">Doctor Phone Number</string>-->
+<!--        <string name="dremailhint">Doctor Email</string>-->
+<!--        <string name="notava">Data Not Available</string>-->
+
+    <string name="enter_password">Password</string>
+    <string name="enter_passwordagain">Confirm Password</string>
+    <string name="enter_name">Username</string>
+    <string name="enter_phone">Phone Number</string>
+    <string name="submit">SUBMIT</string>
+    <string name="don_t_have_account">DON\'T HAVE ACCOUNT?</string>
+    <string name="sign_up"> <u>Sign up</u></string>
+    <string name="enter_your_mail">Mail</string>
+    <string name="openlogin">openloginpage</string>
+    <string name="login_png">loginpng</string>
+    <string name="liver_png">liver png</string>
+    <string name="heart_png">heart png</string>
+    <string name="logo_png">logo png</string>
+    <string name="log_in"><u>Log in</u></string>
+    <string name="already_have_an_account">ALREADY HAVE AN ACCOUNT!</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="liverpng">liverandkidneyimg</string>
+    <string name="heart">heartandeyeimg</string>
+    <string name="loginpng">"login png "</string>
+    <string name="logopng">logo png</string>
+    <string name="username">Username</string>
+    <string name="textforgotpwd">You will get otp on your registered mobile number!</string>
+    <string name="userforgotpwd">Registered Username</string>
+    <string name="userpassword">Password</string>
+    <string name="submitbtn">SUBMIT</string>
+    <string name="forgotpwd">ForgotPasswordPNG</string>
+    <string name="hintotp">Please enter the OTP sent to you.</string>
+    <string name="didnt">Didn\'t receive OTP?</string>
+    <string name="resend"><u>RESEND OTP</u></string>
+    <string name="give_feedback_here">Give Feedback here!</string>
+    <string name="mailaddress">Mail ID</string>
+    <string name="headdingfeed">We would like your feedback to improve our app.</string>
+    <string name="process">Process</string>
+    <string name="notsub">Not Submitted Any Form.</string>
+    <string name="medical"><u>Medical Checkup Info.</u></string>
+    <string name="donorconfirm">Donor Card Will be sent to your Address. </string>
+<!--    <string name="update">Update</string>-->
+<!--    <string name="name">Name : </string>-->
+<!--    <string name="phone">Phone No. : </string>-->
+<!--    <string name="pwd">Password : </string>-->
+    <string name="mail">Mail : </string>
+    <string name="delete">Delete</string>
+    <string name="create">Create</string>
+
+
+    <string name="organdata">Organ Data</string>
+    <string name="userdata">User Data</string>
+    <string name="donor_info">Donor Information</string>
+    <string name="recipient_info">Recipient Information</string>
+    <string name="bonekey">Bone :</string>
+    <string name="bodykey">Body :</string>
+    <string name="bonemarrowkey">Bone marrow :</string>
+    <string name="corneaskey">Corneas :</string>
+    <string name="heartkey">Heart :</string>
+    <string name="intestinekey">Intestine :</string>
+    <string name="kidneykey">Kidney :</string>
+    <string name="liverkey">Liver :</string>
+    <string name="lungkey">Lung :</string>
+    <string name="middlekey">Middle ear :</string>
+    <string name="pancreaskey">Pancreas :</string>
+    <string name="skinkey">Skin :</string>
+    <string name="nextbtn">Next</string>
+    <string name="searchhere">Search here!</string>
+    <string name="aadhar"> Aadhar No. : </string>
+    <string name="donorid">Donor ID : </string>
+    <string name="age">Age : </string>
+    <string name="user">Username : </string>
+    <string name="checkup">M. Checkup : </string>
+    <string name="recipientid">Recipient ID : </string>
+    <string name="insdata">Institute &amp; Hospital</string>
+    <string name="insname">Name : </string>
+    <string name="insnamehint">Institute Name</string>
+    <string name="insaddress">Address : </string>
+    <string name="insaddresshint">Institute Address</string>
+    <string name="insphone">Phone No. : </string>
+    <string name="insphonehint">Institute Phone Number</string>
+    <string name="insemail">Email : </string>
+    <string name="insemailhint">Institute Email</string>
+    <string name="inswebsite">Website : </string>
+    <string name="inswebsitehint">Institute Website</string>
+    <string name="drname">Dr. Name : </string>
+    <string name="drnamehint">Doctor Name</string>
+    <string name="drphonehint">Doctor Phone Number</string>
+    <string name="dremailhint">Doctor Email</string>
+    <string name="notava">Data Not Available</string>
+    <string name="admindata">Admin Data</string>
+
+</resources>

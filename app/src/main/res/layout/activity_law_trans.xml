@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -28,45 +29,102 @@
 
                 tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/allerta_stencil"
-
-                android:padding="10dp"
-                android:text="@string/heading_law"
-                android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:textSize="19sp"
-                app:layout_constraintBottom_toTopOf="@+id/textView2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Tool" />
-
-            <TextView
-                android:id="@+id/textView2"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:lineSpacingExtra="5sp"
-                android:linksClickable="false"
-                android:padding="10dp"
-                android:singleLine="false"
-                android:text="@string/para_one"
-                android:textColor="#000000"
-                android:textIsSelectable="true"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                tools:ignore="TextContrastCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/Tool">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/allerta_stencil"
+
+                    android:padding="10dp"
+                    android:text="@string/heading_law"
+                    android:textAlignment="viewStart"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif-light"
+                    android:lineSpacingExtra="5sp"
+                    android:linksClickable="false"
+                    android:padding="10dp"
+                    android:singleLine="false"
+                    android:text="@string/para_one"
+                    android:textColor="#000000"
+                    android:textIsSelectable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView"
+                    tools:ignore="TextContrastCheck" />
+
+            </RelativeLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/optionch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:text="@string/textview"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/yesbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/yesbtn"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/nobtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/nobtn"
+                tools:ignore="TextContrastCheck" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/sidemenubar"
         android:layout_width="wrap_content"

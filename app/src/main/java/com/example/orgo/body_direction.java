@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class body_direction extends AppCompatActivity {
                     "You need to identify and get in touch with Medical Colleges or Body Donation NGOs near you in order to register your wish to donate your body after death in your district.  You can obtain this information by clicking on the above green button (Pan-India Body Donation Directory) and finding a Healthcare Institution or organization in India near you.  The most important thing that you need to know is that, after your death, it is your family or next of kin who will carry out the process of donating your body. Therefore, it’s very important that they are involved in your decision, aware of your wishes, and are comfortable carrying out the entire process. Their support is of paramount importance.",
 
             };
-    String txt_name;
+
     Button yesbtn, nobtn;
     LinearLayout option;
     @Override
@@ -43,10 +44,7 @@ public class body_direction extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
 
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
 
         listView = findViewById(R.id.listView);
         bodyAdapter body = new bodyAdapter(this, R.layout.organztn_layout, heading, txt);
@@ -56,12 +54,19 @@ public class body_direction extends AppCompatActivity {
         nobtn = findViewById(R.id.nobtn);
         option = findViewById(R.id.optionchoose);
 
-        txt_name = getIntent().getStringExtra("username");
+        SharedPreferences sh = getSharedPreferences("UserInfo", MODE_PRIVATE);
+        final String txt_name = sh.getString("user_name", "");
+
+        side_menu draw = new side_menu(this);
+        draw.initNav(drawerLayout, navigationView, toolbar, false);
+
         yesbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(body_direction.this, donate_body.class);
                 intent.putExtra("username", txt_name);
+                intent.putExtra("page_name", "Donate Body");
+                intent.putExtra("checked", "1");
                 startActivity(intent);
             }
         });

@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -40,22 +40,21 @@ public class feed_back extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_back);
 
-        txt_name = getIntent().getStringExtra("user");
+        SharedPreferences sh = getSharedPreferences("UserInfo", MODE_PRIVATE);
+        txt_name = sh.getString("user_name", "");
 
         drawerLayout = findViewById(R.id.feedback);
         navigationView = findViewById(R.id.sidemenubar);
         toolbar = findViewById(R.id.Tool);
-        username = findViewById(R.id.user);
+        username = findViewById(R.id.user_d);
         feed = findViewById(R.id.feed);
         mailadd = findViewById(R.id.mailadd);
         submit = findViewById(R.id.submit);
 
         setSupportActionBar(toolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
-
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        side_menu draw = new side_menu(this);
+        draw.initNav(drawerLayout, navigationView, toolbar, false);
 
         username.setText(txt_name);
 

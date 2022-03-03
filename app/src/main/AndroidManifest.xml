@@ -15,6 +15,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ORGO">
         <activity
+            android:name=".institute"
+            android:exported="false" />
+        <activity
+            android:name=".recipient_info"
+            android:exported="false" />
+        <activity
+            android:name=".donor_info"
+            android:exported="false" />
+        <activity
+            android:name=".processdata"
+            android:exported="false" />
+        <activity
+            android:name=".user_data"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".organ_data"
+            android:exported="false" />
+        <activity
+            android:name=".admin_work"
+            android:exported="false" />
+        <activity
+            android:name=".orgn_trans"
+            android:exported="false" />
+        <activity
             android:name=".process"
             android:exported="false" />
         <activity

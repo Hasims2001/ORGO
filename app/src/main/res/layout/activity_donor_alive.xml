@@ -206,7 +206,7 @@
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <Spinner
-                        android:id="@+id/dtype_s"
+                        android:id="@+id/orgn_spin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -286,10 +286,11 @@
                             android:gravity="center_vertical">
 
                             <TextView
-                                android:id="@+id/did"
+                                android:id="@+id/idone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="10dp"
@@ -302,10 +303,10 @@
                                 tools:ignore="TextContrastCheck" />
 
                             <TextView
-                                android:id="@+id/dname"
+                                android:id="@+id/nameone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/did"
+                                android:layout_below="@id/idone"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginStart="10dp"
@@ -321,7 +322,7 @@
                                 android:id="@+id/daddress"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/dname"
+                                android:layout_below="@id/nameone"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginStart="10dp"
@@ -397,12 +398,30 @@
                                 android:textSize="14sp"
                                 tools:ignore="TextContrastCheck" />
 
+                            <TextView
+                                android:id="@+id/process_act"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/dage"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/open_sans"
+                                android:text="@string/medical"
+                                android:textColor="#2196F3"
+                                android:textSize="16sp"
+                                android:textStyle="italic"
+                                tools:ignore="MissingConstraints,TextContrastCheck" />
+
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/contactbanner"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginTop="20dp"
@@ -415,11 +434,12 @@
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
-                <ListView
-                    android:id="@+id/contact"
+
+                <include
+                    android:id="@+id/contactthem"
+                    layout="@layout/contact_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp" />
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+<RelativeLayout
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/firstart"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/liver_png"
+        app:srcCompat="@drawable/first" />
+
+    <ImageView
+        android:id="@+id/thirdart"
+        android:layout_width="match_parent"
+        android:layout_height="603dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56dp"
+        android:contentDescription="@string/logo_png"
+        app:srcCompat="@drawable/third" />
+
+    <ImageView
+        android:id="@+id/secondart"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:contentDescription="@string/heart_png"
+        app:srcCompat="@drawable/second" />
+
+</RelativeLayout>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/logindesign"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:contentDescription="@string/log_in"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/login" />-->
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.502"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.6">
+
+    <ImageView
+        android:id="@+id/loginpng"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/loginpng"
+        android:padding="5dp"
+        app:srcCompat="@drawable/adminlogin" />
+
+    <EditText
+        android:id="@+id/usernamedata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/allerta_stencil"
+        android:hint="@string/username"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:text="Hasim Shaikh"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:fontFamily="@font/allerta_stencil"
+        android:hint="@string/userpassword"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:text="HasimisAdmin"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/forgotpwd"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:fontFamily="@font/allerta_stencil"-->
+<!--        android:gravity="start"-->
+<!--        android:text="@string/forgot_password"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:ignore="TouchTargetSizeCheck" />-->
+
+    <Button
+        android:id="@+id/otpsubmitbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:text="@string/submitbtn"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="#00558d" />
+
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

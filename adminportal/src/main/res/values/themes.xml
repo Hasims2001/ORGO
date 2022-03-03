@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ORGO" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/darkorage</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+
+    </style>
+    <style name="MyCheckBox" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorControlNormal">#d1d1d1</item>   <!-- normal border color change as you wish -->
+        <item name="colorControlActivated">@color/orange</item> <!-- activated color change as you wish -->
+        <item name="android:textColor">@color/black</item> <!-- checkbox text color -->
+    </style>
+
+</resources>

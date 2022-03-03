@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/Tool"
             android:layout_width="match_parent"
@@ -26,263 +27,43 @@
             android:background="@color/orange"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:title="Organization"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints">
 
-<!--        <androidx.cardview.widget.CardView-->
+        </androidx.appcompat.widget.Toolbar>
 
-<!--            android:id="@+id/card_eighteen"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="5dp"-->
-<!--            app:cardCornerRadius="20dp"-->
-<!--            app:cardElevation="10dp"-->
-<!--            app:contentPadding="10dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/Tool">-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/drop_eighteen"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/allerta_stencil"-->
-<!--                android:text="@string/websitedrop"-->
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="16sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/img_eighteen"-->
-<!--                android:layout_width="18dp"-->
-<!--                android:layout_height="18dp"-->
-<!--                android:layout_gravity="center|top|end"-->
-<!--                android:layout_marginTop="1dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-
-<!--                android:baselineAlignBottom="false"-->
-<!--                android:contentDescription="@string/down_arrow"-->
-<!--                android:duplicateParentState="false"-->
-<!--                app:srcCompat="@drawable/down_arrow" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/eighteen_img"-->
-<!--                android:layout_width="18dp"-->
-<!--                android:layout_height="18dp"-->
-<!--                android:layout_gravity="center|top|end"-->
-<!--                android:layout_marginTop="1dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-
-<!--                android:contentDescription="@string/up_arrow"-->
-<!--                android:visibility="invisible"-->
-<!--                app:srcCompat="@drawable/up_arrow" />-->
-
-<!--            <LinearLayout-->
-<!--                android:id="@+id/layout_eighteen"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="5dp"-->
-<!--                android:orientation="vertical"-->
-<!--                android:visibility="gone">>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/twobox"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:layout_weight="1">-->
-
-<!--                    <RelativeLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:gravity="center_vertical">-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/imgtwo"-->
-<!--                            android:layout_width="82dp"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_alignParentStart="true"-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_alignParentBottom="true"-->
-<!--                            android:contentDescription="@string/Organindia"-->
-<!--                            app:srcCompat="@drawable/mohan" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/txttwo"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_alignParentStart="false"-->
-<!--                            android:layout_alignParentEnd="true"-->
-<!--                            android:layout_marginStart="10dp"-->
-<!--                            android:layout_marginEnd="20dp"-->
-<!--                            android:layout_toEndOf="@id/imgtwo"-->
-<!--                            android:fontFamily="@font/open_sans"-->
-<!--                            android:gravity="center_vertical"-->
-<!--                            android:text="@string/mohanfoundation"-->
-<!--                            android:textAlignment="textStart"-->
-<!--                            android:textColor="#000000"-->
-<!--                            android:textSize="19sp"-->
-<!--                            tools:ignore="RtlCompat,TextContrastCheck" />-->
-
-<!--                    </RelativeLayout>-->
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/threebox"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:layout_weight="1">-->
-
-<!--                    <RelativeLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:gravity="center_vertical">-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/imgthree"-->
-<!--                            android:layout_width="82dp"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_alignParentStart="true"-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_alignParentBottom="true"-->
-<!--                            android:contentDescription="@string/Organindia"-->
-<!--                            app:srcCompat="@drawable/dghs"-->
-<!--                            tools:ignore="ImageContrastCheck" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/txtthree"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_alignParentStart="false"-->
-<!--                            android:layout_alignParentEnd="true"-->
-<!--                            android:layout_marginStart="10dp"-->
-<!--                            android:layout_marginEnd="20dp"-->
-<!--                            android:layout_toEndOf="@id/imgthree"-->
-<!--                            android:fontFamily="@font/open_sans"-->
-<!--                            android:gravity="center_vertical"-->
-<!--                            android:text="@string/dghs.gov"-->
-<!--                            android:textAlignment="textStart"-->
-<!--                            android:textColor="#000000"-->
-<!--                            android:textSize="19sp"-->
-<!--                            tools:ignore="RtlCompat,TextContrastCheck" />-->
-
-<!--                    </RelativeLayout>-->
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/fourbox"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:layout_weight="1">-->
-
-<!--                    <RelativeLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:gravity="center_vertical">-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/imgfour"-->
-<!--                            android:layout_width="82dp"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_alignParentStart="true"-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_alignParentBottom="true"-->
-<!--                            android:contentDescription="@string/Organindia"-->
-<!--                            app:srcCompat="@drawable/kidney"-->
-<!--                            tools:ignore="ImageContrastCheck" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/txtfour"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_alignParentStart="false"-->
-<!--                            android:layout_alignParentEnd="true"-->
-<!--                            android:layout_marginStart="10dp"-->
-<!--                            android:layout_marginEnd="20dp"-->
-<!--                            android:layout_toEndOf="@id/imgfour"-->
-<!--                            android:fontFamily="@font/open_sans"-->
-<!--                            android:gravity="center_vertical"-->
-<!--                            android:text="@string/kidney.org"-->
-<!--                            android:textAlignment="textStart"-->
-<!--                            android:textColor="#000000"-->
-<!--                            android:textSize="19sp"-->
-<!--                            tools:ignore="RtlCompat,TextContrastCheck" />-->
-
-<!--                    </RelativeLayout>-->
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/onebox"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="10dp"-->
-<!--                    android:layout_weight="1">-->
-
-<!--                    <RelativeLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:gravity="center_vertical">-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/imgone"-->
-<!--                            android:layout_width="82dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_alignParentStart="true"-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_alignParentBottom="true"-->
-<!--                            android:contentDescription="@string/Organindia"-->
-<!--                            app:srcCompat="@drawable/organindia" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/txtone"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_alignParentStart="false"-->
-<!--                            android:layout_alignParentEnd="true"-->
-<!--                            android:layout_marginStart="10dp"-->
-<!--                            android:layout_marginEnd="20dp"-->
-<!--                            android:layout_toEndOf="@+id/imgone"-->
-<!--                            android:fontFamily="@font/open_sans"-->
-<!--                            android:gravity="center_vertical"-->
-<!--                            android:text="@string/Organindia"-->
-<!--                            android:textAlignment="textStart"-->
-<!--                            android:textColor="#000000"-->
-<!--                            android:textSize="19sp"-->
-<!--                            tools:ignore="RtlCompat,TextContrastCheck" />-->
-<!--                    </RelativeLayout>-->
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/des_eighteen"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:orientation="vertical"-->
-<!--                    android:visibility="gone"><![CDATA[>-->
-
-
-
-
-
-
-<!--                ]]></LinearLayout>-->
-<!--            </LinearLayout>-->
-
-<!--        </androidx.cardview.widget.CardView>-->
+        <EditText
+            android:id="@+id/searchbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/search_background"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:hint="@string/hintfor"
+            android:importantForAutofill="no"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/listview"
+            app:layout_constraintStart_toEndOf="@+id/listview"
+            app:layout_constraintTop_toBottomOf="@id/Tool"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ListView
             android:id="@+id/listview"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Tool" />
+            app:layout_constraintTop_toBottomOf="@id/searchbar" />
 
-<!--        <LinearLayout-->
+        <!--        <LinearLayout-->
 <!--            android:id="@+id/card_body"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="match_parent"-->

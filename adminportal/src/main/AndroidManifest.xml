@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.adminportal">
+<!-- android:icon="@mipmap/ic_launcher"   -->
+<!--     android:roundIcon= @mipmap/ic_launcher_round-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/admin"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/admin"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ORGO">
+        <activity
+            android:name=".recipient_info"
+            android:exported="false" />
+        <activity
+            android:name=".donor_info"
+            android:exported="false" />
+        <activity
+            android:name=".user_data"
+            android:exported="false" />
+        <activity
+            android:name=".organ_data"
+            android:exported="false" />
+        <activity
+            android:name=".institute"
+            android:exported="false" />
+        <activity
+            android:name=".admin_data"
+            android:exported="false" />
+        <activity
+            android:name=".admindashboard"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

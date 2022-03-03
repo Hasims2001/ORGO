@@ -11,10 +11,6 @@
     tools:openDrawer="end">
 
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -54,177 +50,21 @@
                     android:text="@string/notsub"
                     android:textSize="18sp" />
 
-                <LinearLayout
-                    android:id="@+id/show_details"
+                <ListView
+                    android:id="@+id/user_donor"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Tool">
+                    android:layout_height="match_parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
 
-                    <LinearLayout
-                        android:id="@+id/linear"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                <ListView
+                    android:id="@+id/user_recipient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/onebox"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_margin="10dp"
-                            android:layout_weight="1">
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center_vertical">
-
-                                <TextView
-                                    android:id="@+id/did"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/allerta_stencil"
-                                    android:text="@string/did"
-                                    android:textColor="@color/black"
-                                    android:textSize="19sp"
-                                    tools:ignore="TextContrastCheck" />
-
-                                <TextView
-                                    android:id="@+id/dname"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@id/did"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/allerta_stencil"
-                                    android:text="@string/dname"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp"
-                                    tools:ignore="TextContrastCheck" />
-
-                                <TextView
-                                    android:id="@+id/daddress"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@id/dname"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/allerta_stencil"
-                                    android:text="@string/daddress"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    tools:ignore="TextContrastCheck" />
-
-                                <TextView
-                                    android:id="@+id/dphone"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@id/daddress"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/allerta_stencil"
-                                    android:text="@string/dphone"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    tools:ignore="TextContrastCheck" />
-
-                                <TextView
-                                    android:id="@+id/dmail"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@id/dphone"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/allerta_stencil"
-                                    android:text="@string/dmail"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    tools:ignore="TextContrastCheck" />
-
-                                <TextView
-                                    android:id="@+id/daadhar"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@id/dmail"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/allerta_stencil"
-                                    android:text="@string/daadhar"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    tools:ignore="TextContrastCheck" />
-
-                                <TextView
-                                    android:id="@+id/dage"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@id/daadhar"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/allerta_stencil"
-                                    android:text="@string/dage"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp"
-                                    tools:ignore="TextContrastCheck" />
-
-                            </RelativeLayout>
-                        </androidx.cardview.widget.CardView>
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@color/blue"
-                        android:fontFamily="@font/open_sans"
-                        android:gravity="center"
-                        android:paddingStart="18dp"
-                        android:paddingEnd="18dp"
-                        android:text="@string/direction"
-                        android:textColor="@color/white"
-                        android:textSize="16sp" />
-
-                    <ListView
-                        android:id="@+id/contact"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="15dp" />
-
-                </LinearLayout>
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/sidemenubar"
         android:layout_width="wrap_content"

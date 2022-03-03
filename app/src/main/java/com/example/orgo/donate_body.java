@@ -1,5 +1,6 @@
 package com.example.orgo;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,20 +10,27 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.util.ArrayUtils;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 
@@ -54,35 +62,55 @@ public class donate_body extends AppCompatActivity {
     Button submit;
 
     String[] dr_names, dr_phones, dr_emails, i_names, i_address, i_phones, i_emails, i_websites;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference insinfo;
+    private String txt_name;
 
-    String txt_name;
+    TextView insname, insaddress, insphone, insemail, inswebsite, drnameone, drnametwo, drnamethree, drphoneone, drphonetwo, drphonethree, dremailone, dremailtwo, dremailthree;
+    String ins_name, ins_address, ins_phone, ins_email, ins_website, per_nameone, per_nametwo, per_namethree, per_phoneone, per_phonetwo, per_phonethree, per_emailone, per_emailtwo, per_emailthree;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donate_body);
 
+        String donatebdy = getIntent().getStringExtra("page_name");
+        String doanteorgn = getIntent().getStringExtra("activity_name");
+       final String checking = getIntent().getStringExtra("checked");
+
+        if (checking.equals("1")){
+            setTitle(donatebdy);
+        }else if (checking.equals("2")){
+            setTitle(doanteorgn);
+        }else{
+            setTitle("ORGO");
+        }
         drawerLayout = findViewById(R.id.donatebody);
         navigationView = findViewById(R.id.sidemenubar);
         toolbar = findViewById(R.id.Tool);
         setSupportActionBar(toolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
+        side_menu draw = new side_menu(this);
+        draw.initNav(drawerLayout, navigationView, toolbar, false);
 
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        insinfo = firebaseDatabase.getReference("Institute");
 
+        LinearLayout linearLayout2 = findViewById(R.id.input_detalis);
+        LinearLayout listitem = findViewById(R.id.listitem);
 
+        linearLayout2.setVisibility(View.VISIBLE);
+        listitem.setVisibility(View.GONE);
 
 //        listView = findViewById(R.id.listView);
 //        bodyAdapter body = new bodyAdapter(this, R.layout.organztn_layout, heading, txt);
 //        listView.setAdapter(body);
 
 
-        stateview = findViewById(R.id.stateview);
-        districtview = findViewById(R.id.districtview);
+        stateview = findViewById(R.id.state_view);
+        districtview = findViewById(R.id.district_view);
         submit = findViewById(R.id.next);
-        indianstates = findViewById(R.id.indiastates);
-        indiandistrict = findViewById(R.id.indiadistrict);
+        indianstates = findViewById(R.id.indian_states);
+        indiandistrict = findViewById(R.id.indian_district);
 
         stateAdapter = ArrayAdapter.createFromResource(this, R.array.indian_states, R.layout.spinner_layout);
         stateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -95,7 +123,7 @@ public class donate_body extends AppCompatActivity {
 
                 selectedstate = indianstates.getSelectedItem().toString();
                 int parentID = parent.getId();
-                if (parentID == R.id.indiastates){
+                if (parentID == R.id.indian_states){
                     switch (selectedstate){
                         case "Select Your State": districtAdapter = ArrayAdapter.createFromResource(parent.getContext(), R.array.indian_district, R.layout.spinner_layout);
                         break;
@@ -241,7 +269,10 @@ public class donate_body extends AppCompatActivity {
         donor = findViewById(R.id.donor);
 
         txt_name = getIntent().getStringExtra("username");
-//        adapter
+
+        final ProgressBar prog = findViewById(R.id.prog);
+//        prog.setVisibility(View.VISIBLE);
+//        submit.setVisibility(View.INVISIBLE);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
@@ -273,203 +304,285 @@ public class donate_body extends AppCompatActivity {
                        radioid = findViewById(IDs);
                        String sel = radioid.getText().toString();
 
-                       if (sel.equals("Alive")){
+                       if (sel.equals("Alive")) {
                            Intent intent = new Intent(donate_body.this, donor_alive.class);
                            intent.putExtra("state", selectedstate);
                            intent.putExtra("district", selecteddistrict);
-                           intent.putExtra("d_type", "Body");
                            intent.putExtra("username", txt_name);
                            startActivity(intent);
                        }else{
+                           prog.setVisibility(View.VISIBLE);
+                           submit.setVisibility(View.INVISIBLE);
 
-                           String[] ins_name = getResources().getStringArray(R.array.ins_name);
-                           String[] ins_address = getResources().getStringArray(R.array.ins_address);
-                           String[] ins_phoneno = getResources().getStringArray(R.array.ins_phoneno);
-                           String[] ins_email = getResources().getStringArray(R.array.ins_email);
-                           String[] ins_website = getResources().getStringArray(R.array.ins_website);
+                           Query check_ins = insinfo.child(selectedstate).orderByChild("name").equalTo(selecteddistrict);
+                           check_ins.addListenerForSingleValueEvent(new ValueEventListener() {
+                               @Override
+                               public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                   if (snapshot.exists()){
+                                       Handler handler = new Handler();
+                                       handler.postDelayed(new Runnable() {
+                                           public void run() {
+                                               // yourMethod();
+                                               prog.setVisibility(View.INVISIBLE);
+                                               submit.setVisibility(View.VISIBLE);
 
-                           String[] per_name =  getResources().getStringArray(R.array.per_name);
-                           String[] per_phone =  getResources().getStringArray(R.array.per_phone);
-                           String[] per_email =  getResources().getStringArray(R.array.per_email);
+                                               linearLayout2.setVisibility(View.GONE);
+                                               listitem.setVisibility(View.VISIBLE);
 
-                           LinearLayout linearLayout2 = findViewById(R.id.linearLayout2);
-                           linearLayout2.setVisibility(View.GONE);
+                                           }
+                                       }, 4000);
+                                       insname = findViewById(R.id.institute_name);
+                                       insaddress = findViewById(R.id.output_add);
+                                       insphone = findViewById(R.id.output_phone);
+                                       insemail = findViewById(R.id.output_email);
+                                       inswebsite = findViewById(R.id.output_website);
 
-                           LinearLayout listitem = findViewById(R.id.listitem);
-                           listitem.setVisibility(View.VISIBLE);
+                                       drnameone = findViewById(R.id.drnameone);
+                                       drnametwo = findViewById(R.id.drnametwo);
+                                       drnamethree = findViewById(R.id.drnamethree);
 
-                           ListView contactlist = findViewById(R.id.contactlist);
-                           ListView  person_contact = findViewById(R.id.person_contact);
+                                       drphoneone = findViewById(R.id.drphoneone);
+                                       drphonetwo = findViewById(R.id.drphonetwo);
+                                       drphonethree = findViewById(R.id.drphonethree);
 
-                        switch (selecteddistrict){
-//                            Andaman Nicobar state
-                            case "Nicobar" :
+                                       dremailone = findViewById(R.id.dremailone);
+                                       dremailtwo = findViewById(R.id.dremailtwo);
+                                       dremailthree = findViewById(R.id.dremailthree);
 
-                            case "North Middle Andaman" :
-
-                            case "South Andaman" :
-                                i_names = Arrays.copyOfRange(ins_name, 0,1);
-                                i_address = Arrays.copyOfRange(ins_address, 0,1);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 0,1);
-                                i_emails = Arrays.copyOfRange(ins_email, 0,1);
-                                i_websites = Arrays.copyOfRange(ins_website, 0,1);
-
-                                dr_names = Arrays.copyOfRange(per_name, 0,5);
-                                dr_phones = Arrays.copyOfRange(per_phone, 0,5);
-                                dr_emails = Arrays.copyOfRange(per_email, 0,5);
-
-                                contactAdapter nicobar = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(nicobar);
-                                person_contactAdapter nicobar_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(nicobar_per);
-                                break;
-
-
-//                                Andhra pradesh state
-                            case "Anantapur" :
-                                i_names = Arrays.copyOfRange(ins_name, 1,2);
-                                i_address = Arrays.copyOfRange(ins_address, 1,2);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 1,2);
-                                i_emails = Arrays.copyOfRange(ins_email, 1,2);
-                                i_websites = Arrays.copyOfRange(ins_website, 1,2);
-
-                                dr_names = Arrays.copyOfRange(per_name, 5,7);
-                                dr_phones =Arrays.copyOfRange(per_phone, 5,7);
-                                dr_emails =Arrays.copyOfRange(per_email, 5,7);
-
-                                contactAdapter anantapur = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(anantapur);
-                                person_contactAdapter anantapur_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(anantapur_per);
-                                break;
-
-                            case "Chittoor" :
-                                i_names = Arrays.copyOfRange(ins_name, 2,3);
-                                i_address = Arrays.copyOfRange(ins_address, 2,3);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 2,3);
-                                i_emails = Arrays.copyOfRange(ins_email, 2,3);
-                                i_websites = Arrays.copyOfRange(ins_website,2,3);
-
-                                dr_names = Arrays.copyOfRange(per_name,  7,11);
-                                dr_phones =Arrays.copyOfRange(per_phone,  7,11);
-                                dr_emails =Arrays.copyOfRange(per_email,  7,11);
-
-                                contactAdapter chittoor = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(chittoor);
-                                person_contactAdapter chittoor_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(chittoor_per);
-                                break;
-
-                            case "East Godavari" :
-                               i_names = Arrays.copyOfRange(ins_name, 3,4);
-                               i_address = Arrays.copyOfRange(ins_address, 3,4);
-                               i_phones = Arrays.copyOfRange(ins_phoneno, 3,4);
-                               i_emails = Arrays.copyOfRange(ins_email, 3,4);
-                               i_websites = Arrays.copyOfRange(ins_website,3,4);
-
-                                dr_names = Arrays.copyOfRange(per_name, 11,15);
-                                dr_phones =Arrays.copyOfRange(per_phone, 11,15);
-                                dr_emails =Arrays.copyOfRange(per_email, 11,15);
-
-                                contactAdapter godavari = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(godavari);
-                                person_contactAdapter godavari_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(godavari_per);
-                                break;
-
-                            case "Guntur" :
-                                i_names = Arrays.copyOfRange(ins_name, 4,5); // 4,7
-                                i_address = Arrays.copyOfRange(ins_address, 4,5);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 4,5);
-                                i_emails = Arrays.copyOfRange(ins_email, 4,5);
-                                i_websites = Arrays.copyOfRange(ins_website,4,5);
-
-                                dr_names = Arrays.copyOfRange(per_name, 15,22);
-                                dr_phones =Arrays.copyOfRange(per_phone, 15,22);
-                                dr_emails =Arrays.copyOfRange(per_email, 15,22);
-
-                                contactAdapter guntur = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(guntur);
-                                person_contactAdapter guntur_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(guntur_per);
-                                break;
-
-                            case "Kadapa" :
-                                i_names = Arrays.copyOfRange(ins_name, 7,8); //7,9
-                                i_address = Arrays.copyOfRange(ins_address, 7,8);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 7,8);
-                                i_emails = Arrays.copyOfRange(ins_email, 7,8);
-                                i_websites = Arrays.copyOfRange(ins_website,7,8);
-
-                                dr_names = Arrays.copyOfRange(per_name, 22,26);
-                                dr_phones =Arrays.copyOfRange(per_phone, 22,26);
-                                dr_emails =Arrays.copyOfRange(per_email, 22,26);
-
-                                contactAdapter kadapa = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(kadapa);
-                                person_contactAdapter kadapa_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(kadapa_per);
-                                break;
-
-                            case "Krishna" :
-                                i_names = Arrays.copyOfRange(ins_name, 9,10);
-                                i_address = Arrays.copyOfRange(ins_address, 9,10);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 9,10);
-                                i_emails = Arrays.copyOfRange(ins_email, 9,10);
-                                i_websites = Arrays.copyOfRange(ins_website,9,10);
-
-                                dr_names = Arrays.copyOfRange(per_name, 26,30);
-                                dr_phones =Arrays.copyOfRange(per_phone, 26,30);
-                                dr_emails =Arrays.copyOfRange(per_email, 26,30);
-
-                                contactAdapter krishna = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(krishna);
-                                person_contactAdapter krishna_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(krishna_per);
-                                break;
-
-                            case "Kurnool" :
-                                i_names = Arrays.copyOfRange(ins_name, 10,11); // 10,12
-                                i_address = Arrays.copyOfRange(ins_address, 10,11);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 10,11);
-                                i_emails = Arrays.copyOfRange(ins_email, 10,11);
-                                i_websites = Arrays.copyOfRange(ins_website,10,11);
-
-                                dr_names = Arrays.copyOfRange(per_name, 30,36);
-                                dr_phones =Arrays.copyOfRange(per_phone, 30,36);
-                                dr_emails =Arrays.copyOfRange(per_email, 30,36);
-
-                                contactAdapter kurnool = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(kurnool);
-                                person_contactAdapter kurnool_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(kurnool_per);
-                                break;
-
-                            case "Nellore" :
-                                i_names = Arrays.copyOfRange(ins_name, 12,13); // 12,14
-                                i_address = Arrays.copyOfRange(ins_address, 12,13);
-                                i_phones = Arrays.copyOfRange(ins_phoneno, 12,13);
-                                i_emails = Arrays.copyOfRange(ins_email, 12,13);
-                                i_websites = Arrays.copyOfRange(ins_website,12,13);
-
-                                dr_names = Arrays.copyOfRange(per_name, 36,44);
-                                dr_phones =Arrays.copyOfRange(per_phone, 36,44);
-                                dr_emails =Arrays.copyOfRange(per_email, 36,44);
-
-                                contactAdapter nellore = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
-                                contactlist.setAdapter(nellore);
-                                person_contactAdapter nellore_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
-                                person_contact.setAdapter(nellore_per);
-                                break;
+                                       ins_name = snapshot.child(selecteddistrict).child("ins_name").getValue(String.class);
+                                       insname.setText(ins_name);
+                                       ins_address = snapshot.child(selecteddistrict).child("ins_address").getValue(String.class);
+                                       insaddress.setText(ins_address);
+                                       ins_phone = snapshot.child(selecteddistrict).child("ins_phoneno").getValue(String.class);
+                                       insphone.setText(ins_phone);
+                                       ins_email = snapshot.child(selecteddistrict).child("ins_email").getValue(String.class);
+                                       insemail.setText(ins_email);
+                                       ins_website = snapshot.child(selecteddistrict).child("ins_website").getValue(String.class);
+                                       inswebsite.setText(ins_website);
 
 
+                                       per_nameone = snapshot.child(selecteddistrict).child("per_name_one").getValue(String.class);
+                                       drnameone.setText(per_nameone);
+                                       per_nametwo = snapshot.child(selecteddistrict).child("per_name_two").getValue(String.class);
+                                       drnametwo.setText(per_nametwo);
+                                       per_namethree = snapshot.child(selecteddistrict).child("per_name_three").getValue(String.class);
+                                       drnamethree.setText(per_namethree);
 
+                                       per_phoneone = snapshot.child(selecteddistrict).child("per_phone_one").getValue(String.class);
+                                       drphoneone.setText(per_phoneone);
+                                       per_phonetwo = snapshot.child(selecteddistrict).child("per_phone_two").getValue(String.class);
+                                       drphonetwo.setText(per_phonetwo);
+                                       per_phonethree = snapshot.child(selecteddistrict).child("per_phone_three").getValue(String.class);
+                                       drphonethree.setText(per_phonethree);
 
-                        }
+                                       per_emailone = snapshot.child(selecteddistrict).child("per_email_one").getValue(String.class);
+                                       dremailone.setText(per_emailone);
+                                       per_emailtwo = snapshot.child(selecteddistrict).child("per_email_two").getValue(String.class);
+                                       dremailtwo .setText(per_emailtwo);
+                                       per_emailthree = snapshot.child(selecteddistrict).child("per_email_three").getValue(String.class);
+                                       dremailthree.setText(per_emailthree);
 
+                                   }else{
+                                       Toast.makeText(getApplicationContext(), "Data Doesn't Exists", Toast.LENGTH_SHORT).show();
+                                   }
+                               }
 
+                               @Override
+                               public void onCancelled(@NonNull DatabaseError error) {
 
+                               }
+                           });
                        }
+//                       }else{
+//
+//                           String[] ins_name = getResources().getStringArray(R.array.ins_name);
+//                           String[] ins_address = getResources().getStringArray(R.array.ins_address);
+//                           String[] ins_phoneno = getResources().getStringArray(R.array.ins_phoneno);
+//                           String[] ins_email = getResources().getStringArray(R.array.ins_email);
+//                           String[] ins_website = getResources().getStringArray(R.array.ins_website);
+//
+//                           String[] per_name =  getResources().getStringArray(R.array.per_name);
+//                           String[] per_phone =  getResources().getStringArray(R.array.per_phone);
+//                           String[] per_email =  getResources().getStringArray(R.array.per_email);
+//
+//                           LinearLayout linearLayout2 = findViewById(R.id.input_detalis);
+//                           linearLayout2.setVisibility(View.GONE);
+//
+//                           LinearLayout listitem = findViewById(R.id.listitem);
+//                           listitem.setVisibility(View.VISIBLE);
+//
+//                           ListView contactlist = findViewById(R.id.contactlist);
+//                           ListView  person_contact = findViewById(R.id.person_contact);
+//
+//                        switch (selecteddistrict){
+////                            Andaman Nicobar state
+//                            case "Nicobar" :
+//
+//                            case "North Middle Andaman" :
+//
+//                            case "South Andaman" :
+//                                i_names = Arrays.copyOfRange(ins_name, 0,1);
+//                                i_address = Arrays.copyOfRange(ins_address, 0,1);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 0,1);
+//                                i_emails = Arrays.copyOfRange(ins_email, 0,1);
+//                                i_websites = Arrays.copyOfRange(ins_website, 0,1);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 0,5);
+//                                dr_phones = Arrays.copyOfRange(per_phone, 0,5);
+//                                dr_emails = Arrays.copyOfRange(per_email, 0,5);
+//
+//                                contactAdapter nicobar = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(nicobar);
+//                                person_contactAdapter nicobar_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(nicobar_per);
+//                                break;
+//
+//
+////                                Andhra pradesh state
+//                            case "Anantapur" :
+//                                i_names = Arrays.copyOfRange(ins_name, 1,2);
+//                                i_address = Arrays.copyOfRange(ins_address, 1,2);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 1,2);
+//                                i_emails = Arrays.copyOfRange(ins_email, 1,2);
+//                                i_websites = Arrays.copyOfRange(ins_website, 1,2);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 5,7);
+//                                dr_phones =Arrays.copyOfRange(per_phone, 5,7);
+//                                dr_emails =Arrays.copyOfRange(per_email, 5,7);
+//
+//                                contactAdapter anantapur = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(anantapur);
+//                                person_contactAdapter anantapur_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(anantapur_per);
+//                                break;
+//
+//                            case "Chittoor" :
+//                                i_names = Arrays.copyOfRange(ins_name, 2,3);
+//                                i_address = Arrays.copyOfRange(ins_address, 2,3);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 2,3);
+//                                i_emails = Arrays.copyOfRange(ins_email, 2,3);
+//                                i_websites = Arrays.copyOfRange(ins_website,2,3);
+//
+//                                dr_names = Arrays.copyOfRange(per_name,  7,11);
+//                                dr_phones =Arrays.copyOfRange(per_phone,  7,11);
+//                                dr_emails =Arrays.copyOfRange(per_email,  7,11);
+//
+//                                contactAdapter chittoor = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(chittoor);
+//                                person_contactAdapter chittoor_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(chittoor_per);
+//                                break;
+//
+//                            case "East Godavari" :
+//                               i_names = Arrays.copyOfRange(ins_name, 3,4);
+//                               i_address = Arrays.copyOfRange(ins_address, 3,4);
+//                               i_phones = Arrays.copyOfRange(ins_phoneno, 3,4);
+//                               i_emails = Arrays.copyOfRange(ins_email, 3,4);
+//                               i_websites = Arrays.copyOfRange(ins_website,3,4);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 11,15);
+//                                dr_phones =Arrays.copyOfRange(per_phone, 11,15);
+//                                dr_emails =Arrays.copyOfRange(per_email, 11,15);
+//
+//                                contactAdapter godavari = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(godavari);
+//                                person_contactAdapter godavari_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(godavari_per);
+//                                break;
+//
+//                            case "Guntur" :
+//                                i_names = Arrays.copyOfRange(ins_name, 4,5); // 4,7
+//                                i_address = Arrays.copyOfRange(ins_address, 4,5);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 4,5);
+//                                i_emails = Arrays.copyOfRange(ins_email, 4,5);
+//                                i_websites = Arrays.copyOfRange(ins_website,4,5);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 15,22);
+//                                dr_phones =Arrays.copyOfRange(per_phone, 15,22);
+//                                dr_emails =Arrays.copyOfRange(per_email, 15,22);
+//
+//                                contactAdapter guntur = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(guntur);
+//                                person_contactAdapter guntur_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(guntur_per);
+//                                break;
+//
+//                            case "Kadapa" :
+//                                i_names = Arrays.copyOfRange(ins_name, 7,8); //7,9
+//                                i_address = Arrays.copyOfRange(ins_address, 7,8);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 7,8);
+//                                i_emails = Arrays.copyOfRange(ins_email, 7,8);
+//                                i_websites = Arrays.copyOfRange(ins_website,7,8);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 22,26);
+//                                dr_phones =Arrays.copyOfRange(per_phone, 22,26);
+//                                dr_emails =Arrays.copyOfRange(per_email, 22,26);
+//
+//                                contactAdapter kadapa = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(kadapa);
+//                                person_contactAdapter kadapa_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(kadapa_per);
+//                                break;
+//
+//                            case "Krishna" :
+//                                i_names = Arrays.copyOfRange(ins_name, 9,10);
+//                                i_address = Arrays.copyOfRange(ins_address, 9,10);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 9,10);
+//                                i_emails = Arrays.copyOfRange(ins_email, 9,10);
+//                                i_websites = Arrays.copyOfRange(ins_website,9,10);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 26,30);
+//                                dr_phones =Arrays.copyOfRange(per_phone, 26,30);
+//                                dr_emails =Arrays.copyOfRange(per_email, 26,30);
+//
+//                                contactAdapter krishna = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(krishna);
+//                                person_contactAdapter krishna_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(krishna_per);
+//                                break;
+//
+//                            case "Kurnool" :
+//                                i_names = Arrays.copyOfRange(ins_name, 10,11); // 10,12
+//                                i_address = Arrays.copyOfRange(ins_address, 10,11);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 10,11);
+//                                i_emails = Arrays.copyOfRange(ins_email, 10,11);
+//                                i_websites = Arrays.copyOfRange(ins_website,10,11);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 30,36);
+//                                dr_phones =Arrays.copyOfRange(per_phone, 30,36);
+//                                dr_emails =Arrays.copyOfRange(per_email, 30,36);
+//
+//                                contactAdapter kurnool = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(kurnool);
+//                                person_contactAdapter kurnool_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(kurnool_per);
+//                                break;
+//
+//                            case "Nellore" :
+//                                i_names = Arrays.copyOfRange(ins_name, 12,13); // 12,14
+//                                i_address = Arrays.copyOfRange(ins_address, 12,13);
+//                                i_phones = Arrays.copyOfRange(ins_phoneno, 12,13);
+//                                i_emails = Arrays.copyOfRange(ins_email, 12,13);
+//                                i_websites = Arrays.copyOfRange(ins_website,12,13);
+//
+//                                dr_names = Arrays.copyOfRange(per_name, 36,44);
+//                                dr_phones =Arrays.copyOfRange(per_phone, 36,44);
+//                                dr_emails =Arrays.copyOfRange(per_email, 36,44);
+//
+//                                contactAdapter nellore = new contactAdapter(donate_body.this, R.layout.contact_layout, i_names, i_address, i_phones, i_emails, i_websites);
+//                                contactlist.setAdapter(nellore);
+//                                person_contactAdapter nellore_per = new person_contactAdapter(donate_body.this, R.layout.person_contact_layout, dr_names, dr_phones, dr_emails);
+//                                person_contact.setAdapter(nellore_per);
+//                                break;
+//
+//
+//
+//
+//                        }
+//
+//
+//
+//                       }
                    }
 
 

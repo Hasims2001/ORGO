@@ -125,7 +125,7 @@
                             app:srcCompat="@drawable/seventh" />
 
                         <TextView
-                            android:id="@+id/dname"
+                            android:id="@+id/nameone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/imgtwo"

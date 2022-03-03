@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -75,10 +76,16 @@ public class user_profile extends AppCompatActivity {
         toolbar = findViewById(R.id.Tool);
         setSupportActionBar(toolbar);
 
+
+
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("userdata");
 
-        username = getIntent().getStringExtra("names");
+        SharedPreferences sh = getSharedPreferences("UserInfo", MODE_PRIVATE);
+        username = sh.getString("user_name", "");
+
+        side_menu draw = new side_menu(this);
+        draw.initNav(drawerLayout, navigationView, toolbar, false);
 
         profilepic = findViewById(R.id.profile_ic);
         user_name = findViewById(R.id.user_name);
@@ -90,10 +97,7 @@ public class user_profile extends AppCompatActivity {
         submit = findViewById(R.id.submit);
 
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
 
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
 
         user_name.setText(username);
         username_in.setText(username);
