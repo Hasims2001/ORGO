@@ -115,7 +115,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/open_sans"
-                            android:text="@string/insname"
+                            android:text="@string/bonekey"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 

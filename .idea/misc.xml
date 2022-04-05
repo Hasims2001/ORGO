@@ -11,6 +11,7 @@
         <entry key="..\:/sem-6/android/ORGO/adminportal/src/main/res/layout/activity_donor_info.xml" value="0.20416666666666666" />
         <entry key="..\:/sem-6/android/ORGO/adminportal/src/main/res/layout/activity_institute.xml" value="0.20416666666666666" />
         <entry key="..\:/sem-6/android/ORGO/adminportal/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/sem-6/android/ORGO/adminportal/src/main/res/layout/activity_organ_data.xml" value="0.20416666666666666" />
         <entry key="..\:/sem-6/android/ORGO/adminportal/src/main/res/layout/activity_user_data.xml" value="0.33" />
         <entry key="..\:/sem-6/android/ORGO/adminportal/src/main/res/layout/spinner_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/sem-6/android/ORGO/adminportal/src/main/res/layout/user_data_layout.xml" value="0.16296296296296298" />
@@ -41,7 +42,7 @@
         <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_organ_data.xml" value="0.25" />
         <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_organization.xml" value="0.25" />
         <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_orgn_trans.xml" value="0.33" />
-        <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_process.xml" value="0.15" />
+        <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_process.xml" value="0.25" />
         <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_processdata.xml" value="0.4312431243124312" />
         <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_recipient_info.xml" value="0.25" />
         <entry key="..\:/sem-6/android/ORGO/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />

@@ -54,7 +54,7 @@ public class process extends AppCompatActivity {
     String[] str_d_ids, str_d_names;
     String[] str_r_ids, str_r_names;
     userdataAdapter donorview, recipientview;
-    String txt_name;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

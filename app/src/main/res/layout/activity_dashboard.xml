@@ -8,7 +8,7 @@
     app:layoutDescription="@xml/activity_dashboard_scene"
     tools:context=".dashboard"
     android:fitsSystemWindows="true"
-    tools:openDrawer="end">
+    tools:openDrawer="start">
 
 
     <ScrollView
